@@ -1,5 +1,4 @@
 CREATE DATABASE TeziushopinhDB;
-go
 
 USE TeziushopinhDB;
 
