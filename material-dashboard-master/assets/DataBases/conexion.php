@@ -1,7 +1,7 @@
 <?php
 
     $user = "root";
-    $pwd = "";
+    $pwd = "root";
     $dbname = "TeziushopinhDB";
 
     try{
