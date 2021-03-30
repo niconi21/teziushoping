@@ -22,7 +22,7 @@ fechaIngreso date not null,
 tipoUsuario varchar (100) not null,
 telefono varchar(100) not null,
 correo varchar (100) not null,
-CONSTRAINT fk_Direccion FOREIGN KEY (idDireccion) REFERENCES Direccion (idDireccion),
+CONSTRAINT fk_Direccion FOREIGN KEY (idDireccion) REFERENCES Direccion (idDireccion)
 );
 
 
