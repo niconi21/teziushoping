@@ -1,0 +1,18 @@
+Jared:
+    Plantillas:
+        - Login
+        - Registro de usuario
+        - Vista de Perfil
+        
+        - Alta de productos
+        - Vista de productos (cómo mercado libre)
+        
+
+Manuel:
+    Conexión a base de datos
+    consultas de usuarios (insersion, consulta y actualización)
+    Consultar de productos
+
+Nicolas:
+    Consultas de administrador
+    Consultar de productos
