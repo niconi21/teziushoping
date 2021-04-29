@@ -21,3 +21,4 @@ INNER JOIN CategoriaArticulo as c ON a.idCategoria = c.idCategoria
 $query = $cn->prepare($query);
 $query->execute();
 $results = $query->fetchAll(PDO::FETCH_OBJ);
+?>

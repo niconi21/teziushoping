@@ -8,3 +8,4 @@ $query = "SELECT nombre, apellidos, nombreUsuario, tipoUsuario, telefono, correo
 $query = $cn->prepare($query);
 $query->execute();
 $results = $query->fetchAll(PDO::FETCH_OBJ);
+?>
