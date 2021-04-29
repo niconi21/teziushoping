@@ -25,8 +25,6 @@ correo varchar (100) not null,
 CONSTRAINT fk_Direccion FOREIGN KEY (idDireccion) REFERENCES Direccion (idDireccion)
 );
 
-
-
 CREATE TABLE CategoriaArticulo(
 idCategoria int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
 nombre varchar (50) NOT NULL,
@@ -47,16 +45,12 @@ CONSTRAINT fk_Categoria FOREIGN KEY (idCategoria) REFERENCES CategoriaArticulo(i
 CONSTRAINT fk_Usuario FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
 );
 
-
-
 CREATE TABLE MetodoPago(
 idMetodoPago int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
 banco varchar (100) not null,
 noCuenta int not null,
 tipoCuenta varchar (100)
 );
-
-
 
 CREATE TABLE Ventas(
 idVenta int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
