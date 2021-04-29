@@ -5,23 +5,23 @@ USE TeziushopinhDB;
 CREATE TABLE Direccion (
 idDireccion int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
 calle varchar(100),
-noExterior int,
-noInterior int,
-colonia varchar(100),
-codigo_Postal varchar (100) not null
+noExterior smallint,
+noInterior smallint,
+colonia varchar(50),
+codigo_Postal int not null
 );
 
 CREATE TABLE Usuario(
 idUsuario int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
-nombre varchar(100) not null,
-apellidos varchar(100) not null,
-nombreUsuario varchar(100) not null,
-contrasenia varchar (100) not null,
+nombre varchar(50) not null,
+apellidos varchar(50) not null,
+nombreUsuario varchar(50) not null,
+contrasenia varchar (50) not null,
 idDireccion int not null,
 fechaIngreso date not null,
-tipoUsuario varchar (100) not null,
-telefono varchar(100) not null,
-correo varchar (100) not null,
+tipoUsuario varchar (50) not null,
+telefono varchar(15) not null,
+correo varchar (50) not null,
 CONSTRAINT fk_Direccion FOREIGN KEY (idDireccion) REFERENCES Direccion (idDireccion)
 );
 
@@ -47,9 +47,9 @@ CONSTRAINT fk_Usuario FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
 
 CREATE TABLE MetodoPago(
 idMetodoPago int NOT NULL AUTO_INCREMENT  PRIMARY KEY,
-banco varchar (100) not null,
+banco varchar (50) not null,
 noCuenta int not null,
-tipoCuenta varchar (100)
+tipoCuenta varchar (50)
 );
 
 CREATE TABLE Ventas(
@@ -62,4 +62,3 @@ CONSTRAINT fk_ArticuloV FOREIGN KEY (idArticulo) REFERENCES Articulo(idArticulo)
 CONSTRAINT fk_UsuarioV FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario),
 CONSTRAINT fk_MetodoPagoV FOREIGN KEY (idMetodoPago) REFERENCES MetodoPago(idMetodoPago)
 );
-
