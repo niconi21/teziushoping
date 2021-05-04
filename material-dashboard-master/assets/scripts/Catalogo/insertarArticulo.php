@@ -1,22 +1,36 @@
 <?php
 
 
-$nombre = $_POST['nombreUsuario'];
-$apellidos = $_POST['apellidosUsuario'];
-$usuario = $_POST['nombreUsuario'];
-$contrasenia= $_POST['contrasenia'];
-$correo=$_POST['correoUsuario'];
-$telefono = $_POST['telefonoUsuario'];
+$idUsuario = $_POST['idUsuario'];
+$nombreArticulo=$_POST['nombreArticulo'];
+$descripcion = $_POST['descripcion'];
+$idCategoria=$_POST['idCategoria'];
+$precio = $_POST['precio'];
+$cantidad = $_POST['cantidad'];
+
 $idDireccion=$_POST['1'];
 $fecha="CURDATE()";
 
 include "../../DataBases/conexion.php";
+
+
+////CargaImagen
+
+$NombreArchivo = $_FILES['imagenArticulo']['name'];
+$directorioTemporal = $_FILES['imagenArticulo']['tmp_name'];
+$tamanio = $_FILES['imagenArticulo']['size'];
+////fin cargaImagen
+$imagenArticulo = file_get_contents($directorioTemporal);
+$urlArticulo = "img/";
+$extImagen = strtolower(pathinfo($NombreArchivo, PATHINFO_EXTENSION));
+$urlImagen = $urlArticulo.$nombreArticulo.".".$extImagen;
+move_uploaded_file($directorioTemporal,$urlImagen);
 try{
 
 
 
-$sql = $cn-> prepare("insert into Usuario(nombre, apellidos, nombreUsuario, contrasenia, idDireccion, fechaIngreso, tipoUsuario, telefono, correo) value ('?','?','?','?',?,'?','?','?','?')");
-$resultado=$sql->execute([$nombre,$apellidos,$usuario,$contrasenia,$idDireccion,$fecha,"Comprador",$telefono,$correo]);
+$sql = $cn-> prepare("insert into Articulo(nombreArticulo, descripcion, idCategoria, precio, cantidad, imagen, fechaIngreso, idUsuario) value (?,?,?,?,?,?,?,?)");
+$resultado=$sql->execute([$nombreArticulo,$descripcion,$idCategoria,$precio,$cantidad,$urlImagen,$fecha,$idUsuario]);
 
 header('location: ../../index.html');
 }catch(Exception $e){
