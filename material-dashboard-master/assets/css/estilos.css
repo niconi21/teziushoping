@@ -27,22 +27,12 @@ h1 {
     font-size: 40px;
 }
 
-textarea {
-    font-size: 20px;
-    width: 82%;
-    padding: 10px;
-    border: none;
-    resize: vertical;
-    min-height: 80px;
-    max-height: 100px;
-
-}
-
 input {
     font-size: 20px;
     width: 82%;
     padding: 10px;
     border: none;
+    margin-top: 10px;
 }
 
 .input-contenedor {
@@ -99,4 +89,8 @@ p {
         margin-top: 150px;
         border-radius: 2%;
     }
+}
+
+.bg-success {
+    background-color: #04802d
 }

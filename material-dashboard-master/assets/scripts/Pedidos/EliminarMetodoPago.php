@@ -1,7 +1,7 @@
 <?php
 
 
-$idMetodoPago = $_POST['idMetodoPago'];
+$idArticulo = $_POST['idArticulo'];
 $idDireccion=$_POST['1'];
 $fecha="CURDATE()";
 
@@ -10,10 +10,12 @@ try{
 
 
 
-$sql = $cn-> prepare("delete from metodoPago where idMetodoPago=".$idMetodoPago);
+$sql = $cn-> prepare("delete from Articulo where idArticulo=".$idArticulo);
 
 
 header('location: ../../index.html');
 }catch(Exception $e){
     echo "error en: ".$e;
 }
+
+?>
