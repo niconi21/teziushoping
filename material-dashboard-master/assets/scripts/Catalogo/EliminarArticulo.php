@@ -1,7 +1,7 @@
 <?php
 
 
-$idArticulo = $_POST['idArticulo'];
+$idUsuario = $_POST['idUsuario'];
 $idDireccion=$_POST['1'];
 $fecha="CURDATE()";
 
@@ -10,7 +10,7 @@ try{
 
 
 
-$sql = $cn-> prepare("delete from Articulo where idArticulo=".$idArticulo);
+$sql = $cn-> prepare("delete from usuario where idUsuario=".$idUsuario);
 
 
 header('location: ../../index.html');
