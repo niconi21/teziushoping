@@ -97,7 +97,7 @@ INSERT INTO Usuario (nombre, apellidos, nombreUsuario, contrasenia, idDireccion,
 INSERT INTO Usuario (nombre, apellidos, nombreUsuario, contrasenia, idDireccion, fechaIngreso, tipoUsuario, telefono, correo)  VALUES ('Anahí','Muñoz Lopez','doge45','cartones',7,NOW(), 'Vendedor', '231-946-4827','chocomoustrina29@gmail.com');
 INSERT INTO Usuario (nombre, apellidos, nombreUsuario, contrasenia, idDireccion, fechaIngreso, tipoUsuario, telefono, correo)  VALUES ('Pablo','Aguirre Moreno','avchevro','polizonte',8,NOW(), 'Vendedor', '231-234-1254','aguirremoreno@gmail.com');
 INSERT INTO Usuario (nombre, apellidos, nombreUsuario, contrasenia, idDireccion, fechaIngreso, tipoUsuario, telefono, correo)  VALUES ('Luisa','Hernandez Lopez','hdz28','hdz54',9,NOW(), 'Vendedor', '231-824-6798','hernandez563@gmail.com');
-INSERT INTO Usuario (nombre, apellidos, nombreUsuario, contrasenia, idDireccion, fechaIngreso, tipoUsuario, telefono, correo)  VALUES ('Esteban','Gonzalez Murrieta','sebas7468','este23',10,NOW(), 'Vendedor', '231-236-4389','esteban65hdz@gmail.com');|
+INSERT INTO Usuario (nombre, apellidos, nombreUsuario, contrasenia, idDireccion, fechaIngreso, tipoUsuario, telefono, correo)  VALUES ('Esteban','Gonzalez Murrieta','sebas7468','este23',10,NOW(), 'Vendedor', '231-236-4389','esteban65hdz@gmail.com');
 
 INSERT INTO CategoriaArticulo (nombre, descripcion) VALUES ('Herrería','Objetos de herreria');
 INSERT INTO CategoriaArticulo (nombre, descripcion) VALUES ('Muebles','Muebles y cosas del hogar');
