@@ -6,7 +6,7 @@
     <title></title>
     <meta name="viewport"
         content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://kit.fontawesome.com/7d4955662e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 
@@ -18,37 +18,37 @@
 
             <div class="input-contenedor">
                 <i class="fas fa-user icon"></i>
-                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Nombre" required>
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-user icon"></i>
-                <input type="text" placeholder="Apellidos">
+                <input type="text" placeholder="Apellidos" required>
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-user icon"></i>
-                <input type="text" placeholder="Usuario">
+                <input type="text" placeholder="Usuario" required>
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="text" placeholder="Correo Electronico">
+                <input type="email" placeholder="Correo Electrónico" required>
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-phone icon"></i>
-                <input type="text" placeholder="Teléfono">
+                <input type="number" minlength="10" placeholder="Teléfono" required>
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
-                <input type="password" placeholder="Contraseña">
+                <input type="password" minlength="8" placeholder="Contraseña" required>
             </div>
 
-            <input type="submit" value="Registrate" class="button">
-            
-            <p>¿Ya tienes una cuenta?<a class="link" href="loginvista.html"> Iniciar Sesion</a></p>
+            <input type="submit" value="Regístrate" class="button">
+
+            <p>¿Ya tienes una cuenta?<a class="link" href="loginvista.html"> Iniciar Sesión</a></p>
         </div>
     </form>
 </body>
