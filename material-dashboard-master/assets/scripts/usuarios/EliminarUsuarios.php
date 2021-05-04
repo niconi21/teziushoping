@@ -17,5 +17,3 @@ header('location: ../../index.html');
 }catch(Exception $e){
     echo "error en: ".$e;
 }
-
-?>

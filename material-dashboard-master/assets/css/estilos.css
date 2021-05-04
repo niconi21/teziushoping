@@ -82,3 +82,7 @@ p {
         border-radius: 2%;
     }
 }
+
+.bg-success {
+    background-color: #04802d
+}
