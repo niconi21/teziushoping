@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: url(../img/bg2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* Cajas */
+.border {
+    font-size: 15px;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+/* Boton eliminar */
+.eliminar{
+    font-size: 15px;
+    padding: 3px;
+    margin-left: 25px;
+}
+
+.eliminar-banco{
+    width: 100%;
+}
+
+/* Boton */
+.agregar-cuenta{
+    padding: 8px;
+    margin-left: 35%;
+    margin-bottom: 2em;
+}
+
+.link-perfil{
+    font-size: 18px;
+}
+
+label{
+    font-size: 15px;
+}
+
+.fecha-vencimiento{
+    width: 9%;
+}
+
+select{
+    font-size: 15px;
+    text-align: center;
+    align-content: center;
+}
+
+.metodo-btn{
+    font-size: 15px;
+}
+
+.caja-metodo{
+    padding-top: 15px;
+}
+
+.text-center{
+    color: white;
+    font-size: 2.1em;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.container, .card{
+    min-width: 900px;
+    margin-left: 0px;
+}
+
+.pedido-btn{
+    font-size: 15px;
+    border-radius: 5px;
+    border-style: double;
+    height: 25px;
+}
+
+.col{
+    vertical-align: middle;
+}
