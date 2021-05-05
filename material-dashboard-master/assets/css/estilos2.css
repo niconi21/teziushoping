@@ -30,7 +30,7 @@ body {
 /* Boton */
 .agregar-cuenta{
     padding: 8px;
-    margin-left: 35%;
+    margin-left: 39%;
     margin-bottom: 2em;
 }
 
@@ -76,10 +76,17 @@ a{
 }
 
 .pedido-btn{
-    font-size: 15px;
+    font-size: 13px;
     border-radius: 5px;
-    border-style: double;
-    height: 25px;
+    border-style: outset;
+    background-color: white;
+    height: 22px;
+    margin-bottom: 10px;
+}
+
+.pedido-btn:hover{
+ background-color:chocolate;
+ color: white;
 }
 
 .col{
