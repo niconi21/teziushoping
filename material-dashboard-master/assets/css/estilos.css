@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background: url(../img/fondo.jpg);
+    background: url(../img/bg2.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -32,19 +32,11 @@ input {
     width: 82%;
     padding: 10px;
     border: none;
-    margin-top: 10px;
 }
 
 .input-contenedor {
     margin-bottom: 15px;
     border: 1px solid #aaa;
-}
-
-.icono {
-    min-width: 50px;
-    text-align:center;
-    vertical-align: middle;
-    color: #999;
 }
 
 .icon {
@@ -62,6 +54,7 @@ input {
     padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
+    
 }
 
 .button:hover {
@@ -89,8 +82,4 @@ p {
         margin-top: 150px;
         border-radius: 2%;
     }
-}
-
-.bg-success {
-    background-color: #04802d
 }
