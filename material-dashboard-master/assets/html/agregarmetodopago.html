@@ -27,16 +27,17 @@
                         <input type="button" value="Tarjeta" class="metodo-btn">
                         <input type="button" value="Cuenta Bancaria" class="metodo-btn">
                     </div>
+                    <form action="../scripts/Pedidos/InsertarMetodoPago.php" method="POST" enctype="multipart/form-data">
                     <div class="card-body ">
                         <h5 class="card-title">
                             <label for="">Numero de tarjeta</label>
                             <br>    
-                            <input type="text" value="573116579" class="border" />
+                            <input type="text" name="noCuenta" value="573116579" class="border" />
                         </h5>
                         <h5 class="card-title">
                             <label for="">Nombre en la tarjeta</label>
                             <br>    
-                            <input type="text" value="573116579" class="border" />
+                            <input type="text"  class="border" />
                         </h5>
                         <h5 class="card-title">
                             <label for="">Fecha de vencimiento</label>
@@ -67,7 +68,8 @@
                                 <option value="2030">2030</option>
                             </select>
                             <div class="caja-metodo">
-                                <input type="button" value="Agregar" class="btn btn-success">
+                                <button type="submit" class="btn btn-primary">Registrar</button>
+                            </form>
                                 <input type="button" value="Cancelar" class="btn btn-warning">
                             </div>
                             

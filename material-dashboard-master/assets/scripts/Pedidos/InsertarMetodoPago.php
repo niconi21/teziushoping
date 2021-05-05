@@ -12,7 +12,7 @@ try{
 
 
 
-$sql = $cn-> prepare("insert into metodoPago(banco, noCuenta, tipoCuenta) value ('?','?','?')");
+$sql = $cn-> prepare("insert into metodoPago(banco, noCuenta, tipoCuenta) value (?,?,?)");
 $resultado=$sql->execute([$banco,$noCuenta,$tipoCuenta]);
 
 header('location: ../../index.html');

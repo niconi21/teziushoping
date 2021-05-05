@@ -11,34 +11,35 @@
 </head>
 
 <body>
-    <form class="formulario">
+    
+    <form class="formulario" action="../scripts/articulo/altaArticulo.php" method="POST" enctype="multipart/form-data">
 
         <h1>Publicar Producto</h1>
         <div class="contenedor">
 
             <div class="input-contenedor">
                 <i class="fas fa-pen icon"></i>
-                <input type="text" placeholder="Nombre">
+                <input type="text" name="nombreArticulo" placeholder="Nombre">
             </div>
 
             <div class="input-contenedor">
                 <i class="far fa-file-alt icono"></i>
-                <input type="text" placeholder="Descripción">
+                <input type="text" placeholder="Descripción" name="decripcion">
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-align-justify icon"></i>
-                <input type="text" placeholder="Categoría">
+                <input type="text" name="idCategoria" placeholder="Categoría">
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-dollar-sign icon"></i>
-                <input type="number" name="" id="" placeholder="Precio">
+                <input type="number" name="precio" id="" placeholder="Precio">
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-coins icon"></i>
-                <input type="number" name="" id="" placeholder="Cantidad Disponible">
+                <input type="number" name="cantidad" id="" placeholder="Cantidad Disponible">
             </div>
 
             <div class="input-contenedor">
