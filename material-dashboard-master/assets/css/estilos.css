@@ -34,7 +34,15 @@ input {
     border: none;
 }
 
-.input-contenedor {
+select {
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+    color: rgb(102, 102, 102);
+}
+
+.input-contenedor{
     margin-bottom: 15px;
     border: 1px solid #aaa;
 }
@@ -73,6 +81,10 @@ p {
 
 .link:hover {
     color: cadetblue;
+}
+
+.btn-seleccionar-img{
+    font-size: 15px;
 }
 
 @media(min-width:768px) {

@@ -36,6 +36,7 @@ body {
 
 .link-perfil{
     font-size: 18px;
+    color: white;
 }
 
 label{
@@ -44,6 +45,10 @@ label{
 
 .fecha-vencimiento{
     width: 9%;
+}
+
+.seleccion-banco{
+    width: 15%;
 }
 
 select{
@@ -65,12 +70,9 @@ select{
     font-size: 2.1em;
 }
 
-a{
-    color: white;
-    text-decoration: none;
-}
 
-.container, .card{
+
+ .card{
     min-width: 900px;
     margin-left: 0px;
 }
@@ -92,3 +94,42 @@ a{
 .col{
     vertical-align: middle;
 }
+
+.btn-agregar-metodo{
+    display: inline-block;
+    width: 180px;
+    padding: 5px 20px;
+    margin: 0px 5px;
+    margin-left: 140px;
+    background-color:   #1a2537;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border-style: none;
+      
+}
+
+.btn-agregar-tarjeta{
+    display: inline-block;
+    width: 120px;
+    padding: 5px 20px;
+    margin: 0px 5px;
+    background-color:  #1a2537;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border-style: none;
+
+    
+}
+
+.btn-agregar-metodo:hover, .btn-agregar-tarjeta:hover{
+    opacity: 0.9;
+    color: white;
+    background-color: cadetblue;
+}
+
