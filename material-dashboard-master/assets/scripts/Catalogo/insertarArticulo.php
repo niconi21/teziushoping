@@ -1,3 +1,9 @@
+<!-- 
+-Nombre proyecto: Teziushoping
+-Creación: 04-05-2021
+-FechaEntrega: 6 de Mayo de 2021
+Autor: Nicolas Moreno Duran
+-->
 <?php
 
 //recibimos los datos por POST y los asignamos a una variable local
@@ -25,7 +31,8 @@ $urlImagen = $urlArticulo.$nombreArticulo.".".$extImagen;
 move_uploaded_file($directorioTemporal,$urlImagen);
 try{
 ///madamos los datos por el metodo EXECUTE
-$sql = $cn-> prepare("insert into Articulo(nombreArticulo, descripcion, idCategoria, precio, cantidad, imagen, fechaIngreso, idUsuario) value (?,?,?,?,?,?,?,?)");
+$sql = $cn-> prepare("insert into Articulo(nombreArticulo, descripcion, idCategoria, precio, cantidad, imagen, fechaIngreso, 
+idUsuario) value (?,?,?,?,?,?,?,?)");
 $resultado=$sql->execute([$nombreArticulo,$descripcion,$idCategoria,$precio,$cantidad,$urlImagen,$fecha,$idUsuario]);
 
 header('location: ../../index.html');
