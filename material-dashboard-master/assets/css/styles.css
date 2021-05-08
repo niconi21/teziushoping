@@ -1,0 +1,22 @@
+body {
+  background-image: url("../img/bg2.jpg");
+  background-repeat: repeat-y;
+}
+
+.bg-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.bg-fondo {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bg-card-success {
+  background-color: rgba(3, 104, 37, 0.404);
+  color: white;
+}
+
+.header-icon {
+  left: -100px;
+}
