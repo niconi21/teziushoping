@@ -1,3 +1,9 @@
+<!-- 
+-Nombre proyecto: Teziushoping
+-Creación: 04-05-2021
+-FechaEntrega: 6 de Mayo de 2021
+Autor: Andres Huerta Santiago
+-->
 <?php
 
 //recibimos los datos por POST y los asignamos a una variable local

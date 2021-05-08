@@ -1,3 +1,9 @@
+<!-- 
+-Nombre proyecto: Teziushoping
+-Creación: 04-05-2021
+-FechaEntrega: 6 de Mayo de 2021
+Autor: Jaret Josue Camacho Rolon
+-->
 <?php
 
 //Se declaran los parametros a enviar usando el método POST
@@ -14,7 +20,8 @@ include "../../DataBases/conexion.php";
 try{
 
 //Se mandan los datos
-$sql = $cn-> prepare("insert into Usuario(nombre, apellidos, nombreUsuario, contrasenia, idDireccion, fechaIngreso, tipoUsuario, telefono, correo) value ('?','?','?','?',?,'?','?','?','?')");
+$sql = $cn-> prepare("insert into Usuario(nombre, apellidos, nombreUsuario, contrasenia, idDireccion, fechaIngreso, 
+tipoUsuario, telefono, correo) value ('?','?','?','?',?,'?','?','?','?')");
 $resultado=$sql->execute([$nombre,$apellidos,$usuario,$contrasenia,$idDireccion,$fecha,"Comprador",$telefono,$correo]);
 //redirigimos al index.html
 header('location: ../../index.html');
@@ -25,3 +32,4 @@ header('location: ../../index.html');
 
 
 ?>
+
