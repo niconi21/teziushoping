@@ -20,15 +20,15 @@ include('../partials/navbar.php');
     </div>
 </div>
 <div class="container mt-5">
-    <div class="row">
+    <div class="row animate__animated animate__fadeInLeft">
         <div class="col"><a href="./altaMetodoPago.MisMetodosPago.php?tipo=post" class="btn btn-success"> <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Agregar método de pago</a></div>
     </div>
     <div class="row">
         <div class="col">
-            <h5 class="text-white text-center">Métodos de pago registrados</h5>
+            <h5 class="text-white text-center animate__animated animate__fadeInLeft">Métodos de pago registrados</h5>
 
-            <div class="card-columns mt-5">
+            <div class="card-columns mt-5 animate__animated animate__fadeInUp">
 
                 <div class="card text-left bg-fondo text-white">
                     <div class="card-body">
@@ -36,7 +36,7 @@ include('../partials/navbar.php');
                             terminación 7982 -
                             <a href="./altaMetodoPago.MisMetodosPago.php?tipo=put&id=1" class="btn btn-outline-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </a>
-                            <button class="btn btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i>
+                            <button onclick="eliminarMetodoPago()" class="btn btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i>
                                 </i>
                             </button>
                         </h5>
@@ -53,7 +53,7 @@ include('../partials/navbar.php');
                             terminación 2108 -
                             <a href="./altaMetodoPago.MisMetodosPago.php?tipo=put&id=1" class="btn btn-outline-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </a>
-                            <button class="btn btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i>
+                            <button onclick="eliminarMetodoPago()" class="btn btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i>
                                 </i>
                             </button>
                         </h5>
@@ -69,7 +69,7 @@ include('../partials/navbar.php');
                             terminación 7982 -
                             <a href="./altaMetodoPago.MisMetodosPago.php?tipo=put&id=1" class="btn btn-outline-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </a>
-                            <button class="btn btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i>
+                            <button onclick="eliminarMetodoPago()" class="btn btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i>
                                 </i>
                             </button>
                         </h5>

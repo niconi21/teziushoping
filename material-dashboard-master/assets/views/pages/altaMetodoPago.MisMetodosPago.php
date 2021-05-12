@@ -29,7 +29,7 @@ if($tipo == 'put'){
 </div>
 
 <div class="container mt-5">
-    <div class="row">
+    <div class="row animate__animated animate__fadeInLeft">
         <div class="col-6 offset-3">
             <form action="" method="post">
                 <div class="card  bg-fondo text-white">
