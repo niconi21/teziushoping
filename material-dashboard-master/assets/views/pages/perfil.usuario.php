@@ -27,7 +27,7 @@ include('../partials/navbar.php');
                 <div class="card-body border border-dark text-center bg-fondo">
                     <h5 class="text-white">Opciónes de cuenta</h5>
                     <hr>
-                    <a href="" class="btn btn-outline-danger">Dar de baja la cuenta</a><br>
+                    <button class="btn btn-outline-danger" onclick="bajaCuentaUsuario()">Dar de baja la cuenta</button><br>
                 </div>
             </div>
         </div>

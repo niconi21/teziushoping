@@ -16,3 +16,23 @@ function eliminarProductoServicio() {
     }
   });
 }
+
+function bajaCuentaUsuario() {
+
+
+Swal.fire({
+  title: 'Ingresa tu contraseña para dar de baja la cuenta',
+  input: 'password',
+  inputLabel: 'Contraseña',
+  showCancelButton: true,
+  inputValidator: (value) => {
+    if (!value) {
+      return 'Contraseña incorrecta'
+    }else{
+      return 'Contraseña correcta, cuenta dada de baja'
+    }
+  }
+
+})
+
+}
