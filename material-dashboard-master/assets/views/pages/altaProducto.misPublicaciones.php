@@ -1,10 +1,4 @@
 <?php
-$tipo = $_GET['tipo'];
-$id = $_GET['id'];
-$producto = null;
-if ($tipo == 'put') {
-    //buscar el producto/servicio por el id
-}
 
 //inicio del html
 include('../partials/header.php');
@@ -15,8 +9,24 @@ include('../partials/header.php');
 <?php
 //footer del html y de la página
 include('../partials/navbar.php');
-?>
+$tipo = $_GET['tipo'];
+$id = $_GET['id'];
+$producto = null;
+if ($tipo == 'put') {
 
+    $urls['altaProducto'] = '<a href="../pages/misPublicaciones.php">Mis publicaciónes</a> > Actualización de Producto';
+    //buscar el producto/servicio por el id
+}
+?>
+<div class="container">
+    <div class="row animate__animated animate__fadeInLeft">
+        <h6 class="text-white mt-3">
+            <?php
+            echo $urls[$page[0]];
+            ?>
+        </h6>
+    </div>
+</div>
 <div class="container-fluid">
 
     <div class="row">

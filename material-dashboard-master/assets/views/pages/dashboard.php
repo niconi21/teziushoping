@@ -9,7 +9,15 @@ include('../partials/header.php');
 //footer del html y de la página
 include('../partials/navbar.php');
 ?>
-
+<div class="container">
+    <div class="row animate__animated animate__fadeInLeft">
+        <h6 class="text-white mt-3">
+            <?php
+            echo $urls[$page[0]];
+            ?>
+        </h6>
+    </div>
+</div>
 <div class="container mt-3">
     <div class="row animate__animated animate__fadeInLeft">
         <h2 class="text-white mb-3">Bienvenido ------- -------- --------</h2>

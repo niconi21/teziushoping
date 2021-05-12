@@ -9,7 +9,15 @@ include('../partials/header.php');
 //footer del html y de la página
 include('../partials/navbar.php');
 ?>
-
+<div class="container">
+    <div class="row animate__animated animate__fadeInLeft">
+        <h6 class="text-white mt-3">
+            <?php
+            echo $urls[$page[0]];
+            ?>
+        </h6>
+    </div>
+</div>
 <div class="container-fluid">
     <div class="row m-3 mt-5 animate__animated animate__fadeInLeft">
         <a href="./altaProducto.misPublicaciones.php?tipo=post" class="btn btn-success"> <i class="fa fa-plus-circle" aria-hidden="true"></i>
