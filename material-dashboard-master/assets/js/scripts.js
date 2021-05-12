@@ -1,3 +1,6 @@
+
+
+
 function eliminarProductoServicio() {
   Swal.fire({
     title: "¿Estás seguro de querer eliminar este producto/servcio?",
@@ -37,6 +40,7 @@ function eliminarMetodoPago() {
 }
 
 
+
 function bajaCuentaUsuario() {
   Swal.fire({
     title: "Ingresa tu contraseña para dar de baja la cuenta",
@@ -51,4 +55,8 @@ function bajaCuentaUsuario() {
       }
     },
   });
+}
+
+function modalVentas(id){
+  $('#exampleModal').modal('toggle')
 }

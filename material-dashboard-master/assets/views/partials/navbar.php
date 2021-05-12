@@ -10,6 +10,8 @@ $urls = array(
   "perfil" => "Mi Perfil",
   "misMetodosPago" => "Mis Métodos de pago",
   "altaMetodoPago" => '<a href="../pages/misMetodosPago.php">Mis métodos de pago</a> > Alta de método de pago',
+  "misVentas" => 'Mis ventas',
+
   )
 
 ?>
@@ -32,7 +34,7 @@ $urls = array(
           <a class="nav-link" href="../pages/misPublicaciones.php">Mis publicaciónes</a>
         </li>
         <li class="nav-item <?php echo $page[0] == 'misVentas' ? 'active': '';?>">
-          <a class="nav-link">Ventas</a>
+          <a class="nav-link" href="../pages/misVentas.php">Ventas</a>
         </li>
         <li class="nav-item <?php echo $page[0] == 'misMetodosPago'  ? 'active': '';?>">
           <a class="nav-link" href="../pages/misMetodosPago.php">Métodos de pagos</a>
