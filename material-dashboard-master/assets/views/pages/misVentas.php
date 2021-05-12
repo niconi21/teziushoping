@@ -18,7 +18,7 @@ include('../partials/navbar.php');
         </h6>
     </div>
 </div>
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-5 animate__animated animate__fadeInRight">
     <div class="row">
         <div class="col">
             <table class="table  table-dark table-striped table-hover">

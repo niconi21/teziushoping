@@ -40,7 +40,7 @@ include('../partials/navbar.php');
                     <h6><b><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i>
                             Ventas</b></h6>
                     <p>20 Ventas realizadas</p>
-                    <a href="">Ver más..</a>
+                    <a href="./misVentas.php">Ver más..</a>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@ include('../partials/navbar.php');
                             Métodos de pago</b></h6>
                     <p>3 métodos de pagos</p>
                     <p>Visa terminación 3168 cómo método de pago prncipal</p>
-                    <a href="">Ver más...</a>
+                    <a href="./misMetodosPago.php">Ver más...</a>
                 </div>
             </div>
         </div>

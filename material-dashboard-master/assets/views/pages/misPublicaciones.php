@@ -25,7 +25,7 @@ include('../partials/navbar.php');
     </div>
     <div class="row animate__animated animate__fadeInRight">
         <div class="col">
-            <table class="table table-dark table-striped  m-2 table-hover">
+            <table class="table table-dark table-striped m-2 table-hover">
                 <th>
                 <td>Titulo</td>
                 <td>Descripción</td>
