@@ -25,22 +25,22 @@ $urls = array(
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
+        <li class="nav-item <?php echo $page[0] == 'dashboard' ? 'active': '';?>">
           <a class="nav-link" href="../pages/dashboard.php">Dashboard </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item <?php echo $page[0] == 'misPublicaciones' ? 'active': '';?>">
           <a class="nav-link" href="../pages/misPublicaciones.php">Mis publicaciónes</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item <?php echo $page[0] == 'misVentas' ? 'active': '';?>">
           <a class="nav-link">Ventas</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item <?php echo $page[0] == 'misMetodosPago'  ? 'active': '';?>">
           <a class="nav-link" href="../pages/misMetodosPago.php">Métodos de pagos</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item <?php echo $page[0] == 'productosServicios'  ? 'active': '';?>">
           <a class="nav-link">Productos/Servicios</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item <?php echo $page[0] == 'perfil'  ? 'active': '';?>">
           <a class="nav-link" href="../pages/perfil.usuario.php">Mi perfl</a>
         </li>
 
@@ -55,5 +55,5 @@ $urls = array(
 
 
   </nav>
-
+  <?php echo $page[0];?>
   
