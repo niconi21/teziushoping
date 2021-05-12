@@ -1,5 +1,5 @@
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-plugin ">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fied-plugin animate__animated animate__fadeInDown">
     <a class="navbar-brand" href="#">
       <i class="fa fa-pencil" aria-hidden="true"></i>
       Teziushoping</a>
@@ -24,7 +24,7 @@
   </nav>
 
   <div class="container">
-    <div class="row">
+    <div class="row animate__animated animate__fadeInLeft">
     <h6 class="text-white mt-3">Dashboard</h6>
     </div>
   </div>

@@ -33,7 +33,7 @@ include('../partials/header.php');
                 </div>
             </div> -->
             <div class="col-md-4 offset-md-4 mt-5">
-                <div class="card bg-card ">
+                <div class="card bg-card animate__animated animate__fadeInLeft">
                     <div class="card-header text-center">
                         <h3 class="mt-3"><b>Iniciar sesión</b></h3>
                         <i>icono</i>
