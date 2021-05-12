@@ -1,4 +1,11 @@
 <?php
+$tipo = $_GET['tipo'];
+$id = $_GET['id'];
+$producto = null;
+if($tipo == 'put'){
+    //buscar el producto/servicio por el id
+}
+
 //inicio del html
 include('../partials/header.php');
 ?>
@@ -16,7 +23,7 @@ include('../partials/navbar.php');
         <div class="col-md-4 offset-md-2">
             <div class="card bg-card ">
                 <div class="card-header text-center">
-                    <h4 class="mt-3"><b>Publicar un producto/servicio</b></h4>
+                    <h4 class="mt-3"><b><?php echo $tipo == 'put' ? 'Actualizar' : 'Publicar'; ?> un producto/servicio</b></h4>
                 </div>
                 <div class="card-body">
                     <form action="" method="post">
@@ -24,13 +31,15 @@ include('../partials/navbar.php');
                             <div class="col">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-money" aria-hidden="true"></i>
+                                        </span>
                                     </div>
                                     <input type="text" class="form-control" placeholder="Nombre" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-filter" aria-hidden="true"></i>
+                                        </span>
                                     </div>
                                     <select name="" id="" class="form-control" required>
                                         <option value="">Seleccióna uno</option>
@@ -38,20 +47,24 @@ include('../partials/navbar.php');
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-money" aria-hidden="true"></i>
+                                        </span>
                                     </div>
                                     <input type="number" class="form-control" placeholder="Precio MXN" required>
                                 </div>
 
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i>
+
+                                        </span>
                                     </div>
                                     <input type="text" class="form-control" placeholder="Cantidad" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-comment" aria-hidden="true"></i>
+                                        </span>
                                     </div>
                                     <textarea class="form-control" rows="5" required></textarea>
                                 </div>
@@ -59,8 +72,8 @@ include('../partials/navbar.php');
 
                                     <input type="file" class="form-control">
                                 </div>
-
-                                <input type="submit" class="btn btn-dark btn-block" value="Agregar producto/servicio">
+                                <button class="btn btn-dark btn-block" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <?php echo $tipo == 'put' ? 'Actualizar' : 'Publicar'; ?> producto/servicio</button>
                             </div>
 
                         </div>
@@ -71,7 +84,7 @@ include('../partials/navbar.php');
         <div class="col-md-4 offset-md-1 mt-5">
             <div class="card bg-card" style="width: 300px;">
                 <div class="card-header">
-                <h5><b><i>Imagen del producto</i></b></h5>
+                    <h5><b>Imagen del producto</b></h5>
                 </div>
                 <img src="../../img/SinImagen.jpg" alt="" width="300px">
             </div>

@@ -43,42 +43,49 @@ include('../partials/header.php');
                         <form action="" method="post">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
                                 </div>
                                 <input type="text" class="form-control" placeholder="Nombre" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </span>
                                 </div>
                                 <input type="text" class="form-control" placeholder="Apellidos" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </span>
                                 </div>
                                 <input type="email" class="form-control" placeholder="Correo" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone" aria-hidden="true"></i>
+                                    </span>
                                 </div>
-                                <input type="number" min="10" max="10"class="form-control" placeholder="Teléfono" required>
+                                <input type="number" min="10" max="10" class="form-control" placeholder="Teléfono" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i>
+                                    </span>
                                 </div>
                                 <input type="text" class="form-control" placeholder="Usuario" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i>
+                                    </span>
                                 </div>
                                 <input type="password" class="form-control" placeholder="Contraseña" required>
                             </div>
                             <button type="submit" class="btn btn-dark btn-block mt-3">
-                                Registrarse <i>icono</i>
+                                Registrarse <i class="fa fa-user-plus" aria-hidden="true"></i>
+
                             </button>
                         </form>
                         <hr>

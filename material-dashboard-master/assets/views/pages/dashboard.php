@@ -19,7 +19,8 @@ include('../partials/navbar.php');
             <div class="card bg-card border border-warning" style="width: 18rem">
 
                 <div class="card-body">
-                    <h6><b><i> icono Productos publicados</i></b></h6>
+                    <h6><b><i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                            Productos publicados</b></h6>
                     <p>20 publcaciónes <br> 10 activos <br> 10 inactivos </p>
                     <a class=" text-right" href="">Ver más...</a>
                 </div>
@@ -28,7 +29,8 @@ include('../partials/navbar.php');
         <div class="col">
             <div class="card bg-card border border-success" style="width: 18rem">
                 <div class="card-header ">
-                    <h6><b><i>icono Ventas</i></b></h6>
+                    <h6><b><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i>
+                            Ventas</b></h6>
                 </div>
                 <div class="card-body text-right">
                     <p>20 Ventas realizadas</p>
@@ -39,7 +41,8 @@ include('../partials/navbar.php');
         <div class="col">
             <div class="card bg-card border border-info" style="width: 18rem">
                 <div class="card-header ">
-                    <h6><b><i> Métodos de pago</i></b></h6>
+                    <h6><b><i class="fa fa-credit-card-alt fa-2x" aria-hidden="true"></i>
+                            Métodos de pago</b></h6>
                 </div>
                 <div class="card-body text-right">
                     <p>3 métodos de pagos</p>

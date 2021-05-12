@@ -10,7 +10,7 @@ include('../partials/header.php');
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
         <p class="navbar-brand">
-        <i>icono</i> TeziuShoping
+            <i>icono</i> TeziuShoping
         </p>
     </nav>
 
@@ -40,16 +40,17 @@ include('../partials/header.php');
                     </div>
                     <div class="card-body">
                         <form action="" method="post">
-                            <i>icono</i>
-                            <label for="" class="text-left">Usuario</label>
+                            <label for="" class="text-left"> <i class="fa fa-user" aria-hidden="true"></i> Usuario</label>
                             <input type="text" class="form-control mb-3" placeholder="" required>
-                            <i>icono</i>
-                            <label for="">Contraseña</label>
+
+                            <label for=""><i class="fa fa-key" aria-hidden="true"></i>
+                                Contraseña</label>
                             <input type="password" class="form-control mb-3" placeholder="" required>
 
                             <button type="submit" class="btn btn-dark btn-block">
                                 Iniciar sesión
-                                <i>icono</i>
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+
                             </button>
                             <hr class="bg-white">
                             <p class="text-center">¿No tienes una cuenta? <a href="./registro.php" class="text-primary"><b>Registrate aquí</b></a></p>
