@@ -8,7 +8,9 @@ $urls = array(
   "altaProducto" =>  '<a href="../pages/misPublicaciones.php">Mis publicaciónes</a> > Alta de Producto',
   "misPublicaciones" => "Mis Publicaciónes",
   "perfil" => "Mi Perfil",
-)
+  "misMetodosPago" => "Mis Métodos de pago",
+  "altaMetodoPago" => '<a href="../pages/misMetodosPago.php">Mis métodos de pago</a> > Alta de método de pago',
+  )
 
 ?>
 
@@ -33,7 +35,7 @@ $urls = array(
           <a class="nav-link">Ventas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Métodos de pagos</a>
+          <a class="nav-link" href="../pages/misMetodosPago.php">Métodos de pagos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link">Productos/Servicios</a>
@@ -50,7 +52,6 @@ $urls = array(
         </button>
       </form>
     </div>
-
 
 
   </nav>
