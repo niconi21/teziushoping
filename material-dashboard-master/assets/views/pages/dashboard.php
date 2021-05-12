@@ -28,11 +28,9 @@ include('../partials/navbar.php');
         </div>
         <div class="col">
             <div class="card bg-card border border-success animate__animated animate__fadeInUpBig" style="width: 18rem">
-                <div class="card-header ">
+                <div class="card-body ">
                     <h6><b><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i>
                             Ventas</b></h6>
-                </div>
-                <div class="card-body text-right">
                     <p>20 Ventas realizadas</p>
                     <a href="">Ver más..</a>
                 </div>
@@ -40,11 +38,9 @@ include('../partials/navbar.php');
         </div>
         <div class="col">
             <div class="card bg-card border border-info animate__animated animate__fadeInBottomRight" style="width: 18rem">
-                <div class="card-header ">
+                <div class="card-body ">
                     <h6><b><i class="fa fa-credit-card-alt fa-2x" aria-hidden="true"></i>
                             Métodos de pago</b></h6>
-                </div>
-                <div class="card-body text-right">
                     <p>3 métodos de pagos</p>
                     <p>Visa terminación 3168 cómo método de pago prncipal</p>
                     <a href="">Ver más...</a>
