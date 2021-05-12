@@ -18,7 +18,7 @@ include('../partials/navbar.php');
         </h6>
     </div>
 </div>
-<div class="container mt-5">
+<div class="container-fluid mt-5">
     <div class="row">
         <div class="col">
             <table class="table  table-dark table-striped table-hover">
@@ -30,6 +30,7 @@ include('../partials/navbar.php');
                     <td>Cantidad</td>
                     <td>Monto total</td>
                     <td>Fecha</td>
+                    <td>Status</td>
                     <td>Acción</td>
                 </thead>
                 <tbody>
@@ -42,6 +43,15 @@ include('../partials/navbar.php');
                         <td>1 unidad</td>
                         <td>$1200</td>
                         <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
                         <td class="text-center">
                             <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
                         </td>
@@ -55,6 +65,15 @@ include('../partials/navbar.php');
                         <td>1 unidad</td>
                         <td>$1200</td>
                         <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
                         <td class="text-center">
                             <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
                         </td>
@@ -68,6 +87,15 @@ include('../partials/navbar.php');
                         <td>1 unidad</td>
                         <td>$1200</td>
                         <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
                         <td class="text-center">
                             <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
                         </td>
@@ -81,6 +109,15 @@ include('../partials/navbar.php');
                         <td>1 unidad</td>
                         <td>$1200</td>
                         <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
                         <td class="text-center">
                             <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
                         </td>
@@ -94,6 +131,15 @@ include('../partials/navbar.php');
                         <td>1 unidad</td>
                         <td>$1200</td>
                         <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
                         <td class="text-center">
                             <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
                         </td>
@@ -107,6 +153,15 @@ include('../partials/navbar.php');
                         <td>1 unidad</td>
                         <td>$1200</td>
                         <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
                         <td class="text-center">
                             <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
                         </td>
@@ -120,6 +175,15 @@ include('../partials/navbar.php');
                         <td>1 unidad</td>
                         <td>$1200</td>
                         <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
                         <td class="text-center">
                             <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
                         </td>
@@ -133,6 +197,15 @@ include('../partials/navbar.php');
                         <td>1 unidad</td>
                         <td>$1200</td>
                         <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
                         <td class="text-center">
                             <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
                         </td>
@@ -146,6 +219,15 @@ include('../partials/navbar.php');
                         <td>1 unidad</td>
                         <td>$1200</td>
                         <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
                         <td class="text-center">
                             <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
                         </td>
@@ -159,10 +241,86 @@ include('../partials/navbar.php');
                         <td>1 unidad</td>
                         <td>$1200</td>
                         <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
                         <td class="text-center">
                             <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
                         </td>
                     </tr>
+                    <tr>
+                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td>Disco duro</td>
+                        <td>Nicolas Moreno Durán</td>
+                        <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
+                            terminación 2108</td>
+                        <td>1 unidad</td>
+                        <td>$1200</td>
+                        <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
+                        <td class="text-center">
+                            <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td>Disco duro</td>
+                        <td>Nicolas Moreno Durán</td>
+                        <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
+                            terminación 2108</td>
+                        <td>1 unidad</td>
+                        <td>$1200</td>
+                        <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
+                        <td class="text-center">
+                            <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td>Disco duro</td>
+                        <td>Nicolas Moreno Durán</td>
+                        <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
+                            terminación 2108</td>
+                        <td>1 unidad</td>
+                        <td>$1200</td>
+                        <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
+                        <td class="text-center">
+                            <button onclick="modalVentas(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
+                        </td>
+                    </tr>
+                    
                 </tbody>
             </table>
             <!-- Modal -->
