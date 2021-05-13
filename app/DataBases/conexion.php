@@ -3,7 +3,7 @@
 
     //Definimos los parametros de usuario y contraseña para conectar a la BD
     $user = "root";
-    $pwd = "";
+    $pwd = "root";
     $dbname = "TeziushopinhDB";
 
     //Valida que los parametros coincidan y deja conectar
