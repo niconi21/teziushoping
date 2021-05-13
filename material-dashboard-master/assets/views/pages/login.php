@@ -17,21 +17,7 @@ include('../partials/header.php');
 
     <div class="container-fluid mt-5">
         <div class="row ">
-            <!-- <div class="col-lg-4 mt-3">
-                <div class="card">
-                    <div class="card-body text-justify">
-                        <h4 class="text-center"><b><i>Términos y condiciones</i></b></h4>
-                        <ol>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cupiditate corporis in consequatur facere dolorem </li>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cupiditate corporis in consequatur facere dolorem </li>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cupiditate corporis in consequatur facere dolorem </li>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cupiditate corporis in consequatur facere dolorem </li>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cupiditate corporis in consequatur facere dolorem </li>
-                            <a href="" class="text-right">Ver más</a>
-                        </ol>
-                    </div>
-                </div>
-            </div> -->
+            
             <div class="col-md-4 offset-md-4 mt-5">
                 <div class="card bg-card animate__animated animate__fadeInLeft">
                     <div class="card-header text-center">
@@ -39,11 +25,8 @@ include('../partials/header.php');
                         <i>icono</i>
                     </div>
                     <div class="card-body">
-<<<<<<< HEAD
-                        <form action="./dashboard.php" method="post">
-=======
-                        <form action="../../scripts/usuarios/login.php " method="POST" enctype="multipart/form-data">
->>>>>>> 3ece4fa1a50b2a2a4a13aaae943ee51bbc9e5973
+                        <form action="./dashboard.php " method="POST" enctype="multipart/form-data">
+
                             <label for="" class="text-left"> <i class="fa fa-user" aria-hidden="true"></i> Usuario</label>
                             <input type="text" class="form-control mb-3" placeholder="" required name="usuario">
 
@@ -62,21 +45,7 @@ include('../partials/header.php');
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-md-4 mt-3">
-                <div class="card">
-                    <div class="card-body text-justify">
-                        <h4 class="text-center"><b><i>Políticas de privacidad</i></b></h4>
-                        <ol>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cupiditate corporis in consequatur facere dolorem </li>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cupiditate corporis in consequatur facere dolorem </li>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cupiditate corporis in consequatur facere dolorem </li>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cupiditate corporis in consequatur facere dolorem </li>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cupiditate corporis in consequatur facere dolorem </li>
-                            <a href="" class="text-right">Ver más</a>
-                        </ol>
-                    </div>
-                </div>
-            </div> -->
+          
 
         </div>
     </div>

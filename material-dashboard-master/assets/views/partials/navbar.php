@@ -11,8 +11,12 @@ $urls = array(
   "misMetodosPago" => "Mis Métodos de pago",
   "altaMetodoPago" => '<a href="../pages/misMetodosPago.php">Mis métodos de pago</a> > Alta de método de pago',
   "misVentas" => 'Mis ventas',
+  "misCompras" => 'Mis compras',
+  "productosServicios" => 'Productos ó Servicios',
+  "miCarrito" => 'Mi carrito',
+  "compra" => 'Comprar productos',
 
-  )
+)
 
 ?>
 
@@ -27,35 +31,38 @@ $urls = array(
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item <?php echo $page[0] == 'dashboard' ? 'active': '';?>">
+        <li class="nav-item <?php echo $page[0] == 'dashboard' ? 'active' : ''; ?>">
           <a class="nav-link" href="../pages/dashboard.php">Dashboard </a>
         </li>
-        <li class="nav-item <?php echo $page[0] == 'misPublicaciones' ? 'active': '';?>">
+        <li class="nav-item <?php echo $page[0] == 'misPublicaciones' ? 'active' : ''; ?>">
           <a class="nav-link" href="../pages/misPublicaciones.php">Mis publicaciónes</a>
         </li>
-        <li class="nav-item <?php echo $page[0] == 'misVentas' ? 'active': '';?>">
+        <li class="nav-item <?php echo $page[0] == 'misVentas' ? 'active' : ''; ?>">
           <a class="nav-link" href="../pages/misVentas.php">Ventas</a>
         </li>
-        <li class="nav-item <?php echo $page[0] == 'misMetodosPago'  ? 'active': '';?>">
+        <li class="nav-item <?php echo $page[0] == 'misCompras' ? 'active' : ''; ?>">
+          <a class="nav-link" href="../pages/misCompras.php">Compras</a>
+        </li>
+        <li class="nav-item <?php echo $page[0] == 'misMetodosPago'  ? 'active' : ''; ?>">
           <a class="nav-link" href="../pages/misMetodosPago.php">Métodos de pagos</a>
         </li>
-        <li class="nav-item <?php echo $page[0] == 'productosServicios'  ? 'active': '';?>">
-          <a class="nav-link">Productos/Servicios</a>
+        <li class="nav-item <?php echo $page[0] == 'productosServicios'  ? 'active' : ''; ?>">
+          <a class="nav-link" href="../pages/productosServicios.php">Productos/Servicios</a>
         </li>
-        <li class="nav-item <?php echo $page[0] == 'perfil'  ? 'active': '';?>">
+        <li class="nav-item <?php echo $page[0] == 'perfil'  ? 'active' : ''; ?>">
           <a class="nav-link" href="../pages/perfil.usuario.php">Mi perfl</a>
         </li>
 
 
       </ul>
+
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Buscar producto/servicio" aria-label="Search">
         <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i> Buscar
         </button>
       </form>
+      <a href="../pages/miCarrito.php" class="btn ml-2"><i class="fa fa-shopping-cart text-white fa-2x" aria-hidden="true"></i></a>
     </div>
 
 
   </nav>
-  <?php echo $page[0];?>
-  

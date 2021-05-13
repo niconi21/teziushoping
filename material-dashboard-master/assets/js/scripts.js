@@ -58,5 +58,10 @@ function bajaCuentaUsuario() {
 }
 
 function modalVentas(id){
-  $('#exampleModal').modal('toggle')
+  $('#modalVentas').modal('toggle');
+  $('#modalVentas').modal('show');
+}
+function modalCompras(id){
+  $('#modalCompras').modal('toggle');
+  $('#modalCompras').modal('show');
 }
