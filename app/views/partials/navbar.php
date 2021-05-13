@@ -21,7 +21,7 @@ $urls = array(
 ?>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fied-plugin animate__animated animate__fadeInDown">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-fondo fixed-top animate__animated animate__fadeInDown">
     <a class="navbar-brand" href="../pages/dashboard.php">
       <i class="fa fa-shopping-bag" aria-hidden="true"></i>
 
@@ -37,21 +37,31 @@ $urls = array(
         <li class="nav-item <?php echo $page[0] == 'misPublicaciones' ? 'active' : ''; ?>">
           <a class="nav-link" href="../pages/misPublicaciones.php">Mis publicaciónes</a>
         </li>
-        <li class="nav-item <?php echo $page[0] == 'misVentas' ? 'active' : ''; ?>">
-          <a class="nav-link" href="../pages/misVentas.php">Ventas</a>
-        </li>
-        <li class="nav-item <?php echo $page[0] == 'misCompras' ? 'active' : ''; ?>">
-          <a class="nav-link" href="../pages/misCompras.php">Compras</a>
-        </li>
-        <li class="nav-item <?php echo $page[0] == 'misMetodosPago'  ? 'active' : ''; ?>">
-          <a class="nav-link" href="../pages/misMetodosPago.php">Métodos de pagos</a>
-        </li>
         <li class="nav-item <?php echo $page[0] == 'productosServicios'  ? 'active' : ''; ?>">
           <a class="nav-link" href="../pages/productosServicios.php">Productos/Servicios</a>
         </li>
-        <li class="nav-item <?php echo $page[0] == 'perfil'  ? 'active' : ''; ?>">
-          <a class="nav-link" href="../pages/perfil.usuario.php">Mi perfl</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Más Acciónes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../pages/misVentas.php">Ventas</a>
+            <a class="dropdown-item" href="../pages/misCompras.php">Compras</a>
+            <a class="dropdown-item" href="../pages/misMetodosPago.php">Métodos de pagos</a>
+          </div>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Perfil
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../pages/perfil.usuario.php">Mi perfl</a>
+            <a href="../pages/login.php" class=" dropdown-item text-danger"><i class="fa fa-sign-out" aria-hidden="true"></i>
+              Cerrar sesión</a>
+
+          </div>
+        </li>
+
 
 
       </ul>
@@ -62,7 +72,9 @@ $urls = array(
         </button>
       </form>
       <a href="../pages/miCarrito.php" class="btn ml-2"><i class="fa fa-shopping-cart text-white fa-2x" aria-hidden="true"></i></a>
+
     </div>
-
-
   </nav>
+  <div class="container mt-5">
+    <div class="row">...</div>
+  </div>
