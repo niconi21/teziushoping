@@ -39,7 +39,7 @@ include('../partials/header.php');
                         <i>icono</i>
                     </div>
                     <div class="card-body">
-                        <form action="" method="post">
+                        <form action="./dashboard.php" method="post">
                             <label for="" class="text-left"> <i class="fa fa-user" aria-hidden="true"></i> Usuario</label>
                             <input type="text" class="form-control mb-3" placeholder="" required>
 
