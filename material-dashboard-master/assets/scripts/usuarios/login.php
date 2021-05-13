@@ -1,4 +1,5 @@
 <?php
+session_start();
 $usuario = $_POST['usuario'];
 $password = $_POST['password'];
 
@@ -10,6 +11,7 @@ $login = $sentencia->fetch(PDO::FETCH_OBJ);
 echo "Hola";
 
 if($login){
+    $_SESSION['NombreUsuario'] = $login->nombre;
     header("location: ../../views/pages/dashboard.php");
 }else{
     header("location: ../../../views/pages/login.php?Error=100");
