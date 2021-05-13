@@ -7,11 +7,12 @@ include "../../DataBases/conexion.php";
 $sentencia = $cn->prepare("select*from Usuario where nombreUsuario=? and contrasenia=?");
 $sentencia->execute([$usuario, $password]);
 $login = $sentencia->fetch(PDO::FETCH_OBJ);
+echo "Hola";
 
 if($login){
-    header("location: ../../html/altaproducto.html");
+    header("location: ../../views/pages/dashboard.php");
 }else{
-    header("location: ../../html/loginvista.html?Error=100");
+    header("location: ../../../views/pages/login.php?Error=100");
 }
 
 

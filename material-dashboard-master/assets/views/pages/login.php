@@ -39,13 +39,13 @@ include('../partials/header.php');
                         <i>icono</i>
                     </div>
                     <div class="card-body">
-                        <form action="" method="post">
+                        <form action="../../scripts/usuarios/login.php " method="POST" enctype="multipart/form-data">
                             <label for="" class="text-left"> <i class="fa fa-user" aria-hidden="true"></i> Usuario</label>
-                            <input type="text" class="form-control mb-3" placeholder="" required>
+                            <input type="text" class="form-control mb-3" placeholder="" required name="usuario">
 
                             <label for=""><i class="fa fa-key" aria-hidden="true"></i>
                                 Contraseña</label>
-                            <input type="password" class="form-control mb-3" placeholder="" required>
+                            <input type="password" class="form-control mb-3" placeholder="" required name="password">
 
                             <button type="submit" class="btn btn-dark btn-block">
                                 Iniciar sesión
