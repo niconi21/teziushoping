@@ -42,7 +42,7 @@ include('../partials/navbar.php');
                         <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
                         <td>12-03-2021 12:55:32 A.M</td>
                         <td>$1200.00 MXN</td>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>
                             <a class="btn btn-info" href="./altaProducto.misPublicaciones.php?tipo=put&id=1"><i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
@@ -50,13 +50,14 @@ include('../partials/navbar.php');
                             </button>
             
                         </td>
-                    <tr>
+                    </tr>
+                    <tr> 
                         <td>1</td>
                         <td>Disco duro</td>
                         <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
                         <td>12-03-2021 12:55:32 A.M</td>
                         <td>$1200.00 MXN</td>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>
                             <a class="btn btn-info" href="./altaProducto.misPublicaciones.php?tipo=put&id=1"><i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
@@ -64,13 +65,14 @@ include('../partials/navbar.php');
                             </button>
             
                         </td>
-                    <tr>
+                    </tr>
+                    <tr> 
                         <td>1</td>
                         <td>Disco duro</td>
                         <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
                         <td>12-03-2021 12:55:32 A.M</td>
                         <td>$1200.00 MXN</td>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>
                             <a class="btn btn-info" href="./altaProducto.misPublicaciones.php?tipo=put&id=1"><i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
@@ -78,13 +80,14 @@ include('../partials/navbar.php');
                             </button>
             
                         </td>
-                    <tr>
+                    </tr>
+                    <tr> 
                         <td>1</td>
                         <td>Disco duro</td>
                         <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
                         <td>12-03-2021 12:55:32 A.M</td>
                         <td>$1200.00 MXN</td>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>
                             <a class="btn btn-info" href="./altaProducto.misPublicaciones.php?tipo=put&id=1"><i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
@@ -92,13 +95,14 @@ include('../partials/navbar.php');
                             </button>
             
                         </td>
-                    <tr>
+                    </tr>
+                    <tr> 
                         <td>1</td>
                         <td>Disco duro</td>
                         <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
                         <td>12-03-2021 12:55:32 A.M</td>
                         <td>$1200.00 MXN</td>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>
                             <a class="btn btn-info" href="./altaProducto.misPublicaciones.php?tipo=put&id=1"><i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
@@ -106,13 +110,14 @@ include('../partials/navbar.php');
                             </button>
             
                         </td>
-                    <tr>
+                    </tr>
+                    <tr> 
                         <td>1</td>
                         <td>Disco duro</td>
                         <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
                         <td>12-03-2021 12:55:32 A.M</td>
                         <td>$1200.00 MXN</td>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>
                             <a class="btn btn-info" href="./altaProducto.misPublicaciones.php?tipo=put&id=1"><i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
@@ -120,13 +125,14 @@ include('../partials/navbar.php');
                             </button>
             
                         </td>
-                    <tr>
+                    </tr>
+                    <tr> 
                         <td>1</td>
                         <td>Disco duro</td>
                         <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
                         <td>12-03-2021 12:55:32 A.M</td>
                         <td>$1200.00 MXN</td>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>
                             <a class="btn btn-info" href="./altaProducto.misPublicaciones.php?tipo=put&id=1"><i class="fa fa-pencil" aria-hidden="true"></i>
                             </a>
@@ -134,63 +140,6 @@ include('../partials/navbar.php');
                             </button>
             
                         </td>
-                    <tr>
-                        <td>1</td>
-                        <td>Disco duro</td>
-                        <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
-                        <td>12-03-2021 12:55:32 A.M</td>
-                        <td>$1200.00 MXN</td>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
-                        <td>
-                            <a class="btn btn-info" href="./altaProducto.misPublicaciones.php?tipo=put&id=1"><i class="fa fa-pencil" aria-hidden="true"></i>
-                            </a>
-                            <button class="btn btn-danger" onclick="eliminarProductoServicio()"><i class="fa fa-trash" aria-hidden="true"></i>
-                            </button>
-            
-                        </td>
-                    <tr>
-                        <td>1</td>
-                        <td>Disco duro</td>
-                        <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
-                        <td>12-03-2021 12:55:32 A.M</td>
-                        <td>$1200.00 MXN</td>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
-                        <td>
-                            <a class="btn btn-info" href="./altaProducto.misPublicaciones.php?tipo=put&id=1"><i class="fa fa-pencil" aria-hidden="true"></i>
-                            </a>
-                            <button class="btn btn-danger" onclick="eliminarProductoServicio()"><i class="fa fa-trash" aria-hidden="true"></i>
-                            </button>
-            
-                        </td>
-                    <tr>
-                        <td>1</td>
-                        <td>Disco duro</td>
-                        <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
-                        <td>12-03-2021 12:55:32 A.M</td>
-                        <td>$1200.00 MXN</td>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
-                        <td>
-                            <a class="btn btn-info" href="./altaProducto.misPublicaciones.php?tipo=put&id=1"><i class="fa fa-pencil" aria-hidden="true"></i>
-                            </a>
-                            <button class="btn btn-danger" onclick="eliminarProductoServicio()"><i class="fa fa-trash" aria-hidden="true"></i>
-                            </button>
-            
-                        </td>
-                    <tr>
-                        <td>1</td>
-                        <td>Disco duro</td>
-                        <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
-                        <td>12-03-2021 12:55:32 A.M</td>
-                        <td>$1200.00 MXN</td>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
-                        <td>
-                            <a class="btn btn-info" href="./altaProducto.misPublicaciones.php?tipo=put&id=1"><i class="fa fa-pencil" aria-hidden="true"></i>
-                            </a>
-                            <button class="btn btn-danger" onclick="eliminarProductoServicio()"><i class="fa fa-trash" aria-hidden="true"></i>
-                            </button>
-            
-                        </td>
-                    
                     </tr>
                     
                 </tbody>

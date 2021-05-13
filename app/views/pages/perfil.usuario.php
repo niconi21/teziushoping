@@ -23,7 +23,7 @@ include('../partials/navbar.php');
     <div class="row mt-2">
         <div class="col-md-4">
             <div class="card bg-transparent animate__animated animate__fadeInLeft" style="width: 18rem;">
-                <img src="../../img/faces/marc.jpg" class="card-img-top">
+                <img src="../../assets/img/faces/marc.jpg" class="card-img-top">
                 <div class="card-body border border-dark text-center bg-fondo">
                     <h5 class="text-white">Opciónes de cuenta</h5>
                     <hr>

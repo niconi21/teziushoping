@@ -37,7 +37,7 @@ include('../partials/navbar.php');
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>Disco duro</td>
                         <td>Nicolas Moreno Durán</td>
                         <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
@@ -59,7 +59,7 @@ include('../partials/navbar.php');
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>Disco duro</td>
                         <td>Nicolas Moreno Durán</td>
                         <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
@@ -81,7 +81,7 @@ include('../partials/navbar.php');
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>Disco duro</td>
                         <td>Nicolas Moreno Durán</td>
                         <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
@@ -103,7 +103,7 @@ include('../partials/navbar.php');
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>Disco duro</td>
                         <td>Nicolas Moreno Durán</td>
                         <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
@@ -125,7 +125,7 @@ include('../partials/navbar.php');
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>Disco duro</td>
                         <td>Nicolas Moreno Durán</td>
                         <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
@@ -147,7 +147,7 @@ include('../partials/navbar.php');
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>Disco duro</td>
                         <td>Nicolas Moreno Durán</td>
                         <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
@@ -168,7 +168,30 @@ include('../partials/navbar.php');
                             <button onclick="modalCompras(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
                         </td>
                     </tr>
-                    
+                    <tr>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
+                        <td>Disco duro</td>
+                        <td>Nicolas Moreno Durán</td>
+                        <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
+                            terminación 2108</td>
+                        <td>1 unidad</td>
+                        <td>$1200</td>
+                        <td>21/03/2021</td>
+                        <td>
+                            <form action="">
+                                <select name="" id="" class="form-control">
+                                    <option value="">En proceso</option>
+                                    <option value="">En camino</option>
+                                    <option value="">Entregado</option>
+                                </select>
+                            </form>
+                        </td>
+                        <td class="text-center">
+                            <button onclick="modalCompras(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
+                        </td>
+                    </tr>
+
+
 
                 </tbody>
             </table>
@@ -188,7 +211,7 @@ include('../partials/navbar.php');
                 </button>
             </div>
             <div class="modal-body text-center text-justify">
-                <img src="../../img/productos.jpg" alt="" width="150px" class="">
+                <img src="../../assets/img/productos.jpg" alt="" width="150px" class="">
                 <p class="text-left"><b>Descripción:</b>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias ut alias quidem impedit deserunt nisi natus soluta, cum deleniti maxime laudantium, atque, ea voluptas repellat voluptatem? Asperiores voluptatibus nam earum!</p>
                 <p class="text-left"><b>Precio:</b> $1200 MXN</p>
                 <p class="text-left"><b>Cantidad:</b> 2 unidades</p>

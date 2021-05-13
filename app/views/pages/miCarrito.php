@@ -34,7 +34,7 @@ include('../partials/navbar.php');
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>Disco duro</td>
                         <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
                         <td>2 unidades</td>
@@ -44,7 +44,7 @@ include('../partials/navbar.php');
                             </a></td>
                     </tr>
                     <tr>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>Disco duro</td>
                         <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
                         <td>2 unidades</td>
@@ -54,7 +54,7 @@ include('../partials/navbar.php');
                             </a></td>
                     </tr>
                     <tr>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>Disco duro</td>
                         <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
                         <td>2 unidades</td>
@@ -64,7 +64,7 @@ include('../partials/navbar.php');
                             </a></td>
                     </tr>
                     <tr>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>Disco duro</td>
                         <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
                         <td>2 unidades</td>
@@ -74,7 +74,7 @@ include('../partials/navbar.php');
                             </a></td>
                     </tr>
                     <tr>
-                        <td><img src="../../img/productos.jpg" alt="" width="100px"></td>
+                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
                         <td>Disco duro</td>
                         <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
                         <td>2 unidades</td>

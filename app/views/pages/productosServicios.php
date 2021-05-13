@@ -46,7 +46,7 @@ include('../partials/navbar.php');
             <h4 class="text-white">Últimos publicados</h4>
             <div class="card-columns bg-fondo">
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -64,7 +64,7 @@ include('../partials/navbar.php');
                     </div>
                 </div>
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -82,7 +82,7 @@ include('../partials/navbar.php');
                     </div>
                 </div>
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -100,7 +100,7 @@ include('../partials/navbar.php');
                     </div>
                 </div>
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -118,7 +118,7 @@ include('../partials/navbar.php');
                     </div>
                 </div>
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -136,7 +136,7 @@ include('../partials/navbar.php');
                     </div>
                 </div>
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -154,7 +154,7 @@ include('../partials/navbar.php');
                     </div>
                 </div>
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -172,7 +172,7 @@ include('../partials/navbar.php');
                     </div>
                 </div>
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -190,7 +190,7 @@ include('../partials/navbar.php');
                     </div>
                 </div>
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -208,7 +208,7 @@ include('../partials/navbar.php');
                     </div>
                 </div>
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -226,7 +226,7 @@ include('../partials/navbar.php');
                     </div>
                 </div>
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -244,7 +244,7 @@ include('../partials/navbar.php');
                     </div>
                 </div>
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -262,7 +262,7 @@ include('../partials/navbar.php');
                     </div>
                 </div>
                 <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
+                    <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Disco Duro </h5>
                         <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
@@ -279,60 +279,7 @@ include('../partials/navbar.php');
                         </div>
                     </div>
                 </div>
-                <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Disco Duro </h5>
-                        <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
-                        <p class="card-text">Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... </p>
-                        <div class="row">
-                            <div class="col">
-                                <a href="#" class="card-link btn btn-info btn-block"><i class="fa fa-eye" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" class="card-link btn btn-success btn-block"><i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Disco Duro </h5>
-                        <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
-                        <p class="card-text">Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... </p>
-                        <div class="row">
-                            <div class="col">
-                                <a href="#" class="card-link btn btn-info btn-block"><i class="fa fa-eye" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" class="card-link btn btn-success btn-block"><i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="../../img/productos.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Disco Duro </h5>
-                        <p class="card-text"><small class="text-muted"><b>Publicado:</b> 21 de agosto del 2020</small></p>
-                        <p class="card-text">Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... </p>
-                        <div class="row">
-                            <div class="col">
-                                <a href="#" class="card-link btn btn-info btn-block"><i class="fa fa-eye" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" class="card-link btn btn-success btn-block"><i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
