@@ -5,16 +5,23 @@ $password = $_POST['password'];
 
 include "../../DataBases/conexion.php";
 
-$sentencia = $cn->prepare("select*from Usuario where nombreUsuario=? and contrasenia=?");
+$sentencia = $cn->prepare("SELECT * FROM Usuario WHERE usuario=? and contrasenia=?");
 $sentencia->execute([$usuario, $password]);
 $login = $sentencia->fetch(PDO::FETCH_OBJ);
-echo "Hola";
 
 if($login){
-    $_SESSION['NombreUsuario'] = $login->nombre;
+    $_SESSION['idUsuario'] = $login->id;
+    $_SESSION['nombre'] = $login->nombre;
+    $_SESSION['apellidos'] = $login->apellidos;
+    $_SESSION['correo'] = $login->correo;
+    $_SESSION['telefono'] = $login->telefono;
+    $_SESSION['usuario'] = $login->usuario;
+    $_SESSION['fechaCreacion'] = $login->fecha;
+    $_SESSION['estado'] = $login->estado;
+
     header("location: ../../views/pages/dashboard.php");
 }else{
-    header("location: ../../../views/pages/login.php?Error=100");
+    header("location: ../../views/pages/login.php?error=401");
 }
 
 

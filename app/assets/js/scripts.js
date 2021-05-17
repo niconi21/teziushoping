@@ -1,6 +1,3 @@
-
-
-
 function eliminarProductoServicio() {
   Swal.fire({
     title: "¿Estás seguro de querer eliminar este producto/servcio?",
@@ -39,29 +36,39 @@ function eliminarMetodoPago() {
   });
 }
 
-
-
 function bajaCuentaUsuario() {
   Swal.fire({
     title: "Ingresa tu contraseña para dar de baja la cuenta",
     input: "password",
     inputLabel: "Contraseña",
     showCancelButton: true,
-    inputValidator: (value) => {
-      if (!value) {
-        return "Contraseña incorrecta";
-      } else {
-        return "Contraseña correcta, cuenta dada de baja";
-      }
+    inputValidator: (contrasenia) => {
+      $.ajax({
+        type: "POST",
+        url: "../../scripts/usuarios/bajaUsuarios.php",
+        data: {contrasenia},
+        success: function (response) {
+          var jsonData = JSON.parse(response);
+          if (jsonData.success == "1") {
+            window.location.href='../../views/pages/login.php'
+          } else {
+            Swal.fire({
+              title: 'Oops...! contraseña erronea',
+              icon: 'error'
+              
+            })
+          }
+        },
+      });
     },
   });
 }
 
-function modalVentas(id){
-  $('#modalVentas').modal('toggle');
-  $('#modalVentas').modal('show');
+function modalVentas(id) {
+  $("#modalVentas").modal("toggle");
+  $("#modalVentas").modal("show");
 }
-function modalCompras(id){
-  $('#modalCompras').modal('toggle');
-  $('#modalCompras').modal('show');
+function modalCompras(id) {
+  $("#modalCompras").modal("toggle");
+  $("#modalCompras").modal("show");
 }

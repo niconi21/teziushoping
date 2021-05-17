@@ -1,4 +1,6 @@
 <?php
+$registro = $_GET['registro'];
+$error = $_GET['error'];
 //inicio del html
 include('../partials/header.php');
 ?>
@@ -10,14 +12,28 @@ include('../partials/header.php');
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
         <p class="navbar-brand">
-        <i class="fa fa-shopping-bag" aria-hidden="true"></i> TeziuShoping
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i> TeziuShoping
         </p>
     </nav>
 
-
     <div class="container-fluid mt-5">
+        <?php
+        if($registro=='true')
+        echo '<div class="alert alert-success mt-5" role="alert">
+        <b>¡Felicidades!</b>Has sido registrado en Teziushopipng
+    </div>';
+    else if($registro=='false')
+    echo '<div class="alert alert-danger mt-5" role="alert">
+        <b>¡Oops...!</b>Ha ocurrido un error con tu registro, vuelve a intentarlo
+    </div>';
+    if($error==401)
+    echo '<div class="alert alert-danger mt-5" role="alert">
+        <b>¡Oops...!</b>Usuario y/o contraseña incorrectos
+    </div>';
+        ?>
+
         <div class="row ">
-            
+
             <div class="col-md-4 offset-md-4 mt-5">
                 <div class="card bg-card animate__animated animate__fadeInLeft">
                     <div class="card-header text-center">
@@ -25,7 +41,7 @@ include('../partials/header.php');
                         <i class="fa fa-sign-in fa-3x" aria-hidden="true"></i>
                     </div>
                     <div class="card-body">
-                        <form action="./dashboard.php " method="POST" enctype="multipart/form-data">
+                        <form action="../../scripts/usuarios/login.php " method="POST" >
 
                             <label for="" class="text-left"> <i class="fa fa-user" aria-hidden="true"></i> Usuario</label>
                             <input type="text" class="form-control mb-3" placeholder="" required name="usuario">
@@ -45,7 +61,7 @@ include('../partials/header.php');
                     </div>
                 </div>
             </div>
-          
+
 
         </div>
     </div>

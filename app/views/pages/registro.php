@@ -27,48 +27,48 @@ include('../partials/header.php');
 
                     </div>
                     <div class="card-body">
-                        <form action="" method="post">
+                        <form action="../../scripts/usuarios/altaUsuarios.php" method="post">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                     </span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Nombre" required>
+                                <input type="text" class="form-control" placeholder="Nombre" name="nombre" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                     </span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Apellidos" required>
+                                <input type="text" class="form-control" placeholder="Apellidos" name="apellidos" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope" aria-hidden="true"></i>
                                     </span>
                                 </div>
-                                <input type="email" class="form-control" placeholder="Correo" required>
+                                <input type="email" class="form-control" placeholder="Correo" name="correo" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone" aria-hidden="true"></i>
                                     </span>
                                 </div>
-                                <input type="number" min="10" max="10" class="form-control" placeholder="Teléfono" required>
+                                <input type="text" class="form-control" placeholder="Teléfono - Ejemplo: ###-###-####" name="telefono" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i>
                                     </span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Usuario" required>
+                                <input type="text" class="form-control" placeholder="Usuario" name="usuario" required>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i>
                                     </span>
                                 </div>
-                                <input type="password" class="form-control" placeholder="Contraseña" required>
+                                <input type="password" class="form-control" placeholder="Contraseña" name="contrasenia" required>
                             </div>
                             <button type="submit" class="btn btn-dark btn-block mt-3">
                                 Registrarse <i class="fa fa-user-plus" aria-hidden="true"></i>

@@ -19,7 +19,9 @@ CREATE TABLE Usuario(
   correo VARCHAR (60) NOT NULL,
   usuario VARCHAR(20) NOT NULL,
   contrasenia VARCHAR (20) NOT NULL,
+  role VARCHAR(20) NOT NULL,
   id_direccion INT,
+  estado BIT DEFAULT 1,
   fecha DATETIME DEFAULT NOW(),
   CONSTRAINT pk_usuario PRIMARY KEY (id),
   CONSTRAINT fk_usuario_to_direccion FOREIGN KEY (id_direccion) REFERENCES Direccion(id)
@@ -91,3 +93,34 @@ CREATE TABLE Venta(
   CONSTRAINT fk_venta_to_publcacion FOREIGN KEY (id_publicacion) REFERENCES Publicaciones(id),
   CONSTRAINT fk_venta_to_metodo_pago FOREIGN KEY (id_metodo_pago) REFERENCES MetodoPago(id)
 );
+
+
+
+
+USE TeziushopingDB;
+SELECT * FROM Usuario AS u INNER JOIN Direccion AS d ON d.id = u.id_direccion;
+
+INSERT INTO Usuario (
+nombre,
+apellidos,
+telefono,
+correo,
+usuario,
+contrasenia,
+role) VALUES (
+'Nicolas',
+'Moreno Durán',
+'231-140-5938',
+'morenodurann@gmail.com',
+'niconi',
+'niconi21',
+'ADMIN_USER'
+);
+
+
+UPDATE Usuario SET estado = 1 WHERE id = 1;
+
+DELETE FROM Usuario WHERE id=2;
+
+SELECT * FROM Direccion;
+SELECT * FROM Usuario;

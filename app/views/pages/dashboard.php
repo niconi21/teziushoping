@@ -1,4 +1,5 @@
 <?php
+session_start();
 //inicio del html
 include('../partials/header.php');
 ?>
@@ -21,7 +22,7 @@ include('../partials/navbar.php');
 <div class="container mt-3">
     <div class="row animate__animated animate__fadeInLeft">
     
-    <h2 class='text-white mb-3'>Bienvenido -------- ---------- ---------</h2>
+    <h2 class='text-white mb-3'>Bienvenido <?php echo $_SESSION['nombre'].' '.$_SESSION['apellidos']; ?><h2>
 
     
         
