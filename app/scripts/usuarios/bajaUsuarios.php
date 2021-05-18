@@ -15,9 +15,9 @@ try{
 $sql = $cn-> prepare("UPDATE Usuario SET estado = 0 WHERE id=? AND contrasenia=?");
 $result = $sql->execute([$_SESSION['idUsuario'],$contrasenia]);
 if($sql->rowCount()>0){
-    echo json_encode(array('success' => 1, 'Contrasena' => $contrasenia));
+    echo json_encode(array('success' => 1));
 }else{
-    echo json_encode(array('success' => 0, 'Contrasena' => $contrasenia));
+    echo json_encode(array('success' => 0));
 }
     
     

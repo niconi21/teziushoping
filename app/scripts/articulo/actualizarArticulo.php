@@ -17,7 +17,6 @@ $precio = $_POST['precio'];
 $cantidad = $_POST['cantidad'];
 $descripcion = $_POST['descripcion'];
 
-
 ////CargaImagen
 
 // $NombreArchivo = $_FILES['imagenArticulo']['name'];
@@ -33,15 +32,14 @@ $descripcion = $_POST['descripcion'];
 $urlImagen = 'noImage.png';
 try {
     ///madamos los datos por el metodo EXECUTE
-    $sql = $cn->prepare("INSERT INTO Publicaciones(
-    nombre,descripcion,precio,cantidad,imagen,id_categoria,id_usuario
-    ) VALUES (
-    ?, ?, ?, ?, ?, ?, ?)");
-    $resultado = $sql->execute([$nombre, $descripcion, $precio, $cantidad, $urlImagen,$idCategoria, $idUsuario]);
-    if($sql->rowCount()>0)
-        header('location: ../../views/pages/misPublicaciones.php?statusPost=200');
-        else
-        header('location: ../../views/pages/misPublicaciones.php?statusPost=400');
+    $sql = $cn->prepare("UPDATE Publicaciones SET 
+    nombre=?, descripcion=?, precio=?, cantidad=?, imagen=?, id_categoria=?
+    WHERE id=?");
+    $resultado = $sql->execute([$nombre, $descripcion, $precio, $cantidad, $urlImagen, $idCategoria, $_SESSION['idProductoUpdate']]);
+    if ($sql->rowCount() > 0)
+        header('location: ../../views/pages/misPublicaciones.php?statusPut=200');
+    else
+        header('location: ../../views/pages/misPublicaciones.php?statusPut=400');
 } catch (Exception $e) {
     echo "error en: " . $e;
     //depliega el error

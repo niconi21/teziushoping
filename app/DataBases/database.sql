@@ -90,12 +90,7 @@ CREATE TABLE Venta(
   CONSTRAINT fk_venta_to_publcacion FOREIGN KEY (id_publicacion) REFERENCES Publicaciones(id),
   CONSTRAINT fk_venta_to_metodo_pago FOREIGN KEY (id_metodo_pago) REFERENCES MetodoPago(id)
 );
-USE TeziushopingDB;
-SELECT
-  *
-FROM
-  Usuario AS u
-  INNER JOIN Direccion AS d ON d.id = u.id_direccion;
+
 INSERT INTO
   Usuario (
     nombre,
@@ -137,5 +132,20 @@ VALUES
     'CLIENT_USER'
   );
 
-SELECT usuario, estado FROM Usuario;
-UPDATE Usuario SET estado = 1 where id=1 AND contrasenia='niconi21';
+
+USE TeziushopingDB;
+INSERT INTO Categoria (nombre, descripcion) VALUES ('Ferretería','Todo lo que necesites de herramientas aquí lo encontrarás');
+INSERT INTO Categoria (nombre, descripcion) VALUES ('Linea blanca','Regrigeradores, estufas, todo lo indispensable para tu cocina');
+INSERT INTO Categoria (nombre, descripcion) VALUES ('Plomería','Reparación de tuberías de todo tipo');
+INSERT INTO Categoria (nombre, descripcion) VALUES ('Albañilería','Construcciónes y reparaciónes');
+INSERT INTO Categoria (nombre, descripcion) VALUES ('Celulares','Celulares nuevos o de uso, verficar en la descripción de los articulos');
+INSERT INTO Categoria (nombre, descripcion) VALUES ('Computadora','Equipo de computo para todos');
+
+SELECT * FROM Publicaciones;
+
+INSERT INTO Publicaciones(
+    nombre,descripcion,precio,cantidad,imagen,id_categoria,id_usuario
+    ) VALUES (
+    '?', '?', 21, 21, '?', 1, 1);
+
+    SELECT * FROM Publicaciones WHERE id = 2;
