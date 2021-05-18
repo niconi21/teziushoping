@@ -8,37 +8,56 @@ $calle = $_POST['calle'];
 $colonia = $_POST['colonia'];
 $ciudad = $_POST['ciudad'];
 $cp = $_POST['cp'];
-$noInt = $_POST['noInt'];
-$noEXT = $_POST['noEXT'];
+$noInt = $_POST['noInt'] != '' ? $_POST['noInt'] : null;
+$noExt = $_POST['noExt'] != '' ? $_POST['noExt'] : null;
 $referencias = $_POST['referencias'];
-
-
 include('../../DataBases/conexion.php');
+
+echo 'noInt: '.$noInt.'<br>';
+echo 'noExt: '.$noExt.'<br>';
+
+
 
 try {
 
-    $sql = $cn->prepare('UPDATE Usuario SET  nombre = ?, apellidos = ?, correo = ?, telefono = ?');
-    $sql->execute([$nombre, $apellidos, $correo, $telefono,]);
+    $sql = $cn->prepare('UPDATE Usuario SET  nombre = ?, apellidos = ?, correo = ?, telefono = ? WHERE id=?');
+    $sql->execute([$nombre, $apellidos, $correo, $telefono, $_SESSION['idUsuario']]);
 
     if ($sql) {
+        $_SESSION['nombre'] = $nombre;
+        $_SESSION['apellidos'] = $apellidos;
+        $_SESSION['correo'] = $correo;
+        $_SESSION['telefono'] = $telefono;
         $query = $cn->prepare('SELECT id_direccion FROM Usuario WHERE id = ?');
         $query->execute([$_SESSION['idUsuario']]);
         $query = $query->fetch(PDO::FETCH_OBJ);
         if ($query->id_direccion) {
-
-            $updateDireccion = $cn->prepare('UPDATE Direccion SET calle = ?, colonia = ?, ciudad = ?, cp = ?, noInt = ?, noEXT = ?, referencias = ? WHERE id = ?');
-            $updateDireccion->execute([$calle, $colonia, $ciudad, $cp, $noInt, $noEXT, $referencias, $query->id_direccion]);
+            $updateDireccion = $cn->prepare('UPDATE Direccion SET calle = ?, colonia = ?, ciudad = ?, cp = ?, noInt = ?, noExt = ?, referencias = ? WHERE id = ?');
+            $updateDireccion->execute([$calle, $colonia, $ciudad, $cp, $noInt, $noExt, $referencias, $query->id_direccion]);
             if ($updateDireccion) {
-
+                $_SESSION['calle'] = $calle;
+                $_SESSION['colonia'] = $colonia;
+                $_SESSION['ciudad'] = $ciudad;
+                $_SESSION['cp'] = $cp;
+                $_SESSION['noInt'] = $noInt;
+                $_SESSION['noExt'] = $noExt;
+                $_SESSION['referencias'] = $referencias;
                 header('location: ../../views/pages/perfil.usuario.php?status=200');
-            }else{
+            } else {
                 header('location: ../../views/pages/perfil.usuario.php?status=400');
             }
         } else {
-            echo '2';
-            $queryDireccion = $cn->prepare('INSERT INTO Direccion (calle, colonia, ciudad, cp, noInt, noEXT, referencias) VALUES (?, ?, ?, ? ,? ,? ,?)');
-            $queryDireccion->execute([$calle, $colonia, $ciudad, $cp, $noInt, $noEXT, $referencias]);
+            $queryDireccion = $cn->prepare('INSERT INTO Direccion(calle, colonia,  ciudad, cp, noInt, noExt, referencias) VALUES (?, ?, ?, ? ,? ,? ,?)');
+            $queryDireccion->execute([$calle, $colonia, $ciudad, $cp, $noInt, $noExt, $referencias]);
             if ($queryDireccion) {
+                echo 'true';
+                $_SESSION['calle'] = $calle;
+                $_SESSION['colonia'] = $colonia;
+                $_SESSION['ciudad'] = $ciudad;
+                $_SESSION['cp'] = $cp;
+                $_SESSION['noInt'] = $noInt;
+                $_SESSION['noExt'] = $noExt;
+                $_SESSION['referencias'] = $referencias;
                 $queryLastId = $cn->prepare('SELECT MAX(id) AS id FROM Direccion');
                 $queryLastId->execute();
                 $queryLastId = $queryLastId->fetch(PDO::FETCH_OBJ);

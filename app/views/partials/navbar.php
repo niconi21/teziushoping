@@ -56,7 +56,7 @@ $urls = array(
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="../pages/perfil.usuario.php">Mi perfl</a>
-            <a href="../pages/login.php" class=" dropdown-item text-danger"><i class="fa fa-sign-out" aria-hidden="true"></i>
+            <a href="../../scripts/usuarios/logout.php" class=" dropdown-item text-danger"><i class="fa fa-sign-out" aria-hidden="true"></i>
               Cerrar sesión</a>
 
           </div>

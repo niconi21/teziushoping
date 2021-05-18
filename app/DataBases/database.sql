@@ -5,10 +5,10 @@ CREATE TABLE Direccion(
   calle VARCHAR(20) NOT NULL,
   colonia VARCHAR(20) NOT NULL,
   ciudad VARCHAR(20) NOT NULL,
-  cp INT NOT NULL,
+  cp VARCHAR(5) NOT NULL,
   noInt SMALLINT,
-  noEXT SMALLINT,
-  referencias VARCHAR(100) NOT NULL,
+  noExt SMALLINT,
+  referencias VARCHAR(500) NOT NULL,
   CONSTRAINT pk_direccion PRIMARY KEY (id)
 );
 CREATE TABLE Usuario(
@@ -64,28 +64,25 @@ CREATE TABLE Usuario_MetodoPago(
   CONSTRAINT fk_usuario_metodoPago_to_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario(id),
   CONSTRAINT fk_usuario_metodoPago_to_metodo_pago FOREIGN KEY (id_metodo_pago) REFERENCES MetodoPago(id)
 );
-
-
 CREATE TABLE Carrito(
   id INT AUTO_INCREMENT NOT NULL,
   id_usuario INT NOT NULL,
   id_publicacion INT NOT NULL,
-  cantidad TINYINT  NOT NULL,
+  cantidad TINYINT NOT NULL,
   CONSTRAINT pk_carrito PRIMARY KEY (id),
   CONSTRAINT fk_carrito_to_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario(id),
   CONSTRAINT fk_carrito_to_publicacion FOREIGN KEY (id_publicacion) REFERENCES Publicaciones(id)
 );
-
 CREATE TABLE Venta(
   id int AUTO_INCREMENT NOT NULL,
   id_vendedor INT NOT NULL,
   id_comprador INT NOT NULL,
   id_publicacion INT NOT NULL,
   id_metodo_pago INT NOT NULL,
-  cantidad TINYINT  NOT NULL,
+  cantidad TINYINT NOT NULL,
   precio float NOT NULL,
   monto float NOT NULL,
-  fecha DATETIME  NOT NULL,
+  fecha DATETIME NOT NULL,
   status VARCHAR (20) NOT NULL,
   CONSTRAINT pk_venta PRIMARY KEY (id),
   CONSTRAINT fk_venta_to_usuario_comprador FOREIGN KEY (id_comprador) REFERENCES Usuario(id),
@@ -93,34 +90,52 @@ CREATE TABLE Venta(
   CONSTRAINT fk_venta_to_publcacion FOREIGN KEY (id_publicacion) REFERENCES Publicaciones(id),
   CONSTRAINT fk_venta_to_metodo_pago FOREIGN KEY (id_metodo_pago) REFERENCES MetodoPago(id)
 );
-
-
-
-
 USE TeziushopingDB;
-SELECT * FROM Usuario AS u INNER JOIN Direccion AS d ON d.id = u.id_direccion;
+SELECT
+  *
+FROM
+  Usuario AS u
+  INNER JOIN Direccion AS d ON d.id = u.id_direccion;
+INSERT INTO
+  Usuario (
+    nombre,
+    apellidos,
+    telefono,
+    correo,
+    usuario,
+    contrasenia,
+    role
+  )
+VALUES
+  (
+    'Nicolas',
+    'Moreno Durán',
+    '231-140-5938',
+    'morenodurann@gmail.com',
+    'niconi',
+    'niconi21',
+    'ADMIN_USER'
+  );
+INSERT INTO
+  Usuario (
+    nombre,
+    apellidos,
+    telefono,
+    correo,
+    usuario,
+    contrasenia,
+    role
+  )
+VALUES
+  (
+    'Manuel',
+    'Francisco Peña',
+    '123-123-1232',
+    'manuelfrancis44@gmail.com',
+    'manolo',
+    'manolo',
+    'CLIENT_USER'
+  );
 
-INSERT INTO Usuario (
-nombre,
-apellidos,
-telefono,
-correo,
-usuario,
-contrasenia,
-role) VALUES (
-'Nicolas',
-'Moreno Durán',
-'231-140-5938',
-'morenodurann@gmail.com',
-'niconi',
-'niconi21',
-'ADMIN_USER'
-);
-
-
-UPDATE Usuario SET estado = 1 WHERE id = 1;
-
-DELETE FROM Usuario WHERE id=2;
-
-SELECT * FROM Direccion;
-SELECT * FROM Usuario;
+SELECT usuario, estado FROM Usuario;
+UPDATE Usuario SET estado = 1 where id=1 AND contrasenia='niconi21';

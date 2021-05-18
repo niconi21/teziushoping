@@ -1,5 +1,8 @@
 <?php
+
+$status = $_GET['status'];
 session_start();
+// include('../../scripts/usuarios/consultarUsuario.php');
 //inicio del html
 include('../partials/header.php');
 ?>
@@ -10,7 +13,19 @@ include('../partials/header.php');
 //footer del html y de la página
 include('../partials/navbar.php');
 ?>
+
 <div class="container">
+
+    <?php
+    if ($status == 200) {
+        echo '<div class="alert alert-success mt-5" role="alert">
+        Tu perfil ha sido actualizado</div>';
+    }
+    if ($status == 400) {
+        echo '<div class="alert alert-danger mt-5" role="alert">
+        Ha ocurrido un error en la actualización del perfil</div>';
+    }
+    ?>
     <div class="row animate__animated animate__fadeInLeft">
         <h6 class="text-white mt-3">
             <?php
@@ -24,9 +39,21 @@ include('../partials/navbar.php');
     <div class="row mt-2">
         <div class="col-md-4">
             <div class="card bg-transparent animate__animated animate__fadeInLeft" style="width: 18rem;">
-                <img src="../../assets/img/faces/marc.jpg" class="card-img-top">
+                <img src="../../assets/img/faces/marc.jpg" class="card-img-top" id="imagenPrevisualizacion">
+                <form action="../../scripts/usuarios/imagenPerfil.php" method="POST" enctype="multipart/form-data" class="text-center">
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-picture-o" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <input type="file" class="form-control" name="imagen" id="seleccionArchivos" accept="image/*">
+                    </div>
+
+                    <input type="submit" class=" btn btn-info" value="Actualizar imagen de perfil">
+                </form>
                 <div class="card-body border border-dark text-center bg-fondo">
-                    <h5 class="text-white">Estado: <br> Cuenta <?php echo $_SESSION['estado']==1 ? 'Activada': 'Desactivada'; ?></h5>
+                    <h5 class="text-white">Estado: <br> Cuenta <?php echo $_SESSION['estado'] == 1 ? 'Activada' : 'Desactivada'; ?></h5>
                     <hr>
                     <button class="btn btn-outline-danger" onclick="bajaCuentaUsuario()">Dar de baja la cuenta</button><br>
                 </div>
@@ -54,13 +81,7 @@ include('../partials/navbar.php');
                                     </div>
                                     <input type="text" class="form-control" placeholder="Correo" name="correo" value="<?php echo $_SESSION['correo']; ?>" required>
                                 </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-picture-o" aria-hidden="true"></i>
-                                        </span>
-                                    </div>
-                                    <input type="file" class="form-control" name="imagen">
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -120,7 +141,8 @@ include('../partials/navbar.php');
                                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                                 </span>
                                             </div>
-                                            <input type="text" class="form-control" placeholder="No. Int" name="noInt" value="<?php echo $_SESSION['noInt']; ?>" required>
+                                            <input type="text" class="form-control" placeholder="No. Ext" name="noExt" value="<?php echo $_SESSION['noExt']; ?>" required>
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -143,7 +165,7 @@ include('../partials/navbar.php');
                                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                                 </span>
                                             </div>
-                                            <input type="text" class="form-control" placeholder="No. Ext" name="noExt" value="<?php echo $_SESSION['noExt']; ?>" required>
+                                            <input type="text" class="form-control" placeholder="No. Int" name="noInt" value="<?php echo $_SESSION['noInt']; ?>">
                                         </div>
 
                                     </div>
@@ -155,7 +177,7 @@ include('../partials/navbar.php');
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <textarea rows="5" class="form-control" name="referencias" placeholder="Referencias..." value="<?php echo $_SESSION['referencias']; ?>"></textarea>
+                                    <textarea rows="5" class="form-control" name="referencias" placeholder="Referencias..."><?php echo $_SESSION['referencias']; ?></textarea>
                                 </div>
                             </div>
                         </div>
