@@ -51,6 +51,7 @@ if ($put == 400)
                     <th>Correo</th>
                     <th>Teléfono</th>
                     <th>Usuario</th>
+                    <th>Estado</th>
                     <th>Acción</th>
                 </tr>
 
@@ -67,6 +68,7 @@ if ($put == 400)
                     echo '<td>' . $row['correo'] . '</td>';
                     echo '<td>' . $row['telefono'] . '</td>';
                     echo '<td>' . $row['usuario'] . '</td>';
+                    echo '<td>' . ($row['estado']==1 ? 'Activado' : 'Desactivado') . '</td>';
                     echo '<td>
                                 <a class="btn btn-info" href="../../scripts/usuarios/altaUsuario.admin.php?id=' . $row['id'] . '"><i class="fa fa-arrow-up" aria-hidden="true"></i>
 
