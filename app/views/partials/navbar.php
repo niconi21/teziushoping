@@ -1,4 +1,5 @@
 <?php
+session_start();
 $uri = explode('/', $_SERVER['REQUEST_URI']);
 
 $page = explode('.', $uri[sizeof($uri) - 1]);
@@ -15,6 +16,7 @@ $urls = array(
   "productosServicios" => 'Productos ó Servicios',
   "miCarrito" => 'Mi carrito',
   "compra" => 'Comprar productos',
+  "usuarios" => 'Usuarios',
 
 )
 
@@ -40,6 +42,13 @@ $urls = array(
         <li class="nav-item <?php echo $page[0] == 'productosServicios'  ? 'active' : ''; ?>">
           <a class="nav-link" href="../pages/productosServicios.php">Productos/Servicios</a>
         </li>
+        <?php
+        if ($_SESSION['role'] == 'ADMIN_USER')
+          echo '<li class="nav-item' . ($page[0] == 'usuarios'  ? 'active' : '') . '">
+        <a class="nav-link" href="../pages/usuarios.php">Usuarios</a>
+      </li>';
+        ?>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Más Acciónes
