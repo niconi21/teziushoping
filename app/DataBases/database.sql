@@ -51,19 +51,14 @@ CREATE TABLE MetodoPago(
   id int AUTO_INCREMENT NOT NULL,
   titular VARCHAR(60) NOT NULL,
   noTarjeta VARCHAR(20) NOT NULL,
-  dia TINYINT NOT NULL,
-  mes TINYINT NOT NULL,
-  ccv SMALLINT NOT NULL,
-  CONSTRAINT pk_metodoPago PRIMARY KEY (id)
-);
-CREATE TABLE Usuario_MetodoPago(
-  id int AUTO_INCREMENT NOT NULL,
+  mes VARCHAR(2) NOT NULL,
+  anio VARCHAR(4) NOT NULL,
+  ccv VARCHAR(3) NOT NULL,
   id_usuario INT NOT NULL,
-  id_metodo_pago INT NOT NULL,
-  CONSTRAINT pk_usuario_metodoPago PRIMARY KEY (id),
-  CONSTRAINT fk_usuario_metodoPago_to_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario(id),
-  CONSTRAINT fk_usuario_metodoPago_to_metodo_pago FOREIGN KEY (id_metodo_pago) REFERENCES MetodoPago(id)
+  CONSTRAINT pk_metodoPago PRIMARY KEY (id),
+  CONSTRAINT fk_metodoPago_to_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario(id)
 );
+
 CREATE TABLE Carrito(
   id INT AUTO_INCREMENT NOT NULL,
   id_usuario INT NOT NULL,
@@ -133,7 +128,6 @@ VALUES
   );
 
 
-USE TeziushopingDB;
 INSERT INTO Categoria (nombre, descripcion) VALUES ('Ferretería','Todo lo que necesites de herramientas aquí lo encontrarás');
 INSERT INTO Categoria (nombre, descripcion) VALUES ('Linea blanca','Regrigeradores, estufas, todo lo indispensable para tu cocina');
 INSERT INTO Categoria (nombre, descripcion) VALUES ('Plomería','Reparación de tuberías de todo tipo');
@@ -149,3 +143,6 @@ INSERT INTO Publicaciones(
     '?', '?', 21, 21, '?', 1, 1);
 
     SELECT * FROM Publicaciones WHERE id = 2;
+
+SELECT * FROM MetodoPago;
+    UPDATE MetodoPago SET titular='?', noTarjeta='?', mes='1', anio='?', ccv='?' WHERE id=1;

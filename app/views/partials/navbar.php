@@ -76,5 +76,5 @@ $urls = array(
     </div>
   </nav>
   <div class="container mt-5">
-    <div class="row">...</div>
+    <div class="row">&nbsp;</div>
   </div>

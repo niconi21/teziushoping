@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //inicio del html
 include('../partials/header.php');
 ?>
@@ -10,12 +10,13 @@ include('../partials/header.php');
 //footer del html y de la página
 include('../partials/navbar.php');
 
-$tipo =$_GET['tipo'];
-$id =$_GET['id'];
-if($tipo == 'put'){
+$tipo = $_GET['tipo'];
+$_SESSION['idMetodoPagoUpdate'] = $_GET['id'];
+if ($tipo == 'put') {
+    
     $urls['altaMetodoPago'] = '<a href="../pages/misMetodosPago.php">Mis métodos de pago</a> > Actualizar de método de pago';
 
-    //obtener el método de pago por id
+    include('../../scripts/metodosPago/obtenerUnMetodoPago.php');
 }
 ?>
 <div class="container">
@@ -31,10 +32,11 @@ if($tipo == 'put'){
 <div class="container mt-5">
     <div class="row animate__animated animate__fadeInLeft">
         <div class="col-6 offset-3">
-            <form action="" method="post">
+            <form action="
+            <?php echo $tipo == 'put'? '../../scripts/metodosPago/actualizarMetodoPago.php' : '../../scripts/metodosPago/altaMetodoPago.php'?>" method="POST">
                 <div class="card  bg-fondo text-white">
                     <div class="card-header text-center">
-                        <?php echo $tipo == 'put' ? 'Actualizar': 'Agregar';?> método de pago
+                        <?php echo $tipo == 'put' ? 'Actualizar' : 'Agregar'; ?> método de pago
                     </div>
                     <div class="card-body">
                         <div class="input-group mb-3">
@@ -42,7 +44,7 @@ if($tipo == 'put'){
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Nombre del titular" required>
+                            <input type="text" class="form-control" placeholder="Nombre del titular" name="titular" value="<?php echo $result->titular?>" required>
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
@@ -50,44 +52,40 @@ if($tipo == 'put'){
 
                                 </span>
                             </div>
-                            <input type="number" class="form-control" placeholder="Número de tarjeta" required>
+                            <input type="number" class="form-control" placeholder="Número de tarjeta" name="tarjeta" value="<?php echo $result->noTarjeta?>" required>
                         </div>
                         <label>Fecha de expiración</label>
                         <div class="row">
-                            <div class="col-4">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">Día
-                                        </span>
-                                    </div>
-                                    <select>
-                                        <?php
-                                        for ($i = 1; $i < 32; $i++) {
-                                            echo '<option>' . $i . '</option>';
-                                        }
-                                        ?>
-                                    </select>
-                                </div>
-                            </div>
+                            
                             <div class="col">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">Mes
                                         </span>
                                     </div>
-                                    <select>
-                                        <option value="1">Enero</option>
-                                        <option value="2">Febrero</option>
-                                        <option value="3">Marzo</option>
-                                        <option value="4">Abril</option>
-                                        <option value="5">Mayo</option>
-                                        <option value="6">Junio</option>
-                                        <option value="7">Julio</option>
-                                        <option value="8">Agosto</option>
-                                        <option value="9">Septiembre</option>
-                                        <option value="10">Octubre</option>
-                                        <option value="11">Noviembre</option>
-                                        <option value="12">Diciembre</option>
+                                    <select name="mes">
+                                    <?php
+                                    for ($i=1; $i <= 12; $i++) { 
+                                        echo '<option value="'.$i.'" '.($result->mes == $i ? 'selected' : '').'>'.$i.'</option>';
+                                    }
+                                    ?>
+                                        
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">Año
+                                        </span>
+                                    </div>
+                                    <select name="anio">
+                                        <?php
+                                        for ($i = 2021; $i < 2030; $i++) {
+                                            echo '<option value="'.$i.'" '.($result->anio == $i ? 'selected' : '').'>' . $i . '</option>';
+                                        }
+                                        ?>
                                     </select>
                                 </div>
                             </div>
@@ -100,13 +98,13 @@ if($tipo == 'put'){
 
                                 </span>
                             </div>
-                            <input type="password" class="form-control" placeholder="CCV" required>
+                            <input type="password" class="form-control" placeholder="CCV" name="ccv" value="<?php echo $result->ccv;?>" required>
                             <i class="fa fa-question-circle fa-2x ml-2 " aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i>
-         
+
 
                         </div>
                         <div class="card-footer text-muted text-center">
-                            <button type="submit" class="btn btn-success"><?php echo $tipo == 'put' ? 'Actualizar': 'Agregar';?> método de pago</button>
+                            <button type="submit" class="btn btn-success"><?php echo $tipo == 'put' ? 'Actualizar' : 'Agregar'; ?> método de pago</button>
                         </div>
                     </div>
             </form>
