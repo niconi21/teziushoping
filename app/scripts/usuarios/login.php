@@ -19,6 +19,7 @@ if ($login) {
     $_SESSION['fechaCreacion'] = $login->fecha;
     $_SESSION['estado'] = $login->estado;
     $_SESSION['id_direccion'] = $login->id_direccion;
+    $_SESSION['role'] = $login->role;
     if ($_SESSION['id_direccion']) {
         $query = $cn->prepare('SELECT * FROM Direccion WHERE id=?');
         $query->execute([$_SESSION['id_direccion']]);
