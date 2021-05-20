@@ -1,13 +1,21 @@
 <?php
+$delete=$_GET['statusDelete'];
 //inicio del html
 include('../partials/header.php');
 ?>
-<title>Dashboard</title>
+<title>Mi carrito</title>
 </head>
 
 <?php
 //footer del html y de la página
 include('../partials/navbar.php');
+?>
+
+<?php
+if ($delete == 200)
+    echo '<div class="alert alert-success mt-5" role="alert">
+Producto eliminado del carrito
+</div>';
 ?>
 <div class="container">
     <div class="row animate__animated animate__fadeInLeft">
@@ -33,65 +41,41 @@ include('../partials/navbar.php');
                     <td>Acción</td>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
-                        <td>Disco duro</td>
-                        <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
-                        <td>2 unidades</td>
-                        <td>$1200 MXN</td>
-                        <td>$2400 MXN</td>
-                        <td><a href="" class="btn btn-outline-danger"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
-                        <td>Disco duro</td>
-                        <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
-                        <td>2 unidades</td>
-                        <td>$1200 MXN</td>
-                        <td>$2400 MXN</td>
-                        <td><a href="" class="btn btn-outline-danger"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
-                        <td>Disco duro</td>
-                        <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
-                        <td>2 unidades</td>
-                        <td>$1200 MXN</td>
-                        <td>$2400 MXN</td>
-                        <td><a href="" class="btn btn-outline-danger"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
-                        <td>Disco duro</td>
-                        <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
-                        <td>2 unidades</td>
-                        <td>$1200 MXN</td>
-                        <td>$2400 MXN</td>
-                        <td><a href="" class="btn btn-outline-danger"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
-                        <td>Disco duro</td>
-                        <td>Disco duro de 1 tb de almacenamiento perfecto para tus archivos en tu pc... <br><a href="">ver más...</a></td>
-                        <td>2 unidades</td>
-                        <td>$1200 MXN</td>
-                        <td>$2400 MXN</td>
-                        <td><a href="" class="btn btn-outline-danger"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-                            </a></td>
-                    </tr>
+                    <?php
+                    include('../../scripts/carrito/obtenerCarrito.php');
+                    $i = 0;
+                    while ($row = $queryCarrito->fetch(PDO::FETCH_ASSOC)) {
+
+                        $i += ($row['cantidadCarrito'] * $row['precio']);
+
+                        echo '<tr>';
+                        echo '<td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>';
+                        echo '<td>' . $row['nombre'] . '</td>';
+                        echo '<td>' . $row['descripcion'] . '<br><a href="">ver más...</a></td>';
+                        echo '<td>' . $row['cantidadCarrito'] . ' unidades</td>';
+                        echo '<td>$' . $row['precio'] . ' MXN</td>';
+                        echo '<td>$' . ($row['precio'] * $row['cantidadCarrito']) . ' MXN</td>';
+                        echo '<td>
+                        <a href="../../scripts/carrito/bajaCarrito.php?id=' . $row['id'] . '" class="btn btn-outline-danger"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                                        </a>
+                                </td>';
+                        echo '</tr>';
+                    }
+                    ?>
                 </tbody>
                 <tfoot>
                     <tr>
+
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td>Total:</td>
-                        <td>$2400 MXN</td>
+                        <td>
+                            <?php
+
+                            echo '$' . $i . ' MXN';
+                            ?></td>
                     </tr>
 
 

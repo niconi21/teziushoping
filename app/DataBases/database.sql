@@ -146,3 +146,17 @@ INSERT INTO Publicaciones(
 
 SELECT * FROM MetodoPago;
     UPDATE MetodoPago SET titular='?', noTarjeta='?', mes='1', anio='?', ccv='?' WHERE id=1;
+
+    SELECT c.cantidad AS cantidadCarrito, p.nombre, p.descripcion, p.cantidad as cantidadPublicacion, p.precio FROM Carrito AS c INNER JOIN Publicaciones AS p ON  c.id_publicacion = p.id WHERE c.id_usuario = 1;
+
+
+
+
+
+
+
+
+
+
+
+

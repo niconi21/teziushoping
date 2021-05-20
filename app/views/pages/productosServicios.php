@@ -1,15 +1,24 @@
 <?php
+$post = $_GET['statusPost'];
 //inicio del html
 include('../../scripts/articulo/obtenerTodosProductosServicios.php');
 include('../../scripts/articulo/obtenerCategorias.php');
 include('../partials/header.php');
 ?>
-<title>Dashboard</title>
+<title>Productos y servicios</title>
 </head>
 
 <?php
 //footer del html y de la página
 include('../partials/navbar.php');
+if ($post == 200)
+    echo '<div class="alert alert-success mt-5" role="alert">
+<b>¡Felicidades!</b>Producto agregado al carrito
+</div>';
+else if ($post == 400)
+    echo '<div class="alert alert-danger mt-5" role="alert">
+<b>¡Oops...!</b>El producto no ha sido agregado al carrito
+</div>';
 ?>
 <div class="container">
     <div class="row animate__animated animate__fadeInLeft">
@@ -32,7 +41,6 @@ include('../partials/navbar.php');
             <div class="list-group mt-4">
                 <?php
                 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-
                     echo '<a href="./productosServicios.php?categoria=' . $row['nombre'] . '" class="list-group-item bg-fondo text-white">' . $row['nombre'] . '</a>';
                 }
                 ?>
@@ -49,21 +57,24 @@ include('../partials/navbar.php');
                     echo '<div class="card m-3 border border-dark" style="width: 18rem;">
                     <img src="../../assets/img/productos.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">'.$row['nombre'].'</h5>
-                        <p class="card-text"><small class="text-muted"><b>Publicado:</b> '.$row['fecha'].'</small></p>
-                        <p class="card-text"><small class="text-muted"><b>Precio:</b> '.$row['precio'].'</small></p>
-                        <p class="card-text">'.$row['descripcion'].'</p>
-                        <p class="card-text"><small class="text-muted"><b>Stock:</b> '.$row['cantidad'].'</small></p>
-                        <div class="row">
-                            <div class="col">
-                                <a href="#" class="card-link btn btn-info btn-block"><i class="fa fa-eye" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" class="card-link btn btn-success btn-block"><i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <form action="../../scripts/carrito/altaCarrito.php" method="GET">
+                                <h5 class="card-title">' . $row['nombre'] . '</h5>
+                                <p class="card-text"><small class="text-muted"><b>Publicado:</b> ' . $row['fecha'] . '</small></p>
+                                <p class="card-text"><small class="text-muted"><b>Precio:</b> ' . $row['precio'] . '</small></p>
+                                <p class="card-text">' . $row['descripcion'] . '</p>
+                                <p class="card-text"><small class="text-muted"><b>Stock:</b> ' . $row['cantidad'] . '</small></p>
+                                <p class="card-text"><input type=number class="form-control" placeholder="Unidades" name="cantidad"/></p>
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="#" class="card-link btn btn-info btn-block"><i class="fa fa-eye" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                    <button type="submit" name="id_publicacion" value="' . $row['id'] . '"  class="card-link btn btn-success btn-block"><i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                        </form>
                     </div>
                 </div>';
                 }

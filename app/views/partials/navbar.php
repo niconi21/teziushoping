@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if(!isset($_SESSION['nombre'])){
+  header('location: ../pages/login.php?status=403');
+}
 $uri = explode('/', $_SERVER['REQUEST_URI']);
 
 $page = explode('.', $uri[sizeof($uri) - 1]);

@@ -1,6 +1,7 @@
 <?php
 $registro = $_GET['registro'];
 $error = $_GET['error'];
+$status = $_GET['status'];
 //inicio del html
 include('../partials/header.php');
 ?>
@@ -18,17 +19,21 @@ include('../partials/header.php');
 
     <div class="container-fluid mt-5">
         <?php
-        if($registro=='true')
-        echo '<div class="alert alert-success mt-5" role="alert">
+        if ($registro == 'true')
+            echo '<div class="alert alert-success mt-5" role="alert">
         <b>¡Felicidades!</b>Has sido registrado en Teziushopipng
     </div>';
-    else if($registro=='false')
-    echo '<div class="alert alert-danger mt-5" role="alert">
+        else if ($registro == 'false')
+            echo '<div class="alert alert-danger mt-5" role="alert">
         <b>¡Oops...!</b>Ha ocurrido un error con tu registro, vuelve a intentarlo
     </div>';
-    if($error==401)
-    echo '<div class="alert alert-danger mt-5" role="alert">
+        if ($error == 401)
+            echo '<div class="alert alert-danger mt-5" role="alert">
         <b>¡Oops...!</b>Usuario y/o contraseña incorrectos
+    </div>';
+        if ($status == 403)
+            echo '<div class="alert alert-danger mt-5" role="alert">
+        No cuentas con el acceso a esta información, por favor logueate con tus credencales correspondientes
     </div>';
         ?>
 
@@ -41,7 +46,7 @@ include('../partials/header.php');
                         <i class="fa fa-sign-in fa-3x" aria-hidden="true"></i>
                     </div>
                     <div class="card-body">
-                        <form action="../../scripts/usuarios/login.php " method="POST" >
+                        <form action="../../scripts/usuarios/login.php " method="POST">
 
                             <label for="" class="text-left"> <i class="fa fa-user" aria-hidden="true"></i> Usuario</label>
                             <input type="text" class="form-control mb-3" placeholder="" required name="usuario">
