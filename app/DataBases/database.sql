@@ -22,6 +22,7 @@ CREATE TABLE Usuario(
   role VARCHAR(20) NOT NULL,
   id_direccion INT,
   estado BIT DEFAULT 1,
+  imagen VARCHAR(500),
   fecha DATETIME DEFAULT NOW(),
   CONSTRAINT pk_usuario PRIMARY KEY (id),
   CONSTRAINT fk_usuario_to_direccion FOREIGN KEY (id_direccion) REFERENCES Direccion(id)

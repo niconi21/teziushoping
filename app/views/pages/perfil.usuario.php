@@ -1,6 +1,7 @@
 <?php
 
 $status = $_GET['status'];
+$statusFile = $_GET['statusFile'];
 session_start();
 // include('../../scripts/usuarios/consultarUsuario.php');
 //inicio del html
@@ -25,6 +26,18 @@ include('../partials/navbar.php');
         echo '<div class="alert alert-danger mt-5" role="alert">
         Ha ocurrido un error en la actualización del perfil</div>';
     }
+    if ($statusFile == 200) {
+        echo '<div class="alert alert-success mt-5" role="alert">
+        imagen de perfil actualizada</div>';
+    }
+    if ($statusFile == 400) {
+        echo '<div class="alert alert-danger mt-5" role="alert">
+        Ocurrió un error al actualizar la imagen, intenta más tarde</div>';
+    }
+    if ($statusFile == 401) {
+        echo '<div class="alert alert-danger mt-5" role="alert">
+        Escoge una nueva imagen de perfil</div>';
+    }
     ?>
     <div class="row animate__animated animate__fadeInLeft">
         <h6 class="text-white mt-3">
@@ -39,7 +52,7 @@ include('../partials/navbar.php');
     <div class="row mt-2">
         <div class="col-md-4">
             <div class="card bg-transparent animate__animated animate__fadeInLeft" style="width: 18rem;">
-                <img src="../../assets/img/faces/marc.jpg" class="card-img-top" id="imagenPrevisualizacion">
+                <img src="<?php echo $host . 'usuarios/' . $_SESSION['imagen']; ?>" class="card-img-top" id="imagenPrevisualizacion">
                 <form action="../../scripts/usuarios/imagenPerfil.php" method="POST" enctype="multipart/form-data" class="text-center">
 
                     <div class="input-group mb-3">

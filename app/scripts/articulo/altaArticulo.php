@@ -17,35 +17,43 @@ $precio = $_POST['precio'];
 $cantidad = $_POST['cantidad'];
 $descripcion = $_POST['descripcion'];
 
+$imagen = $_FILES['imagen']['name'];
+$ext = explode('.', $imagen)[1];
+$tamano = $_FILES['imagen']['size'];
+$temp = $_FILES['imagen']['tmp_name'];
+$milliseconds = round(microtime(true) * 1000);
+$imagen = $_SESSION['idUsuario'] . '-' . $nombre . '-' . $milliseconds . '.' . $ext;
 
-////CargaImagen
-
-// $NombreArchivo = $_FILES['imagenArticulo']['name'];
-// $directorioTemporal = $_FILES['imagenArticulo']['tmp_name'];
-// $tamanio = $_FILES['imagenArticulo']['size'];
-
-////fin cargaImagen
-// $imagenArticulo = file_get_contents($directorioTemporal);
-// $urlArticulo = "img/";
-// $extImagen = strtolower(pathinfo($NombreArchivo, PATHINFO_EXTENSION));
-// $urlImagen = $urlArticulo . $nombreArticulo . "." . $extImagen;
-// move_uploaded_file($directorioTemporal, $urlImagen);
-$urlImagen = 'noImage.png';
-try {
-    ///madamos los datos por el metodo EXECUTE
-    $sql = $cn->prepare("INSERT INTO Publicaciones(
-    nombre,descripcion,precio,cantidad,imagen,id_categoria,id_usuario
-    ) VALUES (
-    ?, ?, ?, ?, ?, ?, ?)");
-    $resultado = $sql->execute([$nombre, $descripcion, $precio, $cantidad, $urlImagen,$idCategoria, $idUsuario]);
-    if($sql->rowCount()>0)
-        header('location: ../../views/pages/misPublicaciones.php?statusPost=200');
-        else
-        header('location: ../../views/pages/misPublicaciones.php?statusPost=400');
-} catch (Exception $e) {
-    echo "error en: " . $e;
-    //depliega el error
+if ($ext == "png" || $ext == "jpg" || $ext == "jpeg") {
+    if ($tamano < 2000000) {
+        $milliseconds = round(microtime(true) * 1000);
+        $imagen = $_SESSION['idUsuario'] . '-' . $_SESSION['usuario'] . '-' . $milliseconds . '.' . $ext;
+        $ruta = '/var/www/html/teziushoping/app/public/productos/' . $imagen;
+        if (move_uploaded_file($temp, $ruta)) {
+            try {
+                $sql = $cn->prepare("INSERT INTO Publicaciones(
+                nombre,descripcion,precio,cantidad,imagen,id_categoria,id_usuario
+                ) VALUES (
+                ?, ?, ?, ?, ?, ?, ?)");
+                $resultado = $sql->execute([$nombre, $descripcion, $precio, $cantidad, $imagen, $idCategoria, $idUsuario]);
+                if ($sql->rowCount() > 0)
+                    header('location: ../../views/pages/misPublicaciones.php?statusPost=200');
+                else
+                    header('location: ../../views/pages/misPublicaciones.php?statusPost=400');
+            } catch (Exception $e) {
+                echo "error en: " . $e;
+            }
+        }else{
+            echo'error';
+        }
+    }
 }
+
+
+
+
+
+
 
 
 ?>

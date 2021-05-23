@@ -12,12 +12,6 @@ $noInt = $_POST['noInt'] != '' ? $_POST['noInt'] : null;
 $noExt = $_POST['noExt'] != '' ? $_POST['noExt'] : null;
 $referencias = $_POST['referencias'];
 include('../../DataBases/conexion.php');
-
-echo 'noInt: '.$noInt.'<br>';
-echo 'noExt: '.$noExt.'<br>';
-
-
-
 try {
 
     $sql = $cn->prepare('UPDATE Usuario SET  nombre = ?, apellidos = ?, correo = ?, telefono = ? WHERE id=?');
