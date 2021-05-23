@@ -49,7 +49,7 @@ Producto eliminado del carrito
                         $i += ($row['cantidadCarrito'] * $row['precio']);
 
                         echo '<tr>';
-                        echo '<td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>';
+                        echo '<td><img src="'.$host.'productos/'.$row['imagen'].'" alt="" width="100px"></td>';
                         echo '<td>' . $row['nombre'] . '</td>';
                         echo '<td>' . $row['descripcion'] . '<br><a href="">ver más...</a></td>';
                         echo '<td>' . $row['cantidadCarrito'] . ' unidades</td>';

@@ -58,8 +58,8 @@ include('../partials/navbar.php');
                     <h4 class="text-white">Elije tu método de pago</h4>
                 </div>
                 <div class="card-body">
-                    <form action="">
-                        <select class="form-control" onchange="selectMetodoPago()" id='selectMetodosPago'>
+                    <form action="../../scripts/carrito/realizarPago.php" method="POST">
+                        <select class="form-control" onchange="selectMetodoPago()" id='selectMetodosPago' name="metodoPago">
 
                             <?php
                             while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
@@ -83,7 +83,7 @@ include('../partials/navbar.php');
                             </div>
                         </div>
                         <h3 class="text-white">Pagar: <?php echo $totalPagar; ?> MXN</h3><br>
-                        <button class="btn btn-success btn-block"> <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                        <button type="submit" class="btn btn-success btn-block"> <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
                             Procesar Pago
                         </button>
                     </form>
@@ -93,9 +93,7 @@ include('../partials/navbar.php');
     </div>
 </div>
 <script>
-    function prueba() {
-        console.log('asd');
-    }
+    
 
     function selectMetodoPago() {
         let id = document.getElementById('selectMetodosPago').value;
@@ -115,9 +113,7 @@ include('../partials/navbar.php');
         })
     }
 
-    function realizarPago(){
-        
-    }
+    
 </script>
 
 

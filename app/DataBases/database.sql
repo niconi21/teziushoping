@@ -78,7 +78,7 @@ CREATE TABLE Venta(
   cantidad TINYINT NOT NULL,
   precio float NOT NULL,
   monto float NOT NULL,
-  fecha DATETIME NOT NULL,
+  fecha DATETIME DEFAULT NOW(),
   status VARCHAR (20) NOT NULL,
   CONSTRAINT pk_venta PRIMARY KEY (id),
   CONSTRAINT fk_venta_to_usuario_comprador FOREIGN KEY (id_comprador) REFERENCES Usuario(id),
@@ -156,28 +156,5 @@ INSERT INTO Categoria (nombre, descripcion) VALUES ('Albañilería','Construcci�
 INSERT INTO Categoria (nombre, descripcion) VALUES ('Celulares','Celulares nuevos o de uso, verficar en la descripción de los articulos');
 INSERT INTO Categoria (nombre, descripcion) VALUES ('Computadora','Equipo de computo para todos');
 
-SELECT * FROM Publicaciones;
 
-INSERT INTO Publicaciones(
-    nombre,descripcion,precio,cantidad,imagen,id_categoria,id_usuario
-    ) VALUES (
-    '?', '?', 21, 21, '?', 1, 1);
-
-    SELECT * FROM Publicaciones WHERE id = 2;
-
-SELECT * FROM MetodoPago;
-    UPDATE MetodoPago SET titular='?', noTarjeta='?', mes='1', anio='?', ccv='?' WHERE id=1;
-
-    SELECT c.cantidad AS cantidadCarrito, p.nombre, p.descripcion, p.cantidad as cantidadPublicacion, p.precio FROM Carrito AS c INNER JOIN Publicaciones AS p ON  c.id_publicacion = p.id WHERE c.id_usuario = 1;
-
-
-
-SELECT p.*, u.nombre, u.apellidos FROM Publicaciones AS p INNER JOIN Usuario AS u ON p.id_usuario = u.id  WHERE p.id = 1;
-
-
-
-
-
-
-
-
+  

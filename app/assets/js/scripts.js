@@ -115,14 +115,80 @@ function bajaCuentaUsuario() {
   });
 }
 
-function modalVentas(id) {
+function modalVentas(id, host) {
+  $.get(`../../scripts/ventas/obtenerUnaVenta.php?id=${id}`, function (data) {
+    let result = data.result;
+    console.log(data);
+    let contenido = `
+      <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Venta de ${result.nombreProducto}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center text-justify">
+      <img src="${host}productos/${
+      result.imagen
+    }" alt="" width="150px" class="">
+      <p class="text-left"><b>Descripción:</b>${result.descripcion}</p>
+      <p class="text-left"><b>Precio:</b> $${result.precio} MXN</p>
+      <p class="text-left"><b>Cantidad:</b> ${result.cantidad} unidades</p>
+      <p class="text-left"><b>Monto total:</b> $${result.monto}MXN</p>
+      <p class="text-left"><b>Vendedor:</b> ${result.nombreComprador} ${
+      result.apellidos
+    }</p>
+      <p class="text-left"><b>Método de pago:</b> <i class="fa fa-cc-visa" aria-hidden="true"></i>
+          terminación ${result.noTarjeta.substr(12, 16)}</p>
+      <p class="text-left"><b>Status:</b><span class="${result.status == 'En proceso' ? 'text-warning' : (result.status == 'En camino' ? 'text-info' : 'text-success')}">${
+        result.status
+      }</span></p>
+      <p class="text-left"><b>Fecha:</b> ${result.fecha}</p>
+      </div>
+      `;
+    $("#contenedorVentasModal").empty();
+    $("#contenedorVentasModal").append(contenido);
+    $("#modalVentas").modal("toggle");
+    $("#modalVentas").modal("show");
+  });
   $("#modalVentas").modal("toggle");
   $("#modalVentas").modal("show");
 }
 
-function modalCompras(id) {
-  $("#modalCompras").modal("toggle");
-  $("#modalCompras").modal("show");
+function modalCompras(id, host) {
+  $.get(`../../scripts/compras/obtenerUnaCompra.php?id=${id}`, function (data) {
+    let result = data.result;
+    console.log(data);
+    let contenido = `
+      <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Compra de ${result.nombreProducto}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center text-justify">
+      <img src="${host}productos/${
+      result.imagen
+    }" alt="" width="150px" class="">
+      <p class="text-left"><b>Descripción:</b>${result.descripcion}</p>
+      <p class="text-left"><b>Precio:</b> $${result.precio} MXN</p>
+      <p class="text-left"><b>Cantidad:</b> ${result.cantidad} unidades</p>
+      <p class="text-left"><b>Monto total:</b> $${result.monto}MXN</p>
+      <p class="text-left"><b>Vendedor:</b> ${result.nombreVendedor} ${
+      result.apellidos
+    }</p>
+      <p class="text-left"><b>Método de pago:</b> <i class="fa fa-cc-visa" aria-hidden="true"></i>
+          terminación ${result.noTarjeta.substr(12, 16)}</p>
+      <p class="text-left"><b>Status:</b><span class="${result.status == 'En proceso' ? 'text-warning' : (result.status == 'En camino' ? 'text-info' : 'text-success')}">${
+        result.status
+      }</span></p>
+      <p class="text-left"><b>Fecha:</b> ${result.fecha}</p>
+      </div>
+      `;
+    $("#contenedorComprasModal").empty();
+    $("#contenedorComprasModal").append(contenido);
+    $("#modalCompras").modal("toggle");
+    $("#modalCompras").modal("show");
+  });
 }
 
 function modalProducto(id, host) {

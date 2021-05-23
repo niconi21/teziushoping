@@ -7,6 +7,7 @@ include('../partials/header.php');
 
 <?php
 //footer del html y de la página
+include('../../scripts/compras/obtenerCompras.php');
 include('../partials/navbar.php');
 ?>
 <div class="container">
@@ -37,161 +38,30 @@ include('../partials/navbar.php');
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
-                        <td>Disco duro</td>
-                        <td>Nicolas Moreno Durán</td>
-                        <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
-                            terminación 2108</td>
-                        <td>1 unidad</td>
-                        <td>$1200</td>
-                        <td>21/03/2021</td>
-                        <td>
-                            <form action="">
-                                <select name="" id="" class="form-control">
-                                    <option value="">En proceso</option>
-                                    <option value="">En camino</option>
-                                    <option value="">Entregado</option>
-                                </select>
-                            </form>
-                        </td>
-                        <td class="text-center">
-                            <button onclick="modalCompras(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
-                        <td>Disco duro</td>
-                        <td>Nicolas Moreno Durán</td>
-                        <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
-                            terminación 2108</td>
-                        <td>1 unidad</td>
-                        <td>$1200</td>
-                        <td>21/03/2021</td>
-                        <td>
-                            <form action="">
-                                <select name="" id="" class="form-control">
-                                    <option value="">En proceso</option>
-                                    <option value="">En camino</option>
-                                    <option value="">Entregado</option>
-                                </select>
-                            </form>
-                        </td>
-                        <td class="text-center">
-                            <button onclick="modalCompras(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
-                        <td>Disco duro</td>
-                        <td>Nicolas Moreno Durán</td>
-                        <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
-                            terminación 2108</td>
-                        <td>1 unidad</td>
-                        <td>$1200</td>
-                        <td>21/03/2021</td>
-                        <td>
-                            <form action="">
-                                <select name="" id="" class="form-control">
-                                    <option value="">En proceso</option>
-                                    <option value="">En camino</option>
-                                    <option value="">Entregado</option>
-                                </select>
-                            </form>
-                        </td>
-                        <td class="text-center">
-                            <button onclick="modalCompras(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
-                        <td>Disco duro</td>
-                        <td>Nicolas Moreno Durán</td>
-                        <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
-                            terminación 2108</td>
-                        <td>1 unidad</td>
-                        <td>$1200</td>
-                        <td>21/03/2021</td>
-                        <td>
-                            <form action="">
-                                <select name="" id="" class="form-control">
-                                    <option value="">En proceso</option>
-                                    <option value="">En camino</option>
-                                    <option value="">Entregado</option>
-                                </select>
-                            </form>
-                        </td>
-                        <td class="text-center">
-                            <button onclick="modalCompras(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
-                        <td>Disco duro</td>
-                        <td>Nicolas Moreno Durán</td>
-                        <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
-                            terminación 2108</td>
-                        <td>1 unidad</td>
-                        <td>$1200</td>
-                        <td>21/03/2021</td>
-                        <td>
-                            <form action="">
-                                <select name="" id="" class="form-control">
-                                    <option value="">En proceso</option>
-                                    <option value="">En camino</option>
-                                    <option value="">Entregado</option>
-                                </select>
-                            </form>
-                        </td>
-                        <td class="text-center">
-                            <button onclick="modalCompras(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
-                        <td>Disco duro</td>
-                        <td>Nicolas Moreno Durán</td>
-                        <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
-                            terminación 2108</td>
-                        <td>1 unidad</td>
-                        <td>$1200</td>
-                        <td>21/03/2021</td>
-                        <td>
-                            <form action="">
-                                <select name="" id="" class="form-control">
-                                    <option value="">En proceso</option>
-                                    <option value="">En camino</option>
-                                    <option value="">Entregado</option>
-                                </select>
-                            </form>
-                        </td>
-                        <td class="text-center">
-                            <button onclick="modalCompras(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="../../assets/img/productos.jpg" alt="" width="100px"></td>
-                        <td>Disco duro</td>
-                        <td>Nicolas Moreno Durán</td>
-                        <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
-                            terminación 2108</td>
-                        <td>1 unidad</td>
-                        <td>$1200</td>
-                        <td>21/03/2021</td>
-                        <td>
-                            <form action="">
-                                <select name="" id="" class="form-control">
-                                    <option value="">En proceso</option>
-                                    <option value="">En camino</option>
-                                    <option value="">Entregado</option>
-                                </select>
-                            </form>
-                        </td>
-                        <td class="text-center">
-                            <button onclick="modalCompras(1)" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
-                        </td>
-                    </tr>
+
+                        <?php
+                        while ($row = $queryCompras->fetch(PDO::FETCH_ASSOC)) {
 
 
+                            echo '
+                            <tr>
+                                <td><img src="' . $host . 'productos/' . $row['imagen'] . '" alt="" width="100px"></td>
+                                <td>' . $row['nombreProducto'] . '</td>
+                                <td>' . $row['nombreVendedor'] . ' ' . $row['apellidos'] . '</td>
+                                <td><i class="fa fa-cc-visa" aria-hidden="true"></i>
+                                    terminación ' . substr($row['noTarjeta'], 12, 16) . '</td>
+                                <td>' . $row['cantidad'] . ' unidad</td>
+                                <td>$' . $row['monto'] . ' MXN</td>
+                                <td>' . $row['fecha'] . '</td>
+                                <td>
+                                    '.$row['status'].'
+                                </td>
+                                <td class="text-center">
+                                    <button onclick="modalCompras('.$row['id'].', \''.$host.'\')" class="btn btn-btn-btn-outline-dark"><i class="fa fa-eye text-white" aria-hidden="true"></i></button>
+                                </td>
+                            </tr>';
+                        }
+                        ?>
 
                 </tbody>
             </table>
@@ -203,7 +73,7 @@ include('../partials/navbar.php');
 <!-- Modal -->
 <div class="modal fade" id="modalCompras" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" id="contenedorComprasModal">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Compra de disco duro</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -223,12 +93,14 @@ include('../partials/navbar.php');
                 <p class="text-left"><b>Fecha:</b> 12-03-2021 12:55:32 A.M</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>
 </div>
+
+
+
 <?php
 //footer del html y de la página
 include('../partials/footer.php');
