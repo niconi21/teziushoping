@@ -1,6 +1,8 @@
 <?php
 $statusPost = $_GET['statusPost'];
 $statusPut = $_GET['statusPut'];
+$statusDelete = $_GET['statusDelete'];
+
 //inicio del html
 include('../../scripts/metodosPago/obtenerMetodosPago.php');
 
@@ -44,6 +46,14 @@ El metodo de pago Ha sido actualizado</div>';
         echo '<div class="alert alert-danger mt-5" role="alert">
         Error al actualizar metodo de pago</div>';
     }
+    if ($statusDelete == 200) {
+        echo '<div class="alert alert-warning mt-5" role="alert">
+El metodo de pago Ha sido eliminado</div>';
+    }
+    if ($statusDelete == 404) {
+        echo '<div class="alert alert-danger mt-5" role="alert">
+        El metodo de pago no pudo ser eliminado</div>';
+    }
     ?>
     <div class="row animate__animated animate__fadeInLeft">
         <div class="col"><a href="./altaMetodoPago.MisMetodosPago.php?tipo=post" class="btn btn-success"> <i class="fa fa-plus-circle" aria-hidden="true"></i>
@@ -65,7 +75,7 @@ El metodo de pago Ha sido actualizado</div>';
                                     terminación ' . (substr($result['noTarjeta'], 12, 4)) . ' -
                                     <a href="./altaMetodoPago.MisMetodosPago.php?tipo=put&id=' . $result['id'] . '" class="btn btn-outline-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                     </a>
-                                    <button onclick="eliminarMetodoPago()" class="btn btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i>
+                                    <button onclick="eliminarMetodoPago(' . $result['id'] . ')" class="btn btn-outline-danger"><i class="fa fa-trash" aria-hidden="true"></i>
                                         </i>
                                     </button>
                                 </h5>

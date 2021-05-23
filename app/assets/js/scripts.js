@@ -52,7 +52,7 @@ function eliminarProductoServicio(nombre, id) {
   });
 }
 
-function eliminarMetodoPago() {
+function eliminarMetodoPago(id) {
   Swal.fire({
     title: "¿Estás seguro de querer eliminar este método de pago?",
     showDenyButton: true,
@@ -62,10 +62,26 @@ function eliminarMetodoPago() {
     if (result.isConfirmed) {
       Swal.fire("Operación cancelada", "", "info");
     } else if (result.isDenied) {
-      Swal.fire(
-        "Método de pago eliminado",
-        "Se ha eliminado el método de pago",
-        "success"
+      $.get(
+        `../../scripts/metodosPago/bajaMetodoPago.php?id=${id}`,
+        function (data) {
+          if (data.ok) {
+            Swal.fire(
+              "Método de pago eliminado",
+              "Se ha eliminado el método de pago",
+              "success"
+            );
+            setTimeout(() => {
+              window.location.href = "./misMetodosPago.php?statusDelete=200";
+            }, 1000);
+          } else {
+            Swal.fire(
+              "Oops...!",
+              "Ha ocurrido un error al eliminar su método de pago",
+              "danger"
+            );
+          }
+        }
       );
     }
   });
@@ -131,5 +147,3 @@ function modalProducto(id, host) {
     }
   );
 }
-
-  
