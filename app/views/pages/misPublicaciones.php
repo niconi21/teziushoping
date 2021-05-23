@@ -58,6 +58,7 @@ include('../partials/navbar.php');
                 <td>Descripción</td>
                 <td>Fecha</td>
                 <td>Precio</td>
+                <td>Estado de publicación</td>
                 <td>Imagen</td>
                 <td>Acción</td>
 
@@ -72,6 +73,7 @@ include('../partials/navbar.php');
                         echo '<td>' . $row['descripcion'] . '</td>';
                         echo '<td>' . $row['fecha'] . '</td>';
                         echo '<td>$' . $row['precio'] . ' MXN</td>';
+                        echo '<td>' . ($row['activo']==true ? 'Publicación activa' : 'Publicación pausada') . '</td>';
                         echo '<td><img src="' . $host . 'productos/' . $row['imagen'] . '" alt="" width="100px"></td>';
                         echo '<td>
                                 <a class="btn btn-info" href="./altaProducto.misPublicaciones.php?tipo=put&id=' . $row['id'] . '"><i class="fa fa-pencil" aria-hidden="true"></i>

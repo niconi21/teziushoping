@@ -13,7 +13,7 @@ include('../partials/header.php');
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
         <p class="navbar-brand">
-            <i class="fa fa-shopping-bag" aria-hidden="true"></i> TeziuShoping
+        <img src="../../assets/img/Logo Teziushopping.jpg" height="30" alt="" class="d-inline-block align-top"></a>
         </p>
     </nav>
 
@@ -30,6 +30,10 @@ include('../partials/header.php');
         if ($error == 401)
             echo '<div class="alert alert-danger mt-5" role="alert">
         <b>¡Oops...!</b>Usuario y/o contraseña incorrectos
+    </div>';
+        if ($error == 403)
+            echo '<div class="alert alert-warning mt-5" role="alert">
+        <b>¡Oops...!</b> Tu cuenta fué dada de baja
     </div>';
         if ($status == 403)
             echo '<div class="alert alert-danger mt-5" role="alert">

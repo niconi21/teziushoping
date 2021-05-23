@@ -1,5 +1,5 @@
 <?php
-$delete=$_GET['statusDelete'];
+$delete = $_GET['statusDelete'];
 //inicio del html
 include('../partials/header.php');
 ?>
@@ -86,7 +86,7 @@ Producto eliminado del carrito
     </div>
     <div class="row">
         <div class="col offset-10">
-            <a href="./compra.php" class="btn btn-success btn-block"><i class="fa fa-money" aria-hidden="true"></i>
+            <a href="./compra.php?id=<?php echo $_SESSION['idUsuario'];?>" class="btn btn-success btn-block"><i class="fa fa-money" aria-hidden="true"></i>
                 Comprar carrito </a>
         </div>
     </div>

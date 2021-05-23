@@ -48,12 +48,15 @@ try {
     $sql = $cn->prepare("UPDATE Publicaciones SET nombre=?, descripcion=?, precio=?, cantidad=?, imagen=?, id_categoria=? WHERE id=?");
     $resultado = $sql->execute([$nombre, $descripcion, $precio, $cantidad, $imagen, $idCategoria, $_SESSION['idProductoUpdate']]);
     if ($sql->rowCount() > 0) {
+        unset($_SESSION['idProductoUpdate']);
         header('location: ../../views/pages/misPublicaciones.php?statusPut=200');
     } else {
+        unset($_SESSION['idProductoUpdate']);
         $imagen =$_SESSION['imagenProductoUpdate'];
         header('location: ../../views/pages/misPublicaciones.php?statusPut=400');
     }
 } catch (Exception $e) {
+    unset($_SESSION['idProductoUpdate']);
     echo "error en: " . $e;
     //depliega el error
 }

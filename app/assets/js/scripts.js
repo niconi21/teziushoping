@@ -1,6 +1,6 @@
 const $seleccionArchivos = document.querySelector("#seleccionArchivos"),
   $imagenPrevisualizacion = document.querySelector("#imagenPrevisualizacion");
-  
+
 // Escuchar cuando cambie
 $seleccionArchivos.addEventListener("change", () => {
   // Los archivos seleccionados, pueden ser muchos o uno
@@ -103,7 +103,33 @@ function modalVentas(id) {
   $("#modalVentas").modal("toggle");
   $("#modalVentas").modal("show");
 }
+
 function modalCompras(id) {
   $("#modalCompras").modal("toggle");
   $("#modalCompras").modal("show");
 }
+
+function modalProducto(id, host) {
+  $.get(
+    `../../scripts/articulo/ObtenerUnProductoServicio.php?id=${id}`,
+    function (data) {
+      let result = data.result;
+      console.log(data);
+      $("#exampleModalLabel").empty();
+      $("#exampleModalLabel").append(result.nombre);
+      let contenido = `
+      <img src="${host}/productos/${result.imagen}" alt="" width="150px" class="">
+      <p class="text-left"><b>Descripción:</b>${result.descripcion}</p>
+      <p class="text-left"><b>Precio:</b> $${result.precio} MXN</p>
+      <p class="text-left"><b>Vendedor:</b> ${result.nombreUsuario} ${result.apellidos}</p>
+      <p class="text-left"><b>Stok:</b> ${result.cantidad} unidades</p>
+      <p class="text-left"><b>Fecha de publicacion:</b> ${result.fecha} A.M</p>`;
+      $("#contenidoModalProducto").empty();
+      $("#contenidoModalProducto").append(contenido);
+      $("#modalProducto").modal("toggle");
+      $("#modalProducto").modal("show");
+    }
+  );
+}
+
+  

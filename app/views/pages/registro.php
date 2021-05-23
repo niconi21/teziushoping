@@ -10,7 +10,7 @@ include('../partials/header.php');
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
         <p class="navbar-brand">
-        <i class="fa fa-shopping-bag" aria-hidden="true"></i> TeziuShoping
+        <img src="../../assets/img/Logo Teziushopping.jpg" height="30" alt="" class="d-inline-block align-top"></a>
         </p>
     </nav>
 

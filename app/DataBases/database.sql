@@ -125,7 +125,27 @@ VALUES
     'manuelfrancis44@gmail.com',
     'manolo',
     'manolo',
-    'CLIENT_USER'
+    'ADMIN_USER'
+  );
+INSERT INTO
+  Usuario (
+    nombre,
+    apellidos,
+    telefono,
+    correo,
+    usuario,
+    contrasenia,
+    role
+  )
+VALUES
+  (
+    'Jared Josue',
+    'Camacho Rolon',
+    '2311381718',
+    'jj.cr@live.com',
+    'shopping73',
+    'shopping73',
+    'ADMIN_USER'
   );
 
 
@@ -152,7 +172,7 @@ SELECT * FROM MetodoPago;
 
 
 
-
+SELECT p.*, u.nombre, u.apellidos FROM Publicaciones AS p INNER JOIN Usuario AS u ON p.id_usuario = u.id  WHERE p.id = 1;
 
 
 

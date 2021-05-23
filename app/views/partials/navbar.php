@@ -29,9 +29,8 @@ $urls = array(
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-fondo fixed-top animate__animated animate__fadeInDown">
     <a class="navbar-brand" href="../pages/dashboard.php">
-      <i class="fa fa-shopping-bag" aria-hidden="true"></i>
 
-      Teziushoping</a>
+        <img src="../../assets/img/Logo Teziushopping.jpg" height="30" alt="" class="d-inline-block align-top"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
