@@ -14,11 +14,11 @@ include('../partials/navbar.php');
 ?>
 <div class="container">
     <div class="row animate__animated animate__fadeInLeft">
-        <h6 class="text-white mt-3">
+        <h3 class="text-white mt-3">
             <?php
             echo $urls[$page[0]];
             ?>
-        </h6>
+        </h3>
     </div>
 </div>
 

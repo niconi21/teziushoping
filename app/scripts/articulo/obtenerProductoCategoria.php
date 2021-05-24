@@ -1,7 +1,7 @@
 <?php
 $id = $_GET['id'];
 include('../../DataBases/conexion.php');
-$queryProductos = $cn->prepare('SELECT p.*, c.nombre AS nombreCategoria FROM Publicaciones AS p INNER JOIN Categoria AS c ON p.id_categoria = c.id WHERE id_categoria=?');
+$queryProductos = $cn->prepare('SELECT p.*, c.nombre AS nombreCategoria FROM Publicaciones AS p INNER JOIN Categoria AS c ON p.id_categoria = c.id WHERE id_categoria=? AND activo=true');
 $queryProductos->execute([$id]);
 
 $publicaciones = array();

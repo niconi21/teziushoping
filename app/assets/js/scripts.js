@@ -204,7 +204,7 @@ function modalProducto(id, host) {
       <p class="text-left"><b>Descripción:</b>${result.descripcion}</p>
       <p class="text-left"><b>Precio:</b> $${result.precio} MXN</p>
       <p class="text-left"><b>Vendedor:</b> ${result.nombreUsuario} ${result.apellidos}</p>
-      <p class="text-left"><b>Stok:</b> ${result.cantidad} unidades</p>
+      <p class="text-left"><b>Stock:</b> ${result.cantidad} unidades</p>
       <p class="text-left"><b>Fecha de publicacion:</b> ${result.fecha} A.M</p>`;
       $("#contenidoModalProducto").empty();
       $("#contenidoModalProducto").append(contenido);

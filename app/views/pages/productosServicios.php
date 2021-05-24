@@ -34,35 +34,18 @@ else if ($put == 400)
 ?>
 <div class="container">
     <div class="row animate__animated animate__fadeInLeft">
-        <h6 class="text-white mt-3">
+        <h3 class="text-white mt-3">
             <?php
             echo $urls[$page[0]];
             ?>
-        </h6>
+        </h3>
     </div>
 </div>
 
 <div class="container-fluid mt-5">
     <div class="row mb-5">
-        <div class="col-3 text-white text-center">
-            <h4>Categorías</h4>
-            <div class="form-inline my-2 my-lg-0 ml-3">
-                <input class="form-control" type="search" placeholder="Categoría" aria-label="Search" id="inputBuscar">
-                <button class="btn btn-success my-2 my-sm-0" type="submit" onclick="buscador(<?php echo '\'' . $host . '\'' ?>)"><i class="fa fa-search" aria-hidden="true"></i> </button>
-            </div>
-            <div class="list-group mt-4">
-
-                <?php
-                while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-
-                    echo '<span  class="list-group-item bg-fondo text-white" onclick="buscarCategoria(' . $row['id'] . ',\'' . $host . '\')">' . $row['nombre'] . '</span>';
-                }
-                ?>
-
-
-            </div>
-        </div>
-        <div class="col-9  pt-3">
+        
+        <div class="col  pt-3">
             <h4 class="text-white" id="textoPublicaciones">Últimos publicados</h4>
             <div class="card-columns bg-fondo" id="contenedorProductosServicios">
                 <?php
