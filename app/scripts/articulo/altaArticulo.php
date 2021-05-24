@@ -44,7 +44,7 @@ if ($ext == "png" || $ext == "jpg" || $ext == "jpeg") {
                 echo "error en: " . $e;
             }
         }else{
-            echo'error';
+            header('location: ../../views/pages/misPublicaciones.php?statusPost=400');
         }
     }
 }

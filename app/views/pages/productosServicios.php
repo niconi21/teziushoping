@@ -131,7 +131,7 @@ else if ($put == 400)
                     <img src="${host}productos/${result.imagen}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <form action="../../scripts/carrito/altaCarrito.php" method="POST">
-                                <h5 class="card-title">Tornillos</h5>
+                                <h5 class="card-title">${result.nombre}</h5>
                                 <p class="card-text"><small class="text-muted"><b>Publicado:</b> ${result.fecha}</small></p>
                                 <p class="card-text"><small class="text-muted"><b>Precio:$ </b> ${result.precio}</small></p>
                                 <p class="card-text">${result.descripcion}</p>
