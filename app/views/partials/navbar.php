@@ -11,13 +11,13 @@ $page = explode('.', $uri[sizeof($uri) - 1]);
 $urls = array(
   "dashboard" => '<a>Dashboard</a>',
   "altaProducto" =>  '<a href="../pages/misPublicaciones.php">Mis publicaciónes</a> > Alta de Producto',
-  "misPublicaciones" => "Mis Publicaciónes",
+  "misPublicaciones" => "Mis Publicaciones",
   "perfil" => "Mi Perfil",
   "misMetodosPago" => "Mis Métodos de pago",
   "altaMetodoPago" => '<a href="../pages/misMetodosPago.php">Mis métodos de pago</a> > Alta de método de pago',
   "misVentas" => 'Mis ventas',
   "misCompras" => 'Mis compras',
-  "productosServicios" => 'Productos ó Servicios',
+  "productosServicios" => 'Productos o Servicios',
   "miCarrito" => 'Mi carrito',
   "compra" => 'Comprar productos',
   "usuarios" => 'Usuarios',
@@ -57,8 +57,8 @@ $urls = array(
             Más Acciónes
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../pages/misVentas.php">Ventas</a>
-            <a class="dropdown-item" href="../pages/misCompras.php">Compras</a>
+            <a class="dropdown-item" href="../pages/misVentas.php">Mis Ventas</a>
+            <a class="dropdown-item" href="../pages/misCompras.php">Mis Compras</a>
             <a class="dropdown-item" href="../pages/misMetodosPago.php">Métodos de pagos</a>
           </div>
         </li>
@@ -67,7 +67,7 @@ $urls = array(
             Perfil
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../pages/perfil.usuario.php">Mi perfl</a>
+            <a class="dropdown-item" href="../pages/perfil.usuario.php">Mi perfil</a>
             <a href="../../scripts/usuarios/logout.php" class=" dropdown-item text-danger"><i class="fa fa-sign-out" aria-hidden="true"></i>
               Cerrar sesión</a>
 

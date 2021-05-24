@@ -16,7 +16,7 @@ include('../partials/navbar.php');
 
 <div class="container">
     <div class="row animate__animated animate__fadeInLeft">
-        <h6 class="text-white mt-3">
+        <h6 class="text-white mt-3 pl-5">
             <?php
             echo $urls[$page[0]];
             ?>
