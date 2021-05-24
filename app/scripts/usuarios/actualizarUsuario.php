@@ -40,7 +40,6 @@ try {
             $queryDireccion = $cn->prepare('INSERT INTO Direccion(calle, colonia,  ciudad, cp, noInt, noExt, referencias) VALUES (?, ?, ?, ? ,? ,? ,?)');
             $queryDireccion->execute([$calle, $colonia, $ciudad, $cp, $noInt, $noExt, $referencias]);
             if ($queryDireccion) {
-                echo 'true';
                 $_SESSION['calle'] = $calle;
                 $_SESSION['colonia'] = $colonia;
                 $_SESSION['ciudad'] = $ciudad;

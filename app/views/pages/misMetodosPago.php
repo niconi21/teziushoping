@@ -81,6 +81,7 @@ El metodo de pago Ha sido eliminado</div>';
                                 </h5>
                                 <p class="card-text"><b>Exp: </b>' . $result['mes'] . '/' . (substr($result['anio'], 2, 2)) . '</p>
                                 <p class="card-text"><b>Titular: </b>' . $result['titular'] . '</p>
+                                <p class="card-text"><b>Dirección: </b>' . $result['ciudad'] . ', col.' . $result['colonia'] . ', CP.' . $result['cp'] . '</p>
                                 <small>' . ($result['noTarjeta'][0] == 4 ? 'Visa' : ($result['noTarjeta'][0] == 5 ? 'MasterCard' : 'Desconocida')) . '</small>
                             </div>
                         </div>';

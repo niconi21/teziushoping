@@ -56,8 +56,10 @@ CREATE TABLE MetodoPago(
   anio VARCHAR(4) NOT NULL,
   ccv VARCHAR(3) NOT NULL,
   id_usuario INT NOT NULL,
+  id_direccion INT NOT NULL,
   CONSTRAINT pk_metodoPago PRIMARY KEY (id),
-  CONSTRAINT fk_metodoPago_to_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario(id)
+  CONSTRAINT fk_metodoPago_to_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario(id),
+  CONSTRAINT fk_metodoPago_to_direccion FOREIGN KEY (id_direccion) REFERENCES Direccion(id)
 );
 CREATE TABLE Carrito(
   id INT AUTO_INCREMENT NOT NULL,
