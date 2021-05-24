@@ -1,7 +1,5 @@
 <?php
 session_start();
-$nombre = $_POST['nombre'];
-$apellidos = $_POST['apellidos'];
 $correo = $_POST['correo'];
 $telefono = $_POST['telefono'];
 $calle = $_POST['calle'];
@@ -14,12 +12,10 @@ $referencias = $_POST['referencias'];
 include('../../DataBases/conexion.php');
 try {
 
-    $sql = $cn->prepare('UPDATE Usuario SET  nombre = ?, apellidos = ?, correo = ?, telefono = ? WHERE id=?');
-    $sql->execute([$nombre, $apellidos, $correo, $telefono, $_SESSION['idUsuario']]);
+    $sql = $cn->prepare('UPDATE Usuario SET  correo = ?, telefono = ? WHERE id=?');
+    $sql->execute([$correo, $telefono, $_SESSION['idUsuario']]);
 
     if ($sql) {
-        $_SESSION['nombre'] = $nombre;
-        $_SESSION['apellidos'] = $apellidos;
         $_SESSION['correo'] = $correo;
         $_SESSION['telefono'] = $telefono;
         $query = $cn->prepare('SELECT id_direccion FROM Usuario WHERE id = ?');
@@ -56,8 +52,6 @@ try {
                 $queryLastId->execute();
                 $queryLastId = $queryLastId->fetch(PDO::FETCH_OBJ);
                 if ($queryLastId) {
-                    echo $queryLastId->id . '<br>';
-                    echo $_SESSION['idUsuario'];
                     $updateUsuario = $cn->prepare('UPDATE Usuario SET id_direccion = ? WHERE id = ?');
                     $updateUsuario->execute([$queryLastId->id, $_SESSION['idUsuario']]);
                     if ($updateUsuario) {
