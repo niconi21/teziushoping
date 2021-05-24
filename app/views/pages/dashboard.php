@@ -3,7 +3,7 @@ session_start();
 //inicio del html
 include('../partials/header.php');
 ?>
-<title>Dashboard</title>
+<title>Inicio</title>
 </head>
 
 <?php

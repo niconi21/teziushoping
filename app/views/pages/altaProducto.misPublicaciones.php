@@ -5,7 +5,7 @@ include('../partials/header.php');
 include('../../scripts/articulo/obtenerCategorias.php');
 
 ?>
-<title>Alta de producto</title>
+<title>Alta de Producto</title>
 </head>
 
 <?php
@@ -56,7 +56,7 @@ if ($tipo == 'put') {
                                         </span>
                                     </div>
                                     <select class="form-control" name="idCategoria" required>
-                                        <option value="0">Seleccióna una categoría</option>
+                                        <option value="0">Selecciona una categoría</option>
                                         <?php
                                         while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
                                             echo '<option value="' . $row['id'] . '" ' . ($result->id_categoria == $row['id'] ? 'selected' : '') . '>' . $row['nombre'] . '</option>';

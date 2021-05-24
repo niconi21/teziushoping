@@ -28,7 +28,7 @@ include('../partials/navbar.php');
     }
     if ($statusFile == 200) {
         echo '<div class="alert alert-success mt-5" role="alert">
-        imagen de perfil actualizada</div>';
+        Imagen de perfil actualizada</div>';
     }
     if ($statusFile == 400) {
         echo '<div class="alert alert-danger mt-5" role="alert">
