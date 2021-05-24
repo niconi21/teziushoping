@@ -52,7 +52,7 @@ if ($tipo == 'put') {
 
                                 </span>
                             </div>
-                            <input type="number"  class="form-control" placeholder="Número de tarjeta" name="tarjeta" value="<?php echo $result->noTarjeta?>" required>
+                            <input type="text"  maxlength="16" minlength="16" class="form-control" placeholder="Número de tarjeta" name="tarjeta" value="<?php echo $result->noTarjeta?>" required>
                         </div>
                         <label>Fecha de expiración</label>
                         <div class="row">
