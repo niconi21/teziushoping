@@ -40,7 +40,7 @@ CREATE TABLE Publicaciones(
   precio FLOAT NOT NULL,
   cantidad TINYINT NOT NULL,
   imagen VARCHAR(150),
-  activo BIT DEFAULT 1,
+  activo TINYINT(1),
   id_categoria INT NOT NULL,
   id_usuario INT NOT NULL,
   fecha DATETIME DEFAULT NOW(),
