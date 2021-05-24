@@ -51,7 +51,7 @@ if ($ext == "png" || $ext == "jpg" || $ext == "jpeg") {
                     header('location: ../../views/pages/misPublicaciones.php?statusPost=200');
                 else
                     {
-                        // header('location: ../../views/pages/misPublicaciones.php?statusPost=400');
+                        header('location: ../../views/pages/misPublicaciones.php?statusPost=400');
                     }
             } catch (Exception $e) {
                 echo "error en: " . $e;

@@ -1,12 +1,9 @@
 <?php
 $post = $_GET['statusPost'];
 $put = $_GET['statusPut'];
-$idCategoria = $_GET['categoria'];
-//inicio del html
-if (!isset($idCategoria))
-    include('../../scripts/articulo/obtenerTodosProductosServicios.php');
+include('../../scripts/articulo/obtenerTodosProductosServicios.php');
 
-include('../../scripts/articulo/obtenerCategorias.php');
+
 include('../partials/header.php');
 ?>
 <title>Productos y servicios</title>
@@ -44,7 +41,7 @@ else if ($put == 400)
 
 <div class="container-fluid mt-5">
     <div class="row mb-5">
-        
+
         <div class="col  pt-3">
             <h4 class="text-white" id="textoPublicaciones">Últimos publicados</h4>
             <div class="card-columns bg-fondo" id="contenedorProductosServicios">
@@ -103,100 +100,6 @@ else if ($put == 400)
     </div>
 </div>
 <script>
-    function buscarCategoria(id, host) {
-        $.get(`../../scripts/articulo/obtenerProductoCategoria.php?id=${id}`, function(data) {
-            $('#contenedorProductosServicios').empty();
-            if (data.ok) {
-                contenido = '';
-                data.results.forEach(result => {
-                    contenido += `
-                    <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="${host}productos/${result.imagen}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <form action="../../scripts/carrito/altaCarrito.php" method="POST">
-                                <h5 class="card-title">${result.nombre}</h5>
-                                <p class="card-text"><small class="text-muted"><b>Publicado:</b> ${result.fecha}</small></p>
-                                <p class="card-text"><small class="text-muted"><b>Precio:$ </b> ${result.precio}</small></p>
-                                <p class="card-text">${result.descripcion}</p>
-                                <p class="card-text"><small class="text-muted"><b>Stock:</b> ${result.cantidad}</small></p>
-                                <p class="card-text"><input type=number min="0" max="${result.cantidad}" class="form-control" placeholder="Unidades" name="cantidad"/></p>
-                                <div class="row">
-                                    <div class="col">
-                                        <a type"button" onclick="modalProducto(${result.id},${host})" class="card-link btn btn-info btn-block"><i class="fa fa-eye" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                    <button type="submit" name="id_publicacion" value="${result.id}"  class="card-link btn btn-success btn-block"><i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                        </form>
-                    </div>
-                </div>`;
-                });
-                $('#contenedorProductosServicios').append(contenido);
-                $('#textoPublicaciones').empty();
-                $('#textoPublicaciones').append(data.results[0].nombreCategoria);
-            } else {
-                $('#textoPublicaciones').empty();
-                $('#textoPublicaciones').append('No hay resultados');
-            }
-
-        })
-    }
-
-    function buscador(host) {
-        let categoriaInput = $('#inputBuscar').val();
-        let id = 0;
-        $.get('../../scripts/articulo/obtenerCategoriaJquery.php', function(data) {
-            data.results.forEach(categoria => {
-                if (categoria.nombre == categoriaInput) {
-                    id = categoria.id;
-                    $.get(`../../scripts/articulo/obtenerProductoCategoria.php?id=${id}`, function(data) {
-                        $('#contenedorProductosServicios').empty();
-                        if (data.ok) {
-                            contenido = '';
-                            data.results.forEach(result => {
-                                contenido += `
-                    <div class="card m-3 border border-dark" style="width: 18rem;">
-                    <img src="${host}productos/${result.imagen}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <form action="../../scripts/carrito/altaCarrito.php" method="POST">
-                                <h5 class="card-title">${result.nombre}</h5>
-                                <p class="card-text"><small class="text-muted"><b>Publicado:</b> ${result.fecha}</small></p>
-                                <p class="card-text"><small class="text-muted"><b>Precio:$ </b> ${result.precio}</small></p>
-                                <p class="card-text">${result.descripcion}</p>
-                                <p class="card-text"><small class="text-muted"><b>Stock:</b> ${result.cantidad}</small></p>
-                                <p class="card-text"><input type=number min="0" max="${result.cantidad}" class="form-control" placeholder="Unidades" name="cantidad"/></p>
-                                <div class="row">
-                                    <div class="col">
-                                        <a type"button" onclick="modalProducto(${result.id},${host})" class="card-link btn btn-info btn-block"><i class="fa fa-eye" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                    <button type="submit" name="id_publicacion" value="${result.id}"  class="card-link btn btn-success btn-block"><i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                        </form>
-                    </div>
-                </div>`;
-                            });
-                            $('#contenedorProductosServicios').append(contenido);
-                            $('#textoPublicaciones').empty();
-                            $('#textoPublicaciones').append(data.results[0].nombreCategoria);
-                        } else {
-                            $('#textoPublicaciones').empty();
-                            $('#textoPublicaciones').append('No hay resultados');
-                        }
-
-                    })
-                    return;
-                }
-            });
-        })
-
-    }
 </script>
 
 <?php
