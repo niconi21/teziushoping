@@ -3,7 +3,7 @@
 $protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === true ? 'https://' : 'http://';
 
 $domain = $_SERVER['HTTP_HOST'];
-$host= $protocol.$domain.'/teziushoping/app/public/';
+$host = $protocol . $domain . '/teziushoping/app/public/';
 
 ?>
 <!DOCTYPE html>
@@ -18,6 +18,6 @@ $host= $protocol.$domain.'/teziushoping/app/public/';
   <link rel="stylesheet" href="../../assets/bootstrap-4.5.3-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../assets/css/styles.css">
   <script src="../../assets/bootstrap-4.5.3-dist/js/popper.min.js"></script>
-<script src="../../assets/bootstrap-4.5.3-dist/js/jquery-3.5.1.min.js"></script>
+  <script src="../../assets/bootstrap-4.5.3-dist/js/jquery-3.5.1.min.js"></script>
 
-<script src="../../assets/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+  <script src="../../assets/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>

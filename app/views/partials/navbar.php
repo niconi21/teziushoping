@@ -78,11 +78,7 @@ $urls = array(
 
       </ul>
 
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Buscar producto/servicio" aria-label="Search">
-        <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i> Buscar
-        </button>
-      </form>
+      
       <a href="../pages/miCarrito.php" class="btn ml-2"><i class="fa fa-shopping-cart text-white fa-2x" aria-hidden="true"></i></a>
 
     </div>

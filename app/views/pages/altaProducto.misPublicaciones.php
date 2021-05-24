@@ -19,7 +19,7 @@ if ($tipo == 'put') {
     $urls['altaProducto'] = '<a href="../pages/misPublicaciones.php">Mis publicaciónes</a> > Actualización de Producto';
     //buscar el producto/servicio por el id
     include('../../scripts/articulo/ObtenerUnProductoServicio.php');
-    $_SESSION['imagenProductoUpdate']=$result->imagen;
+    $_SESSION['imagenProductoUpdate'] = $result->imagen;
 }
 ?>
 <div class="container">
@@ -90,6 +90,7 @@ if ($tipo == 'put') {
                                     </div>
                                     <textarea class="form-control" rows="5" required name="descripcion"> <?php echo $result->descripcion; ?></textarea>
                                 </div>
+                                
                                 <div class="input-group mb-3">
 
                                     <input type="file" class="form-control" name="imagen" id="seleccionArchivos" accept="image/*">
@@ -108,8 +109,8 @@ if ($tipo == 'put') {
                 <div class="card-header">
                     <h5><b>Imagen del producto</b></h5>
                 </div>
-                <img src="<?php echo $host.'productos/'.$result->imagen?>" alt="" width="300px" id="imagenPrevisualizacion">
-                
+                <img src="<?php echo $host . 'productos/' . $result->imagen ?>" alt="" width="300px" id="imagenPrevisualizacion">
+
             </div>
         </div>
     </div>

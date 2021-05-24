@@ -28,18 +28,18 @@ function eliminarProductoServicio(nombre, id) {
     if (result.isConfirmed) {
       Swal.fire("Operación cancelada", "", "info");
     } else if (result.isDenied) {
-      $.ajax({
-        type: "POST",
-        url: "../../scripts/articulo/bajaArticulo.php",
-        data: { id },
-        success: function (response) {
-          var jsonData = JSON.parse(response);
-          if (jsonData.success == "1") {
+      
+      $.get(`../../scripts/articulo/bajaArticulo.php?id=${id}`,function (data) {
+        
+          console.log(data);
+          if (data.ok) {
             Swal.fire(
               "Producto/servicio eliminado",
               "Se ha dado de baja el producto/servicio",
               "success"
-            );
+            ).then( ()=>{
+              window.location.href = './misPublicaciones.php';
+            });
           } else {
             Swal.fire({
               title: "Oops...! Error al dar de baja la publicación",
@@ -47,7 +47,7 @@ function eliminarProductoServicio(nombre, id) {
             });
           }
         },
-      });
+      );
     }
   });
 }

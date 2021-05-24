@@ -16,20 +16,21 @@ $idCategoria = $_POST['idCategoria'];
 $precio = $_POST['precio'];
 $cantidad = $_POST['cantidad'];
 $descripcion = $_POST['descripcion'];
+$activo = $_POST['activo'];
 
-echo 'idUsuario: '.$idUsuario.'<br>';
-echo 'nombre: '.$nombre.'<br>';
-echo 'idCategoria: '.$idCategoria.'<br>';
-echo 'precio: '.$precio.'<br>';
-echo 'cantidad: '.$cantidad.'<br>';
-echo 'descripcion: '.$descripcion.'<br>';
+echo '$idUsuario: '.$idUsuario.'<br>';
+echo '$nombre: '.$nombre.'<br>';
+echo '$idCategoria: '.$idCategoria.'<br>';
+echo '$precio: '.$precio.'<br>';
+echo '$cantidad: '.$cantidad.'<br>';
+echo '$descripcion: '.$descripcion.'<br>';
+echo '$activo: '.$activo.'<br>';
 
 $imagen = $_FILES['imagen']['name'];
 $ext = explode('.', $imagen)[1];
 $tamano = $_FILES['imagen']['size'];
 $temp = $_FILES['imagen']['tmp_name'];
 $milliseconds = round(microtime(true) * 1000);
-echo $_SESSION['imagenProductoUpdate'];
 if (isset($imagen) && $imagen != "") {
     if ($ext == "png" || $ext == "jpg" || $ext == "jpeg") {
         if ($tamano < 2000000) {
@@ -44,26 +45,24 @@ if (isset($imagen) && $imagen != "") {
             $ruta = '/var/www/html/teziushoping/app/public/productos/' . $imagen;
             if (!move_uploaded_file($temp, $ruta)) {
                 $imagen = $_SESSION['imagen'];
-                echo $imagen;
             }
         }
     }
 }else{
     $imagen =$_SESSION['imagenProductoUpdate'];
-    echo '<br>imagen almacenada en db: '. $imagen;    
 }
 
 try {
-    echo 'idProducto' . $_SESSION['idProductoUpdate'];
-    ///madamos los datos por el metodo EXECUTE
-    $sql = $cn->prepare("UPDATE Publicaciones SET nombre=?, descripcion=?, precio=?, cantidad=?, imagen=?, id_categoria=? WHERE id=?");
-    $resultado = $sql->execute([$nombre, $descripcion, $precio, $cantidad, $imagen, $idCategoria, $_SESSION['idProductoUpdate']]);
+    $sql = $cn->prepare("UPDATE Publicaciones SET nombre=?, descripcion=?, precio=?, cantidad=?, imagen=?, id_categoria=?, activo = true WHERE id=?");
+    
+    $resultado = $sql->execute([$nombre, $descripcion, $precio, $cantidad, $imagen, $idCategoria,$_SESSION['idProductoUpdate']]);
     if ($sql->rowCount() > 0) {
         unset($_SESSION['idProductoUpdate']);
         header('location: ../../views/pages/misPublicaciones.php?statusPut=200');
     } else {
         unset($_SESSION['idProductoUpdate']);
         $imagen =$_SESSION['imagenProductoUpdate'];
+        echo $imagen;
         
         // header('location: ../../views/pages/misPublicaciones.php?statusPut=400');
     }

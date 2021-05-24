@@ -107,14 +107,14 @@ include('../partials/navbar.php');
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Nombre" name="nombre" value="<?php echo $_SESSION['nombre']; ?>" required>
+                                    <input type="text" class="form-control" placeholder="Nombre" name="nombre" value="<?php echo $_SESSION['nombre']; ?>" required disabled>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Apellidos" name="apellidos" value="<?php echo $_SESSION['apellidos']; ?>" required>
+                                    <input type="text" class="form-control" placeholder="Apellidos" name="apellidos" value="<?php echo $_SESSION['apellidos']; ?>" required disabled>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
