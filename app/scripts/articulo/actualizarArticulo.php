@@ -16,15 +16,7 @@ $idCategoria = $_POST['idCategoria'];
 $precio = $_POST['precio'];
 $cantidad = $_POST['cantidad'];
 $descripcion = $_POST['descripcion'];
-$activo = $_POST['activo'];
 
-echo '$idUsuario: '.$idUsuario.'<br>';
-echo '$nombre: '.$nombre.'<br>';
-echo '$idCategoria: '.$idCategoria.'<br>';
-echo '$precio: '.$precio.'<br>';
-echo '$cantidad: '.$cantidad.'<br>';
-echo '$descripcion: '.$descripcion.'<br>';
-echo '$activo: '.$activo.'<br>';
 
 $imagen = $_FILES['imagen']['name'];
 $ext = explode('.', $imagen)[1];
@@ -34,9 +26,9 @@ $milliseconds = round(microtime(true) * 1000);
 if (isset($imagen) && $imagen != "") {
     if ($ext == "png" || $ext == "jpg" || $ext == "jpeg") {
         if ($tamano < 2000000) {
-            if(isset($_SESSION['imagenProductoUpdate'])){
-                
-                unlink('/var/www/html/teziushoping/app/public/productos/'.$_SESSION['imagenProductoUpdate']);
+            if (isset($_SESSION['imagenProductoUpdate'])) {
+
+                unlink('/var/www/html/teziushoping/app/public/productos/' . $_SESSION['imagenProductoUpdate']);
                 echo 'imagen eliminada';
             }
             echo 'imagen ';
@@ -48,22 +40,25 @@ if (isset($imagen) && $imagen != "") {
             }
         }
     }
-}else{
-    $imagen =$_SESSION['imagenProductoUpdate'];
+} else {
+    $imagen = $_SESSION['imagenProductoUpdate'];
 }
 
 try {
-    $sql = $cn->prepare("UPDATE Publicaciones SET nombre=?, descripcion=?, precio=?, cantidad=?, imagen=?, id_categoria=?, activo = true WHERE id=?");
-    
-    $resultado = $sql->execute([$nombre, $descripcion, $precio, $cantidad, $imagen, $idCategoria,$_SESSION['idProductoUpdate']]);
+    $activo = true;
+    if ($cantidad <= 0)
+        $activo = false;
+    $sql = $cn->prepare("UPDATE Publicaciones SET nombre=?, descripcion=?, precio=?, cantidad=?, imagen=?, id_categoria=?, activo = ? WHERE id=?");
+
+    $resultado = $sql->execute([$nombre, $descripcion, $precio, $cantidad, $imagen, $idCategoria, $activo,$_SESSION['idProductoUpdate']]);
     if ($sql->rowCount() > 0) {
         unset($_SESSION['idProductoUpdate']);
         header('location: ../../views/pages/misPublicaciones.php?statusPut=200');
     } else {
         unset($_SESSION['idProductoUpdate']);
-        $imagen =$_SESSION['imagenProductoUpdate'];
+        $imagen = $_SESSION['imagenProductoUpdate'];
         echo $imagen;
-        
+
         // header('location: ../../views/pages/misPublicaciones.php?statusPut=400');
     }
 } catch (Exception $e) {

@@ -25,7 +25,8 @@ while ($row = $queryCarrito->fetch(PDO::FETCH_ASSOC)) {
         ]);
         if ($insertVenta->rowCount() > 0) {
             $cantiadFinal = $row['cantidadPublicacion'] - $row['cantidadCarrito'];
-            $activo = !$cantiadFinal == 0;
+            echo 'Venta: '.$row['nombre'].' - '. $cantiadFinal.' - Activo: '.$activo.' - ID: '.$row['id_publicacion'].'<br>';
+            $activo = $cantiadFinal == 0 ? 0: 1;
             $updateProducto = $cn->prepare('UPDATE Publicaciones SET cantidad = ?, activo = ? WHERE id = ?');
             $updateProducto->execute([$cantiadFinal, $activo,$row['id_publicacion']]);
             if ($updateProducto->rowCount() > 0) {
