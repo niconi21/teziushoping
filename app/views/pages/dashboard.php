@@ -34,7 +34,7 @@ include('../partials/navbar.php');
                 <div class="card-body">
                     <h6><b><i class="fa fa-star fa-2x" aria-hidden="true"></i>
                             Productos publicados</b></h6>
-                    <p id="contenidoPublicaciones">20 publcaciónes <br> 10 activos <br> 10 inactivos </p>
+                    <p id="contenidoPublicaciones">20 publcaciones <br> 10 activos <br> 10 inactivos </p>
                     <a class=" text-right" href="./misPublicaciones.php">Ver más...</a>
                 </div>
             </div>
@@ -72,7 +72,7 @@ $.get('../../scripts/dashboard/dashboard.php', function (data){
     $('#contenidoMetodo').empty();
     $('#numeroMetodo').empty();
 
-    $('#contenidoPublicaciones').append(data.publicaciones>0 ? `${data.publicaciones} publicaciónes <br> ${data.activas} activas <br> ${data.inactivas} inactivas` : 'No hay publicaciónes');
+    $('#contenidoPublicaciones').append(data.publicaciones>0 ? `${data.publicaciones} publicaciones <br> ${data.activas} activas <br> ${data.inactivas} inactivas` : 'No hay publicaciónes');
     $('#contenidoVentas').append(data.ventas > 0 ? `${data.ventas} ventas realizadas` : 'Ninguna venta realizada');
     $('#cotenidoMetodo').append(data.metodosPago> 0 ? `${data.metodosPago} métodos de pago` : 'No hay métodos de pago registrados');
     $('#numeroMetodo').append(data.metodo != null ? `${data.metodo[0] == 4 ? 'Visa' : (data.metodo[0] == 5 ? 'MasterCard': 'Desconocido')} terminación ${data.metodo.substr(12,16)} como método de pago principal` : '-----');
