@@ -59,7 +59,6 @@ CREATE TABLE MetodoPago(
   CONSTRAINT pk_metodoPago PRIMARY KEY (id),
   CONSTRAINT fk_metodoPago_to_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario(id)
 );
-
 CREATE TABLE Carrito(
   id INT AUTO_INCREMENT NOT NULL,
   id_usuario INT NOT NULL,
@@ -86,7 +85,6 @@ CREATE TABLE Venta(
   CONSTRAINT fk_venta_to_publcacion FOREIGN KEY (id_publicacion) REFERENCES Publicaciones(id),
   CONSTRAINT fk_venta_to_metodo_pago FOREIGN KEY (id_metodo_pago) REFERENCES MetodoPago(id)
 );
-
 INSERT INTO
   Usuario (
     nombre,
@@ -147,14 +145,66 @@ VALUES
     'shopping73',
     'ADMIN_USER'
   );
+INSERT INTO
+  Categoria (nombre, descripcion)
+VALUES
+  (
+    'Ferretería',
+    'Todo lo que necesites de herramientas aquí lo encontrarás'
+  );
+INSERT INTO
+  Categoria (nombre, descripcion)
+VALUES
+  (
+    'Linea blanca',
+    'Regrigeradores, estufas, todo lo indispensable para tu cocina'
+  );
+INSERT INTO
+  Categoria (nombre, descripcion)
+VALUES
+  ('Plomería', 'Reparación de tuberías de todo tipo');
+INSERT INTO
+  Categoria (nombre, descripcion)
+VALUES
+  ('Albañilería', 'Construcciónes y reparaciónes');
+INSERT INTO
+  Categoria (nombre, descripcion)
+VALUES
+  (
+    'Celulares',
+    'Celulares nuevos o de uso, verficar en la descripción de los articulos'
+  );
+INSERT INTO
+  Categoria (nombre, descripcion)
+VALUES
+  ('Computadora', 'Equipo de computo para todos');
+SELECT
+  COUNT(*)
+FROM
+  Publicaciones
+WHERE
+  activo = true
+  AND id_usuario = 1;
+SELECT
+  COUNT(*)
+FROM
+  Publicaciones
+WHERE
+  activo = false
+  AND id_usuario = 1;
+SELECT
+  COUNT(*)
+FROM
+  Publicaciones
+WHERE
+  id_usuario = 1;
+SELECT
+  COUNT(*)
+FROM
+  Venta
+WHERE
+  id_comprador = 1
+  OR id_vendedor = 1;
 
 
-INSERT INTO Categoria (nombre, descripcion) VALUES ('Ferretería','Todo lo que necesites de herramientas aquí lo encontrarás');
-INSERT INTO Categoria (nombre, descripcion) VALUES ('Linea blanca','Regrigeradores, estufas, todo lo indispensable para tu cocina');
-INSERT INTO Categoria (nombre, descripcion) VALUES ('Plomería','Reparación de tuberías de todo tipo');
-INSERT INTO Categoria (nombre, descripcion) VALUES ('Albañilería','Construcciónes y reparaciónes');
-INSERT INTO Categoria (nombre, descripcion) VALUES ('Celulares','Celulares nuevos o de uso, verficar en la descripción de los articulos');
-INSERT INTO Categoria (nombre, descripcion) VALUES ('Computadora','Equipo de computo para todos');
-
-
-  SELECT id, nombre, descripcion, fecha, precio, cantidad, imagen FROM Publicaciones WHERE id_categoria=2;
+SELECT COUNT(*) AS cantidad FROM Venta WHERE id_comprador = 1 OR id_vendedor = 1
