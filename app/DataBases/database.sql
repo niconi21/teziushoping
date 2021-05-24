@@ -157,4 +157,4 @@ INSERT INTO Categoria (nombre, descripcion) VALUES ('Celulares','Celulares nuevo
 INSERT INTO Categoria (nombre, descripcion) VALUES ('Computadora','Equipo de computo para todos');
 
 
-  
+  SELECT id, nombre, descripcion, fecha, precio, cantidad, imagen FROM Publicaciones WHERE id_categoria=2;

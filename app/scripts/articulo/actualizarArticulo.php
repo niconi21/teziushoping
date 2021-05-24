@@ -17,6 +17,13 @@ $precio = $_POST['precio'];
 $cantidad = $_POST['cantidad'];
 $descripcion = $_POST['descripcion'];
 
+echo 'idUsuario: '.$idUsuario.'<br>';
+echo 'nombre: '.$nombre.'<br>';
+echo 'idCategoria: '.$idCategoria.'<br>';
+echo 'precio: '.$precio.'<br>';
+echo 'cantidad: '.$cantidad.'<br>';
+echo 'descripcion: '.$descripcion.'<br>';
+
 $imagen = $_FILES['imagen']['name'];
 $ext = explode('.', $imagen)[1];
 $tamano = $_FILES['imagen']['size'];
@@ -27,8 +34,11 @@ if (isset($imagen) && $imagen != "") {
     if ($ext == "png" || $ext == "jpg" || $ext == "jpeg") {
         if ($tamano < 2000000) {
             if(isset($_SESSION['imagenProductoUpdate'])){
+                
                 unlink('/var/www/html/teziushoping/app/public/productos/'.$_SESSION['imagenProductoUpdate']);
+                echo 'imagen eliminada';
             }
+            echo 'imagen ';
             $milliseconds = round(microtime(true) * 1000);
             $imagen = $_SESSION['idUsuario'] . '-' . $_SESSION['usuario'] . '-' . $milliseconds . '.' . $ext;
             $ruta = '/var/www/html/teziushoping/app/public/productos/' . $imagen;
@@ -40,10 +50,11 @@ if (isset($imagen) && $imagen != "") {
     }
 }else{
     $imagen =$_SESSION['imagenProductoUpdate'];
-    
+    echo '<br>imagen almacenada en db: '. $imagen;    
 }
 
 try {
+    echo 'idProducto' . $_SESSION['idProductoUpdate'];
     ///madamos los datos por el metodo EXECUTE
     $sql = $cn->prepare("UPDATE Publicaciones SET nombre=?, descripcion=?, precio=?, cantidad=?, imagen=?, id_categoria=? WHERE id=?");
     $resultado = $sql->execute([$nombre, $descripcion, $precio, $cantidad, $imagen, $idCategoria, $_SESSION['idProductoUpdate']]);
@@ -53,7 +64,8 @@ try {
     } else {
         unset($_SESSION['idProductoUpdate']);
         $imagen =$_SESSION['imagenProductoUpdate'];
-        header('location: ../../views/pages/misPublicaciones.php?statusPut=400');
+        
+        // header('location: ../../views/pages/misPublicaciones.php?statusPut=400');
     }
 } catch (Exception $e) {
     unset($_SESSION['idProductoUpdate']);

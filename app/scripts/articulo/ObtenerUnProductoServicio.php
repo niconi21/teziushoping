@@ -12,7 +12,6 @@ $queryProducto = $cn->prepare('SELECT p.*, u.nombre AS nombreUsuario, u.apellido
 $queryProducto->execute([$id]);
 $result = $queryProducto->fetchAll(PDO::FETCH_OBJ)[0];
 if (isset($_SESSION['idProductoUpdate'])) {
-    unset($_SESSION['idProductoUpdate']);
     if ($queryProducto->rowCount() < 1) {
         header('location: ../../views/pages/misPublicaciones.php?statusPut=404');
     }
