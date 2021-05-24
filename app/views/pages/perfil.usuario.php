@@ -73,12 +73,12 @@ include('../partials/navbar.php');
             </div>
         </div>
         <div class="col-md-8 bg-fondo text-center animate__animated animate__fadeInRight">
-            <h4 class="text-white mt-3">Información de perfil</h4>
+            <h4 class="text-white mt-3">Información de Perfil</h4>
             <form action="../../scripts/usuarios/actualizarUsuario.php" method="POST">
                 <div class="row mt-2">
                     <div class="col">
                         <div class="card bg-fondo text-white text-left border border-white">
-                            <div class="card-header">Datos de cuenta</div>
+                            <div class="card-header">Datos de Cuenta</div>
                             <div class="card-body">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
@@ -131,7 +131,7 @@ include('../partials/navbar.php');
                 <div class="row mt-3">
                     <div class="col">
                         <div class="card bg-fondo text-white text-left border border-white">
-                            <div class="card-header">Dirección</div>
+                            <div class="card-header">Domicilio</div>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">

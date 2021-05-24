@@ -33,11 +33,11 @@ include('../partials/header.php');
     </div>';
         if ($error == 403)
             echo '<div class="alert alert-warning mt-5" role="alert">
-        <b>¡Oops...!</b> Tu cuenta fué dada de baja
+        <b>¡Oops...!</b> Tu cuenta fue dada de baja
     </div>';
         if ($status == 403)
             echo '<div class="alert alert-danger mt-5" role="alert">
-        No cuentas con el acceso a esta información, por favor logueate con tus credencales correspondientes
+        No cuentas con el acceso a esta información, por favor inicie sesión con sus credencales correspondientes
     </div>';
         ?>
 
