@@ -24,9 +24,10 @@ while ($row = $queryCarrito->fetch(PDO::FETCH_ASSOC)) {
             $row['precio'], ($row['precio'] * $row['cantidadCarrito']), 'En proceso'
         ]);
         if ($insertVenta->rowCount() > 0) {
-
-            $updateProducto = $cn->prepare('UPDATE Publicaciones SET cantidad = ? WHERE id = ?');
-            $updateProducto->execute([$row['cantidadPublicacion'] - $row['cantidadCarrito'], $row['id_publicacion']]);
+            $cantiadFinal = $row['cantidadPublicacion'] - $row['cantidadCarrito'];
+            $activo = !$cantiadFinal == 0;
+            $updateProducto = $cn->prepare('UPDATE Publicaciones SET cantidad = ?, activo = ? WHERE id = ?');
+            $updateProducto->execute([$cantiadFinal, $activo,$row['id_publicacion']]);
             if ($updateProducto->rowCount() > 0) {
                 $deleteCarrito = $cn->prepare('DELETE FROM Carrito WHERE id = ?');
                 $deleteCarrito->execute([$row['id']]);
