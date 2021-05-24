@@ -63,7 +63,7 @@ CREATE TABLE Carrito(
   id INT AUTO_INCREMENT NOT NULL,
   id_usuario INT NOT NULL,
   id_publicacion INT NOT NULL,
-  cantidad TINYINT NOT NULL,
+  cantidad INT NOT NULL,
   CONSTRAINT pk_carrito PRIMARY KEY (id),
   CONSTRAINT fk_carrito_to_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario(id),
   CONSTRAINT fk_carrito_to_publicacion FOREIGN KEY (id_publicacion) REFERENCES Publicaciones(id)
@@ -74,7 +74,7 @@ CREATE TABLE Venta(
   id_comprador INT NOT NULL,
   id_publicacion INT NOT NULL,
   id_metodo_pago INT NOT NULL,
-  cantidad TINYINT NOT NULL,
+  cantidad INT NOT NULL,
   precio float NOT NULL,
   monto float NOT NULL,
   fecha DATETIME DEFAULT NOW(),
@@ -145,66 +145,20 @@ VALUES
     'shopping73',
     'ADMIN_USER'
   );
-INSERT INTO
-  Categoria (nombre, descripcion)
-VALUES
-  (
-    'Ferretería',
-    'Todo lo que necesites de herramientas aquí lo encontrarás'
-  );
-INSERT INTO
-  Categoria (nombre, descripcion)
-VALUES
-  (
-    'Linea blanca',
-    'Regrigeradores, estufas, todo lo indispensable para tu cocina'
-  );
-INSERT INTO
-  Categoria (nombre, descripcion)
-VALUES
-  ('Plomería', 'Reparación de tuberías de todo tipo');
-INSERT INTO
-  Categoria (nombre, descripcion)
-VALUES
-  ('Albañilería', 'Construcciónes y reparaciónes');
-INSERT INTO
-  Categoria (nombre, descripcion)
-VALUES
-  (
-    'Celulares',
-    'Celulares nuevos o de uso, verficar en la descripción de los articulos'
-  );
-INSERT INTO
-  Categoria (nombre, descripcion)
-VALUES
-  ('Computadora', 'Equipo de computo para todos');
-SELECT
-  COUNT(*)
-FROM
-  Publicaciones
-WHERE
-  activo = true
-  AND id_usuario = 1;
-SELECT
-  COUNT(*)
-FROM
-  Publicaciones
-WHERE
-  activo = false
-  AND id_usuario = 1;
-SELECT
-  COUNT(*)
-FROM
-  Publicaciones
-WHERE
-  id_usuario = 1;
-SELECT
-  COUNT(*)
-FROM
-  Venta
-WHERE
-  id_comprador = 1
-  OR id_vendedor = 1;
 
-
-SELECT COUNT(*) AS cantidad FROM Venta WHERE id_comprador = 1 OR id_vendedor = 1
+INSERT INTO Categoria (nombre, descripcion)VALUES('Electrodomésticos y Línea Blanca','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Celulares, Cámaras y Casa Inteligente','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Pantallas, Audio y Video','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Computadoras, Papelería y Oficina','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Videojuegos y Juguetes','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Deportes','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Autos y Motos','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Muebles','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Hogar y Ferretería','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Moda, Belleza y Salud','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Bebés','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Mascotas','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Películas y Libros','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Vinos y Licores','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Ropa y Zapatos','');
+INSERT INTO Categoria (nombre, descripcion)VALUES('Abarrotes y Limpieza','');
