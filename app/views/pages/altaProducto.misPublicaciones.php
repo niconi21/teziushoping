@@ -72,7 +72,7 @@ if ($tipo == 'put') {
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-money" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <input type="number" class="form-control" placeholder="Precio MXN" name="precio" value="<?php echo $result->precio; ?>" required>
+                                    <input type="number" class="form-control" placeholder="Precio MXN" min="0" name="precio" value="<?php echo $result->precio; ?>" required>
                                 </div>
 
                                 <div class="input-group mb-3">
@@ -81,7 +81,7 @@ if ($tipo == 'put') {
 
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Cantidad" name="cantidad" value="<?php echo $result->cantidad; ?>" required>
+                                    <input type="number" class="form-control" placeholder="Cantidad" min="0" name="cantidad" value="<?php echo $result->cantidad; ?>" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">

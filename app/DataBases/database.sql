@@ -38,7 +38,7 @@ CREATE TABLE Publicaciones(
   nombre VARCHAR(30) NOT NULL,
   descripcion VARCHAR(200) NOT NULL,
   precio FLOAT NOT NULL,
-  cantidad TINYINT NOT NULL,
+  cantidad INT NOT NULL,
   imagen VARCHAR(150),
   activo TINYINT(1),
   id_categoria INT NOT NULL,

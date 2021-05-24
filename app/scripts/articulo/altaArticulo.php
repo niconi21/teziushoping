@@ -31,12 +31,11 @@ if ($ext == "png" || $ext == "jpg" || $ext == "jpeg") {
         $ruta = '/var/www/html/teziushoping/app/public/productos/' . $imagen;
         if (move_uploaded_file($temp, $ruta)) {
             try {
-                $activo = true;
+                $activo = 1;
                 if ($cantidad <= 0)
-                    $activo = false;
-                    echo $activo.'<br>';
+                    $activo = 0;
                 $sql = $cn->prepare("INSERT INTO Publicaciones(
-                nombre,descripcion,precio,cantidad,imagen,activo ,id_categoria,id_usuario) 
+                nombre,descripcion,precio,cantidad,imagen, activo, id_categoria, id_usuario) 
                 VALUES 
                 (?, ?, ?, ?, ?, ?, ?, ?)");
                 echo '$idUsuario: '.$idUsuario.'<br>';
@@ -47,7 +46,7 @@ if ($ext == "png" || $ext == "jpg" || $ext == "jpeg") {
                 echo '$descripcion: '.$descripcion.'<br>';
                 echo '$activo: '.$activo.'<br>';
                 echo '$imagen: '.$imagen.'<br>';
-                $resultado = $sql->execute([$nombre, $descripcion, $precio, $cantidad, $imagen, (!$cantidad<=0) ,$idCategoria, $idUsuario]);
+                $resultado = $sql->execute([$nombre, $descripcion, $precio, $cantidad, $imagen, $activo ,$idCategoria, $idUsuario]);
                 if ($sql->rowCount() > 0)
                     header('location: ../../views/pages/misPublicaciones.php?statusPost=200');
                 else
