@@ -62,11 +62,13 @@ include('../partials/navbar.php');
                         <select class="form-control" onchange="selectMetodoPago()" id='selectMetodosPago' name="metodoPago">
 
                             <?php
+                            $i = 0;
                             while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 
                                 echo '
-                                    <option value="' . $row['id'] . '">' . ($row['noTarjeta'][0] == 4 ? 'Visa' : ($row['noTarjeta'][0] == 5 ? 'MasterCard' : 'Desconocida')) . ' terminación ' . substr($row['noTarjeta'], 12, 4) . '</option>
+                                    <option '.($i==0?'selected':'').' value="' . $row['id'] . '">' . ($row['noTarjeta'][0] == 4 ? 'Visa' : ($row['noTarjeta'][0] == 5 ? 'MasterCard' : 'Desconocida')) . ' terminación ' . substr($row['noTarjeta'], 12, 4) . '</option>
                                 ';
+                                $i++;
                             }
                             ?>
 
@@ -93,12 +95,13 @@ include('../partials/navbar.php');
     </div>
 </div>
 <script>
-    
+    if($('#selectMetodosPago').val()!=null){
+        selectMetodoPago();
+    }
 
     function selectMetodoPago() {
         let id = document.getElementById('selectMetodosPago').value;
         $.get(`../../scripts/metodosPago/obtenerUnMetodoPago.php?id=${id}`, function(data) {
-            console.log(data);
             let result = data.result;
             $('#contenidoMetodoPago').empty();
             $('#contenidoMetodoPago').append(`
