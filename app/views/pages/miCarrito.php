@@ -37,7 +37,7 @@ Producto eliminado del carrito
                     <td>Descripcion</td>
                     <td>Cantidad</td>
                     <td>Precio</td>
-                    <td>Monto total</td>
+                    <td>Monto Total</td>
                     <td>Acción</td>
                 </thead>
                 <tbody>

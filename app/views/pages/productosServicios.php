@@ -14,11 +14,11 @@ include('../partials/header.php');
 include('../partials/navbar.php');
 if ($post == 200)
     echo '<div class="alert alert-success mt-5" role="alert">
-<b>¡Felicidades!</b>Producto agregado al carrito
+<b>¡Felicidades!</b> Producto agregado al carrito
 </div>';
 else if ($post == 400)
     echo '<div class="alert alert-danger mt-5" role="alert">
-<b>¡Oops...!</b>El producto no ha sido agregado al carrito
+<b>¡Oops...!</b> El producto no ha sido agregado al carrito
 </div>';
 if ($put == 200)
     echo '<div class="alert alert-info mt-5" role="alert">
@@ -26,7 +26,7 @@ if ($put == 200)
 </div>';
 else if ($put == 400)
     echo '<div class="alert alert-warning mt-5" role="alert">
-<b>¡Oops...!</b>El producto no ha sido actualizado en el carrito
+<b>¡Oops...!</b> El producto no ha sido actualizado en el carrito
 </div>';
 ?>
 <div class="container">
@@ -43,7 +43,7 @@ else if ($put == 400)
     <div class="row mb-5">
 
         <div class="col  pt-3">
-            <h4 class="text-white" id="textoPublicaciones">Últimos publicados</h4>
+            <h4 class="text-white" id="textoPublicaciones">Publicaciones Recientes</h4>
             <div class="card-columns bg-fondo" id="contenedorProductosServicios">
                 <?php
                 while ($row = $queryProductos->fetch(PDO::FETCH_ASSOC)) {

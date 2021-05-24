@@ -5,7 +5,7 @@ include('../partials/header.php');
 include('../../scripts/articulo/obtenerCategorias.php');
 
 ?>
-<title>Alta de producto</title>
+<title>Alta de Producto</title>
 </head>
 
 <?php

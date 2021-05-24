@@ -55,7 +55,7 @@ include('../partials/navbar.php');
         <div class="col-8">
             <div class="card bg-fondo">
                 <div class="card-header">
-                    <h4 class="text-white">Elije tu método de pago</h4>
+                    <h4 class="text-white">Elige tu método de pago</h4>
                 </div>
                 <div class="card-body">
                     <form action="../../scripts/carrito/realizarPago.php" method="POST">
@@ -76,9 +76,9 @@ include('../partials/navbar.php');
                             <div class="card-body" id="contenidoMetodoPago">
                                 <h5 class="card-title">No. tarjeta
                                 </h5>
-                                <p class="card-text"><b>Exp.</b></p>
-                                <p class="card-text"><b>Titular:</b> </p>
-                                <p class="card-text"><b>Dirección:</b></p>
+                                <p class="card-text"><b>Exp: </b></p>
+                                <p class="card-text"><b>Titular: </b> </p>
+                                <p class="card-text"><b>Dirección: </b></p>
                                 <small></small>
                             </div>
                         </div>
