@@ -27,12 +27,12 @@ include('../partials/navbar.php');
                     <td>Imagen</td>
                     <td>Producto/Servicio</td>
                     <td>Comprador</td>
-                    <td>Método de pago</td>
+                    <td>Método de Pago</td>
                     <td>Cantidad</td>
-                    <td>Monto total</td>
+                    <td>Monto Total</td>
                     <td>Fecha</td>
                     <td>Status</td>
-                    <td>Acción</td>
+                    <td>Ver</td>
                 </thead>
                 <tbody>
                     <?php

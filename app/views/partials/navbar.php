@@ -59,7 +59,7 @@ $urls = array(
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="../pages/misVentas.php">Mis Ventas</a>
             <a class="dropdown-item" href="../pages/misCompras.php">Mis Compras</a>
-            <a class="dropdown-item" href="../pages/misMetodosPago.php">Métodos de pagos</a>
+            <a class="dropdown-item" href="../pages/misMetodosPago.php">Mis Métodos de Pago</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -67,9 +67,9 @@ $urls = array(
             Perfil
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../pages/perfil.usuario.php">Mi perfil</a>
+            <a class="dropdown-item" href="../pages/perfil.usuario.php">Mi Perfil</a>
             <a href="../../scripts/usuarios/logout.php" class=" dropdown-item text-danger"><i class="fa fa-sign-out" aria-hidden="true"></i>
-              Cerrar sesión</a>
+              Cerrar Sesión</a>
 
           </div>
         </li>

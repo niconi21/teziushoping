@@ -54,7 +54,7 @@ include('../partials/navbar.php');
         <div class="col">
             <table class="table table-dark table-striped m-2 table-hover">
                 <th>
-                <td>Titulo</td>
+                <td>Título</td>
                 <td>Descripción</td>
                 <td>Fecha</td>
                 <td>Precio</td>
