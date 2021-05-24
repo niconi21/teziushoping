@@ -8,7 +8,7 @@ if (isset($_SESSION['idProductoUpdate'])) {
     $id = $_SESSION['idProductoUpdate'];
 } else if (isset($_GET['id']))
     $id = $_GET['id'];
-$queryProducto = $cn->prepare('SELECT p.*, u.nombre AS nombreUsuario, u.apellidos FROM Publicaciones AS p INNER JOIN Usuario AS u ON p.id_usuario = u.id  WHERE p.id = ?');
+$queryProducto = $cn->prepare('SELECT p.*, u.nombre AS nombreUsuario, u.apellidos FROM Publicaciones AS p INNER JOIN Usuario AS u ON p.id_usuario = u.id  WHERE p.id = ? AND activo=true');
 $queryProducto->execute([$id]);
 $result = $queryProducto->fetchAll(PDO::FETCH_OBJ)[0];
 if (isset($_SESSION['idProductoUpdate'])) {
