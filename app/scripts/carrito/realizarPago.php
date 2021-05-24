@@ -40,4 +40,4 @@ while ($row = $queryCarrito->fetch(PDO::FETCH_ASSOC)) {
         echo "Ha ocurrido el error " . $ex->getMessage();
     }
 }
-// header('location: ../../views/pages/misCompras.php');
+header('location: ../../views/pages/misCompras.php');
