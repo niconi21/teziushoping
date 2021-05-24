@@ -65,7 +65,7 @@ include('../partials/navbar.php');
                             while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 
                                 echo '
-                                    <option value="' . $row['id'] . '">' . ($row['noTarjeta'][0] == 4 ? 'Visa' : ($row['noTarjeta'][0] == 5 ? 'MasterCard' : 'Desnococida')) . ' terminación ' . substr($row['noTarjeta'], 12, 4) . '</option>
+                                    <option value="' . $row['id'] . '">' . ($row['noTarjeta'][0] == 4 ? 'Visa' : ($row['noTarjeta'][0] == 5 ? 'MasterCard' : 'Desconocida')) . ' terminación ' . substr($row['noTarjeta'], 12, 4) . '</option>
                                 ';
                             }
                             ?>

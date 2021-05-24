@@ -139,7 +139,7 @@ function modalVentas(id, host) {
     }</p>
       <p class="text-left"><b>Método de pago:</b> <i class="fa fa-cc-visa" aria-hidden="true"></i>
           terminación ${result.noTarjeta.substr(12, 16)}</p>
-      <p class="text-left"><b>Status:</b><span class="${result.status == 'En proceso' ? 'text-warning' : (result.status == 'En camino' ? 'text-info' : 'text-success')}">${
+      <p class="text-left"><b>Status: </b><span class="${result.status == 'En proceso' ? 'text-warning' : (result.status == 'En camino' ? 'text-info' : 'text-success')}">${
         result.status
       }</span></p>
       <p class="text-left"><b>Fecha:</b> ${result.fecha}</p>
@@ -178,7 +178,7 @@ function modalCompras(id, host) {
     }</p>
       <p class="text-left"><b>Método de pago:</b> <i class="fa fa-cc-visa" aria-hidden="true"></i>
           terminación ${result.noTarjeta.substr(12, 16)}</p>
-      <p class="text-left"><b>Status:</b><span class="${result.status == 'En proceso' ? 'text-warning' : (result.status == 'En camino' ? 'text-info' : 'text-success')}">${
+      <p class="text-left"><b>Status: </b><span class="${result.status == 'En proceso' ? 'text-warning' : (result.status == 'En camino' ? 'text-info' : 'text-success')}">${
         result.status
       }</span></p>
       <p class="text-left"><b>Fecha:</b> ${result.fecha}</p>

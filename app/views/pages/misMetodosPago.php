@@ -79,9 +79,9 @@ El metodo de pago Ha sido eliminado</div>';
                                         </i>
                                     </button>
                                 </h5>
-                                <p class="card-text"><b>Exp.</b>' . $result['mes'] . '/' . (substr($result['anio'], 2, 2)) . '</p>
-                                <p class="card-text"><b>Titular:</b>' . $result['titular'] . '</p>
-                                <small>' . ($result['noTarjeta'][0] == 4 ? 'Visa' : ($result['noTarjeta'][0] == 5 ? 'MasterCard' : 'Desnococida')) . '</small>
+                                <p class="card-text"><b>Exp: </b>' . $result['mes'] . '/' . (substr($result['anio'], 2, 2)) . '</p>
+                                <p class="card-text"><b>Titular: </b>' . $result['titular'] . '</p>
+                                <small>' . ($result['noTarjeta'][0] == 4 ? 'Visa' : ($result['noTarjeta'][0] == 5 ? 'MasterCard' : 'Desconocida')) . '</small>
                             </div>
                         </div>';
                 }

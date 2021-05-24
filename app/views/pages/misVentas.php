@@ -96,7 +96,7 @@ include('../partials/navbar.php');
                 <p class="text-left"><b>Comprador:</b> Nicolas Moreno Durán</p>
                 <p class="text-left"><b>Método de pago:</b> <i class="fa fa-cc-visa" aria-hidden="true"></i>
                     terminación 2108</p>
-                <p class="text-left"><b>Status:</b><span class="text-success">Entregado</span></p>
+                <p class="text-left"><b>Status: </b><span class="text-success">Entregado</span></p>
                 <p class="text-left"><b>Fecha:</b> 12-03-2021 12:55:32 A.M</p>
             </div>
             <div class="modal-footer">
