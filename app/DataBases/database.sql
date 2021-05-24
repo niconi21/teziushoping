@@ -29,7 +29,7 @@ CREATE TABLE Usuario(
 );
 CREATE TABLE Categoria(
   id INT AUTO_INCREMENT NOT NULL,
-  nombre VARCHAR(20) NOT null,
+  nombre VARCHAR(200) NOT null,
   descripcion VARCHAR(200) NOT NULL,
   CONSTRAINT pk_categoria PRIMARY KEY (id)
 );
@@ -162,3 +162,4 @@ INSERT INTO Categoria (nombre, descripcion)VALUES('Películas y Libros','');
 INSERT INTO Categoria (nombre, descripcion)VALUES('Vinos y Licores','');
 INSERT INTO Categoria (nombre, descripcion)VALUES('Ropa y Zapatos','');
 INSERT INTO Categoria (nombre, descripcion)VALUES('Abarrotes y Limpieza','');
+
