@@ -10,7 +10,7 @@ $page = explode('.', $uri[sizeof($uri) - 1]);
 
 $urls = array(
   "dashboard" => '<a>Dashboard</a>',
-  "altaProducto" =>  '<a href="../pages/misPublicaciones.php">Mis publicaciónes</a> > Alta de Producto',
+  "altaProducto" =>  '<a href="../pages/misPublicaciones.php">Mis publicaciones</a> > Alta de Producto',
   "misPublicaciones" => "Mis Publicaciones",
   "perfil" => "Mi Perfil",
   "misMetodosPago" => "Mis Métodos de pago",
@@ -40,7 +40,7 @@ $urls = array(
           <a class="nav-link" href="../pages/dashboard.php">Dashboard </a>
         </li>
         <li class="nav-item <?php echo $page[0] == 'misPublicaciones' ? 'active' : ''; ?>">
-          <a class="nav-link" href="../pages/misPublicaciones.php">Mis publicaciónes</a>
+          <a class="nav-link" href="../pages/misPublicaciones.php">Mis publicaciones</a>
         </li>
         <li class="nav-item <?php echo $page[0] == 'productosServicios'  ? 'active' : ''; ?>">
           <a class="nav-link" href="../pages/productosServicios.php">Productos/Servicios</a>
