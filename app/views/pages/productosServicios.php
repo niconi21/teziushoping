@@ -45,7 +45,7 @@ else if ($put == 400)
 <div class="container-fluid mt-5">
     <div class="row mb-5">
         
-        <div class="col-9  pt-3">
+        <div class="col  pt-3">
             <h4 class="text-white" id="textoPublicaciones">Últimos publicados</h4>
             <div class="card-columns bg-fondo" id="contenedorProductosServicios">
                 <?php
