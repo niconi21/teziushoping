@@ -17,7 +17,7 @@ echo 'ccv: ' . $ccv . '<br>';
 include('../../DataBases/conexion.php');
 try {
     $update = $cn->prepare('UPDATE MetodoPago SET titular=?, noTarjeta=?, mes=?, anio=?, ccv=? WHERE id=?');
-    $resultado =$update->execute([$titular, $noTarjeta, $mes, $anio, $ccv, $id]);
+    $update->execute([$titular, $noTarjeta, $mes, $anio, $ccv, $id]);
 
     if ($update->rowCount() > 0) {
         header('location: ../../views/pages/misMetodosPago.php?statusPut=200');
