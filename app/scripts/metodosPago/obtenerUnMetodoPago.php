@@ -14,7 +14,7 @@ include('../../DataBases/conexion.php');
 
 
 
-$query = $cn->prepare('SELECT m.*, d.ciudad, d.colonia, d.cp FROM MetodoPago AS m INNER JOIN Direccion AS d ON m.id_direccion = d.id WHERE m.id=?');
+$query = $cn->prepare('SELECT m.*, d.id AS idDireccion,d.ciudad, d.colonia, d.cp, d.calle, d.noExt, d.noInt, d.referencias FROM MetodoPago AS m INNER JOIN Direccion AS d ON m.id_direccion = d.id WHERE m.id=?');
 $query->execute([$id]);
 $result = $query->fetchAll(PDO::FETCH_OBJ)[0];
 if (isset($_SESSION['idMetodoPagoUpdate'])) {

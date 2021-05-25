@@ -116,21 +116,21 @@ if ($tipo == 'put') {
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Calle" name="calle" value="<?php echo $_SESSION['calle']; ?>" required>
+                                    <input type="text" class="form-control" placeholder="Calle" name="calle" value="<?php echo $result->calle; ?>" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Ciudad" name="ciudad" value="<?php echo $_SESSION['ciudad']; ?>" required>
+                                    <input type="text" class="form-control" placeholder="Ciudad" name="ciudad" value="<?php echo $result->ciudad; ?>" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="No. Ext" name="noExt" value="<?php echo $_SESSION['noExt']; ?>" required>
+                                    <input type="text" class="form-control" placeholder="No. Ext" name="noExt" value="<?php echo $result->noExt; ?>" required>
 
                                 </div>
                             </div>
@@ -140,21 +140,21 @@ if ($tipo == 'put') {
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Colonia" name="colonia" value="<?php echo $_SESSION['colonia']; ?>" required>
+                                    <input type="text" class="form-control" placeholder="Colonia" name="colonia" value="<?php echo $result->colonia ?>" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="C.P" name="cp" value="<?php echo $_SESSION['cp']; ?>" required>
+                                    <input type="text" class="form-control" placeholder="C.P" name="cp" value="<?php echo $result->cp; ?>" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="No. Int" name="noInt" value="<?php echo $_SESSION['noInt']; ?>">
+                                    <input type="text" class="form-control" placeholder="No. Int" name="noInt" value="<?php $result->noInt; ?>">
                                 </div>
 
                             </div>
@@ -166,7 +166,7 @@ if ($tipo == 'put') {
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                 </span>
                             </div>
-                            <textarea rows="5" class="form-control" name="referencias" placeholder="Referencias..."><?php echo $_SESSION['referencias']; ?></textarea>
+                            <textarea rows="5" class="form-control" name="referencias" placeholder="Referencias..."><?php echo $result->referencias; ?></textarea>
                         </div>
                     </div>
                 </div>
@@ -176,7 +176,7 @@ if ($tipo == 'put') {
         </div>
         <div class="row">
         <div class="col">
-        <button type="submit" class="btn btn-success btn-block"><?php echo $tipo == 'put' ? 'Actualizar' : 'Agregar'; ?> método de pago</button></div></div>
+        <button type="submit" name="idDireccion" value="<?php echo $result->idDireccion?>" class="btn btn-success btn-block"><?php echo $tipo == 'put' ? 'Actualizar' : 'Agregar'; ?> método de pago</button></div></div>
     </form>
 </div>
 
